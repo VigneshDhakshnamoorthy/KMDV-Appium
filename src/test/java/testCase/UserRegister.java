@@ -8,9 +8,8 @@ import baseUtil.BaseClass;
 
 public class UserRegister extends BaseClass{
 
-
 	@Test
-	public void HomePageTest1() throws InterruptedException{
+	public void Test_Registeration() throws InterruptedException{
 		HomePage homePage = new HomePage(driver);
 		homePage.clickGetStarted();
 		homePage.clickcontinueBtn();
