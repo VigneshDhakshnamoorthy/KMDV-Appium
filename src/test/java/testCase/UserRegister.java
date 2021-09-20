@@ -18,6 +18,7 @@ public class UserRegister extends BaseClass{
 		
 		RegisterLogin registerLogin= new RegisterLogin(driver);
 		registerLogin.clickregisterBtn();
+		
 	}
 
 }
