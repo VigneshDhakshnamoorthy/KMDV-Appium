@@ -5,8 +5,8 @@
     <classes>
       <class name="testCase.UserRegister">
         <methods>
-          <include name="HomePageTest1"/>
           <include name="tearDown"/>
+          <include name="Test_Registeration"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCase.UserRegister -->

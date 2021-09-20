@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-20T19:28:35 IST" name="Default suite" finished-at="2021-09-20T19:29:09 IST" duration-ms="34420">
+  <suite started-at="2021-09-20T22:10:01 IST" name="Suite" finished-at="2021-09-20T22:10:37 IST" duration-ms="35929">
     <groups>
     </groups>
-    <test started-at="2021-09-20T19:28:35 IST" name="Default test" finished-at="2021-09-20T19:29:09 IST" duration-ms="34420">
+    <test started-at="2021-09-20T22:10:01 IST" name="Test" finished-at="2021-09-20T22:10:37 IST" duration-ms="35929">
       <class name="testCase.UserRegister">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.UserRegister@33990a0c]" started-at="2021-09-20T19:28:35 IST" name="setup" finished-at="2021-09-20T19:28:55 IST" duration-ms="20085" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.UserRegister@14555e0a]" started-at="2021-09-20T22:10:01 IST" name="setup" finished-at="2021-09-20T22:10:22 IST" duration-ms="21023" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="HomePageTest1()[pri:0, instance:testCase.UserRegister@33990a0c]" started-at="2021-09-20T19:28:55 IST" name="HomePageTest1" finished-at="2021-09-20T19:29:08 IST" duration-ms="13641" status="PASS">
+        <test-method signature="Test_Registeration()[pri:0, instance:testCase.UserRegister@14555e0a]" started-at="2021-09-20T22:10:22 IST" name="Test_Registeration" finished-at="2021-09-20T22:10:37 IST" duration-ms="14175" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomePageTest1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.UserRegister@33990a0c]" started-at="2021-09-20T19:29:08 IST" name="tearDown" finished-at="2021-09-20T19:29:09 IST" duration-ms="635" status="PASS">
+        </test-method> <!-- Test_Registeration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.UserRegister@14555e0a]" started-at="2021-09-20T22:10:37 IST" name="tearDown" finished-at="2021-09-20T22:10:37 IST" duration-ms="676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCase.UserRegister -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
