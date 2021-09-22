@@ -28,23 +28,24 @@ public class BaseClass {
 		
 		protected File classPathRoot = new File(System.getProperty("user.dir"));
 		protected File appRoot = new File(classPathRoot,"src/test/resources/APK");
-		protected File app;
+		protected File app= new File(appRoot,"AzamTV.apk");
+		protected String appPackage="com.azamtv.max.media";
+		protected String appActivity="com.azamtv.max.media.MainActivity";
 
 		
 		protected String emulator = "emulator-5554";
 		protected String avdName= "Pixel";
 		
-		public DesiredCapabilities platformCapabilities(String platForm) {
+		public DesiredCapabilities platformCapabilities(String platForm, String version) {
 			
 			if (platForm == "Android" ) {
-				app = new File(appRoot,"AzamTV.apk");
 				PlatformCap = new DesiredCapabilities();
-				PlatformCap.setCapability("platformName", "Android");
-				PlatformCap.setCapability("platformVersion", "11.0");
-				PlatformCap.setCapability("deviceName","emulator-5554" );
+				PlatformCap.setCapability("platformName", platForm);
+				PlatformCap.setCapability("platformVersion", version);
+				PlatformCap.setCapability("deviceName", emulator);
 				PlatformCap.setCapability("app", app.getAbsolutePath());
-				PlatformCap.setCapability("appPackage", "com.azamtv.max.media");
-				PlatformCap.setCapability("appActivity", "com.azamtv.max.media.MainActivity");
+				PlatformCap.setCapability("appPackage", appPackage);
+				PlatformCap.setCapability("appActivity", appActivity);
 			}
 
 			return PlatformCap;
@@ -75,7 +76,7 @@ public class BaseClass {
 			
 			//Initiate the AppiumDriver			
 			URL Url = new URL(URLAddress);
-			driver = new AppiumDriver<MobileElement>(Url,platformCapabilities("Android"));
+			driver = new AppiumDriver<MobileElement>(Url,platformCapabilities("Android", "11.0"));
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 
 		}
