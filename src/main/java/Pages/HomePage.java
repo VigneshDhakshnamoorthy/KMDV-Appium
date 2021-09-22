@@ -24,8 +24,6 @@ public class HomePage extends ComUtil{
 	private By registerBtn = By.xpath("//android.widget.TextView[@text='Register']");
 	private By signInBtn = By.xpath("//android.widget.TextView[@text='Sign in']");
 
-
-
 	
 	public void clickGetStarted() {
 		driver.findElement(getStartedBtn).click();

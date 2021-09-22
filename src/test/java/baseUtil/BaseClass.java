@@ -96,6 +96,8 @@ public class BaseClass {
 			Runtime.getRuntime().exec(StopEmulator);
 		}
 		
-		
+		public void log(String LogMessage) {
+			System.out.println(LogMessage);
+		}		
 }
 
