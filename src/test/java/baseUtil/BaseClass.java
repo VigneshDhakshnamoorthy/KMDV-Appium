@@ -5,8 +5,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -52,7 +51,7 @@ public class BaseClass {
 		}
 		
 	
-		@BeforeTest(alwaysRun=true)
+		@BeforeSuite(alwaysRun=true)
 		protected void setup() throws Throwable {
 			String StartEmulator= "emulator -avd "+avdName+" -netdelay none -netspeed full";
 			Runtime.getRuntime().exec(StartEmulator);
@@ -84,13 +83,19 @@ public class BaseClass {
 
 		
 		
-		@AfterTest(alwaysRun=true)
+		@AfterSuite(alwaysRun=true)
 		protected void tearDown() throws Throwable {
+			//Close the AppiumDriver			
 			driver.quit();
+			
+			//Stop the AppiumServer			
 			AppiumService.stop();
+			
+			// Close the Emulator
 			String StopEmulator = "adb -s "+emulator+" emu kill";
 			Runtime.getRuntime().exec(StopEmulator);
 		}
+		
 		
 }
 

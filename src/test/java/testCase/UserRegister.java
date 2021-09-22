@@ -1,9 +1,10 @@
 package testCase;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 import Pages.HomePage;
-import Pages.RegisterLogin;
+import Pages.RegisterPage;
 import baseUtil.BaseClass;
 
 public class UserRegister extends BaseClass{
@@ -12,11 +13,13 @@ public class UserRegister extends BaseClass{
 	public void Test_Registeration() throws InterruptedException{
 		HomePage homePage = new HomePage(driver);
 		homePage.clickGetStarted();
+		homePage.clickenglishLanguageBtn();
 		homePage.clickcontinueBtn();
-		homePage.clickloginRegisterTab();
+		homePage.clickloginTab();
+		homePage.clickregisterBtn();
 		
-		RegisterLogin registerLogin= new RegisterLogin(driver);
-		registerLogin.clickregisterBtn();
+		RegisterPage registerPage = new RegisterPage(driver);
+		Assert.assertTrue(registerPage.IsPageLoaded());
 		
 	}
 
