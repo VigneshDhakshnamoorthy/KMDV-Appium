@@ -1,6 +1,7 @@
 package testCase;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import Pages.HomePage;
@@ -17,9 +18,10 @@ public class UserRegister extends BaseClass{
 		homePage.clickcontinueBtn();
 		homePage.clickloginTab();
 		homePage.clickregisterBtn();
-		
+		Reporter.getCurrentTestResult();
 		RegisterPage registerPage = new RegisterPage(driver);
 		Assert.assertTrue(registerPage.IsPageLoaded());
+		
 		
 	}
 

@@ -1,13 +1,33 @@
 package trial;
 
-import java.io.File;
+import java.io.IOException;
+
+import baseUtil.BaseClass;
+import commonUtil.ExcelUtil;
 
 public class trialDemo {
-	protected static File classPathRoot = new File(System.getProperty("user.dir"));
-	protected static File appRoot = new File(classPathRoot,"src/test/resources/APK");
-	protected static File app;
-public static void main(String[] args) {
-	app = new File(System.getProperty("user.dir")+"src/test/resources/APK/AzamTV.apk");
-	System.out.println(app.getAbsolutePath());
+
+	
+	public static void main(String[] args) throws IOException {
+		BaseClass BaseClass = new BaseClass();
+		
+	String path=BaseClass.getExcelPath("TestData.xlsx");
+	ExcelUtil excelUtil=new ExcelUtil(path);
+	
+	int totalrows=excelUtil.getRowCount("Sheet1");
+	int totalcols=excelUtil.getCellCount("Sheet1",1);	
+			
+		
+	
+	for(int i=0;i<=totalrows;i++) //1
+	{
+		for(int j=0;j<totalcols;j++) //0
+		{
+			System.out.print(excelUtil.getCellData("Sheet1", i, j));
+			System.out.print("  |  ");
+		}
+			
+		System.out.println();
+	}
 }
 }

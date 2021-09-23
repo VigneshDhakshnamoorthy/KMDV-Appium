@@ -5,8 +5,12 @@
     <classes>
       <class name="testCase.UserRegister">
         <methods>
+          <include name="getResult"/>
+          <include name="skipTest"/>
           <include name="tearDown"/>
-          <include name="Test_Registeration"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="failTest"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCase.UserRegister -->

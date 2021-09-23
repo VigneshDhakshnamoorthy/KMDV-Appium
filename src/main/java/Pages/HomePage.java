@@ -29,6 +29,7 @@ public class HomePage extends ComUtil{
 		driver.findElement(getStartedBtn).click();
 		log("Clicked Get Started Button Succesfully");
 		
+		
 	}
 	
 	public void clickenglishLanguageBtn() {
