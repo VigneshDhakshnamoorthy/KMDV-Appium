@@ -20,16 +20,16 @@
       <![CDATA[Loaded Register Page Succesfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-09-23T12:46:49 IST" name="Default suite" finished-at="2021-09-23T12:47:07 IST" duration-ms="17322">
+  <suite started-at="2021-09-24T02:48:42 IST" name="Default suite" finished-at="2021-09-24T02:49:17 IST" duration-ms="35188">
     <groups>
     </groups>
-    <test started-at="2021-09-23T12:46:49 IST" name="Default test" finished-at="2021-09-23T12:47:07 IST" duration-ms="17322">
+    <test started-at="2021-09-24T02:48:42 IST" name="Default test" finished-at="2021-09-24T02:49:17 IST" duration-ms="35188">
       <class name="testCase.UserRegister">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.UserRegister@3d6f0054]" started-at="2021-09-23T12:46:32 IST" name="setup" finished-at="2021-09-23T12:46:49 IST" duration-ms="17782" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.UserRegister@4d0f2471]" started-at="2021-09-24T02:48:20 IST" name="setup" finished-at="2021-09-24T02:48:42 IST" duration-ms="21798" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Test_Registeration()[pri:0, instance:testCase.UserRegister@3d6f0054]" started-at="2021-09-23T12:46:49 IST" name="Test_Registeration" finished-at="2021-09-23T12:47:07 IST" duration-ms="17263" status="PASS">
+        <test-method signature="Test_Registeration()[pri:0, instance:testCase.UserRegister@4d0f2471]" started-at="2021-09-24T02:48:42 IST" name="Test_Registeration" finished-at="2021-09-24T02:49:17 IST" duration-ms="35140" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Clicked Get Started Button Succesfully]]>
@@ -51,7 +51,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- Test_Registeration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.UserRegister@3d6f0054]" started-at="2021-09-23T12:47:07 IST" name="tearDown" finished-at="2021-09-23T12:47:07 IST" duration-ms="528" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.UserRegister@4d0f2471]" started-at="2021-09-24T02:49:18 IST" name="tearDown" finished-at="2021-09-24T02:49:18 IST" duration-ms="492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
