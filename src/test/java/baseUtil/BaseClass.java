@@ -32,6 +32,7 @@ public class BaseClass {
 	protected String appPackage="com.azamtv.max.media";
 	protected String appActivity="com.azamtv.max.media.MainActivity";
 	protected String appName="AzamTV.apk";
+	protected String runApp;
 
 	protected String emulator = "emulator-5554";
 	protected String avdName= "Pixel";
