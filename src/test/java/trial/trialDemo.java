@@ -13,21 +13,15 @@ public class trialDemo {
 		
 	String path=BaseClass.getExcelPath("TestData.xlsx");
 	ExcelUtil excelUtil=new ExcelUtil(path);
+	String[][] fullExcelData = excelUtil.getFullExcelData("Sheet1");
 	
-	int totalrows=excelUtil.getRowCount("Sheet1");
-	int totalcols=excelUtil.getCellCount("Sheet1",1);	
-			
-		
-	
-	for(int i=0;i<=totalrows;i++) //1
-	{
-		for(int j=0;j<totalcols;j++) //0
-		{
-			System.out.print(excelUtil.getCellData("Sheet1", i, j));
-			System.out.print("  |  ");
-		}
-			
-		System.out.println();
-	}
+	  for (int i = 0; i < fullExcelData.length; i++)
+	  {
+          for (int j = 0; j < fullExcelData[i].length; j++) {
+              System.out.print(fullExcelData[i][j] + " ");
+              System.out.print("  |  ");
+          }
+          System.out.println();
+	  }
 }
 }

@@ -16,13 +16,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtil {
 
-	public FileInputStream fi;
-	public FileOutputStream fo;
-	public XSSFWorkbook workbook;
-	public XSSFSheet sheet;
-	public XSSFRow row;
-	public XSSFCell cell;
-	public CellStyle style;   
+	public static FileInputStream fi;
+	public static FileOutputStream fo;
+	public static XSSFWorkbook workbook;
+	public static XSSFSheet sheet;
+	public static XSSFRow row;
+	public static XSSFCell cell;
+	public static CellStyle style;   
 	String path;
 	
 	public ExcelUtil(String path)
@@ -108,7 +108,23 @@ public class ExcelUtil {
 		fo.close();
 	}
 	
-	
+	public String[][] getFullExcelData(String sheetName) throws IOException {
+		
+		int totalrows=getRowCount(sheetName);
+		int totalcols=getCellCount(sheetName,1);	
+				
+			
+		String loginData[][]=new String[totalrows][totalcols];
+		for(int i=1;i<=totalrows;i++)
+		{
+			for(int j=0;j<totalcols;j++)
+			{
+				loginData[i-1][j]=getCellData(sheetName, i, j);
+			}
+				
+		}
+		return loginData;
+	}
 	public void fillGreenColor(String sheetName,int rownum,int colnum) throws IOException
 	{
 		fi=new FileInputStream(path);
