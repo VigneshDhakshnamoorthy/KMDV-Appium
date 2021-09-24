@@ -17,8 +17,11 @@ public class RegisterPage  extends ComUtil{
 	}
 	
 	private By pageLoad = By.xpath("//android.widget.TextView[@text='Your phone number']");
-	
-	public boolean IsPageLoaded() {
+	private By phonenumberBox = By.xpath("//android.widget.EditText");
+	private By registerContinueButton = By.xpath("//android.widget.TextView[@text='Continue']");
+
+
+	public boolean isPageLoaded() {
 		boolean IsPageLoaded = driver.findElement(pageLoad).getText().toString().equals("Your phone number");
 		if (IsPageLoaded ) {
 			log("Loaded Register Page Succesfully");
@@ -27,6 +30,32 @@ public class RegisterPage  extends ComUtil{
 
 		}
 		return IsPageLoaded;
+
+	}
+	
+	public void enterPhonenumber(String phnum) {
+		driver.findElement(phonenumberBox).click();
+		driver.findElement(phonenumberBox).sendKeys(phnum);
+		log("Entered New Register Number - "+phnum+" - Succesfully");
+
+	}
+	
+	public void clickContinue() {
+		driver.findElement(registerContinueButton).click();
+		log("Clicked Continue Button Succesfully");
+
+	}
+	
+	public void enterOTP(String OTP) {
+		char[] ch = OTP.toCharArray();
+		for (int i =1 ; i<=ch.length;i++)
+		{
+		By otpBox = By.xpath("//android.view.ViewGroup["+i+"]/android.widget.EditText");
+		String otp = String.valueOf(ch[i-1]);
+		driver.findElement(otpBox).click();
+		driver.findElement(otpBox).sendKeys(otp);
+		}
+		log("Entered OTP - "+OTP+" -  Succesfully");
 
 	}
 

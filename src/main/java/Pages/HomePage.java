@@ -16,35 +16,10 @@ public class HomePage extends ComUtil{
 		
 	}
 	
-
-	private By getStartedBtn = By.xpath("//android.widget.TextView[@text='Get Started']");
-	private By englishLanguageBtn = By.xpath("//android.widget.TextView[@text='English']");
-	private By continueBtn = By.xpath("//android.widget.TextView[@text='Continue']");
 	private By loginTab = By.xpath("//android.widget.Button[5]/android.view.ViewGroup");
 	private By registerBtn = By.xpath("//android.widget.TextView[@text='Register']");
 	private By signInBtn = By.xpath("//android.widget.TextView[@text='Sign in']");
 
-	
-	public void clickGetStarted() {
-		driver.findElement(getStartedBtn).click();
-		log("Clicked Get Started Button Succesfully");
-		
-		
-	}
-	
-	public void clickenglishLanguageBtn() {
-		driver.findElement(englishLanguageBtn).click();
-		log("Clicked English Language Button Succesfully");
-
-		
-	}
-	
-	public void clickcontinueBtn() {
-		driver.findElement(continueBtn).click();
-		log("Clicked Continue Button Succesfully");
-
-
-	}
 	
 	public void clickloginTab() {
 		driver.findElement(loginTab).click();
