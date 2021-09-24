@@ -8,9 +8,9 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class RegisterPage  extends ComUtil{
+public class RegisterTabPage  extends ComUtil{
 
-	public RegisterPage(AppiumDriver<MobileElement> driver){
+	public RegisterTabPage(AppiumDriver<MobileElement> driver){
 		this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		

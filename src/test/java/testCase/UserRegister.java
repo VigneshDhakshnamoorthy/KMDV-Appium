@@ -3,12 +3,16 @@ package testCase;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import Pages.HomePage;
-import Pages.RegisterPage;
+import Pages.MainPage;
+import Pages.RegisterTabPage;
 import Pages.StartupPage;
 import baseUtil.BaseClass;
 
 public class UserRegister extends BaseClass{
+	
+	private String phonenumber = "9600000000";
+	private String otpnumber = "000000";
+
 
 	@Test(groups= {"Register"})
 	public void Test_Registeration() throws InterruptedException{
@@ -18,15 +22,15 @@ public class UserRegister extends BaseClass{
 		startUpPage.clickenglishLanguageBtn();
 		startUpPage.clickcontinueBtn();
 		
-		HomePage homePage = new HomePage(driver);
-		homePage.clickloginTab();
-		homePage.clickregisterBtn();
+		MainPage mainPage = new MainPage(driver);
+		mainPage.clickloginTab();
+		mainPage.clickregisterBtn();
 		
-		RegisterPage registerPage = new RegisterPage(driver);
-		Assert.assertTrue(registerPage.isPageLoaded());
-		registerPage.enterPhonenumber("9600000000");
-		registerPage.clickContinue();
-		registerPage.enterOTP("000000");
+		RegisterTabPage registerTabPage = new RegisterTabPage(driver);
+		Assert.assertTrue(registerTabPage.isPageLoaded());
+		registerTabPage.enterPhonenumber(phonenumber);
+		registerTabPage.clickContinue();
+		registerTabPage.enterOTP(otpnumber);
 	}
 
 }
