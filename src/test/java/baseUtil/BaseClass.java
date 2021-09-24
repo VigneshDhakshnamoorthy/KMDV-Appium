@@ -1,6 +1,7 @@
 package baseUtil;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -25,7 +26,7 @@ public class BaseClass {
 	protected DesiredCapabilities AppiumCap,PlatformCap;
 	protected AppiumDriverLocalService AppiumService;
 	protected AppiumServiceBuilder AppiumBuilder;
-	protected AppiumDriver<MobileElement> driver;
+	protected static AppiumDriver<MobileElement> driver;
 
 	protected File classPathRoot = new File(System.getProperty("user.dir"));
 	protected File resourcesRoot = new File(classPathRoot,"src/test/resources");
@@ -75,20 +76,31 @@ public class BaseClass {
 		AppiumService.start();
 
 
-		//Initiate the AppiumDriver			
-		URL Url = new URL(URLAddress);
-		driver = new AppiumDriver<MobileElement>(Url,platformCapabilities("Android", "11.0"));
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		
 
 	}
-
+	
+	@BeforeMethod(alwaysRun=true)
+	protected void appOpen() throws MalformedURLException {
+		//Initiate the AppiumDriver			
+			URL Url = new URL(URLAddress);
+			driver = new AppiumDriver<MobileElement>(Url,platformCapabilities("Android", "11.0"));
+			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	}
+	
+	@AfterMethod(alwaysRun=true)
+	protected void appClose() throws MalformedURLException {
+		//Close the AppiumDriver			
+			driver.quit();
+			
+	}
+	
 
 
 
 	@AfterSuite(alwaysRun=true)
 	protected void tearDown() throws Throwable {
-		//Close the AppiumDriver			
-		driver.quit();
+
 
 		//Stop the AppiumServer			
 		AppiumService.stop();
