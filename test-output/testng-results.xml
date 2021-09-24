@@ -19,17 +19,29 @@
     <line>
       <![CDATA[Loaded Register Page Succesfully]]>
     </line>
+    <line>
+      <![CDATA[Entered New Register Number - 9600000000 - Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Continue Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Entered OTP - 000000 -  Succesfully]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-09-24T02:48:42 IST" name="Default suite" finished-at="2021-09-24T02:49:17 IST" duration-ms="35188">
+  <suite started-at="2021-09-25T02:22:44 IST" name="Default suite" finished-at="2021-09-25T02:23:06 IST" duration-ms="22117">
     <groups>
+      <group name="Register">
+        <method signature="UserRegister.Test_Registeration()[pri:0, instance:testCase.UserRegister@505fc5a4]" name="Test_Registeration" class="testCase.UserRegister"/>
+      </group> <!-- Register -->
     </groups>
-    <test started-at="2021-09-24T02:48:42 IST" name="Default test" finished-at="2021-09-24T02:49:17 IST" duration-ms="35188">
+    <test started-at="2021-09-25T02:22:44 IST" name="Default test" finished-at="2021-09-25T02:23:06 IST" duration-ms="22117">
       <class name="testCase.UserRegister">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.UserRegister@4d0f2471]" started-at="2021-09-24T02:48:20 IST" name="setup" finished-at="2021-09-24T02:48:42 IST" duration-ms="21798" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.UserRegister@505fc5a4]" started-at="2021-09-25T02:22:35 IST" name="setup" finished-at="2021-09-25T02:22:44 IST" duration-ms="8764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Test_Registeration()[pri:0, instance:testCase.UserRegister@4d0f2471]" started-at="2021-09-24T02:48:42 IST" name="Test_Registeration" finished-at="2021-09-24T02:49:17 IST" duration-ms="35140" status="PASS">
+        <test-method signature="Test_Registeration()[pri:0, instance:testCase.UserRegister@505fc5a4]" started-at="2021-09-25T02:22:44 IST" name="Test_Registeration" finished-at="2021-09-25T02:23:06 IST" duration-ms="22086" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Clicked Get Started Button Succesfully]]>
@@ -49,9 +61,18 @@
             <line>
               <![CDATA[Loaded Register Page Succesfully]]>
             </line>
+            <line>
+              <![CDATA[Entered New Register Number - 9600000000 - Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Continue Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Entered OTP - 000000 -  Succesfully]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_Registeration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.UserRegister@4d0f2471]" started-at="2021-09-24T02:49:18 IST" name="tearDown" finished-at="2021-09-24T02:49:18 IST" duration-ms="492" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.UserRegister@505fc5a4]" started-at="2021-09-25T02:23:06 IST" name="tearDown" finished-at="2021-09-25T02:23:07 IST" duration-ms="318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
