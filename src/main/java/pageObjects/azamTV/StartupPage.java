@@ -1,4 +1,4 @@
-package Pages;
+package pageObjects.azamTV;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;

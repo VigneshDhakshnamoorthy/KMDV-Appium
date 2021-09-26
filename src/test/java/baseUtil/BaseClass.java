@@ -1,7 +1,6 @@
 package baseUtil;
 
 import java.io.File;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -28,29 +27,21 @@ public class BaseClass {
 	protected AppiumServiceBuilder AppiumBuilder;
 	protected static AppiumDriver<MobileElement> driver;
 
-	protected File classPathRoot = new File(System.getProperty("user.dir"));
-	protected File resourcesRoot = new File(classPathRoot,"src/test/resources");
+	protected static File classPathRoot = new File(System.getProperty("user.dir"));
+	protected static File resourcesRoot = new File(classPathRoot,"src/test/resources");
 	protected String appPackage="com.azamtv.max.media";
-	protected String appActivity="com.azamtv.max.media.MainActivity";
-	protected String appName="AzamTV.apk";
-	protected String runApp;
-
+	public static PropertiesUtil prop;
+	
 	protected String emulator = "emulator-5554";
 	protected String avdName= "Pixel";
+	
+	public DesiredCapabilityUtil desiredCap;
 
-	public DesiredCapabilities platformCapabilities(String platForm, String version) {
+	public DesiredCapabilities appCapability(String AppName) throws Exception {
 
-		if (platForm == "Android" ) {
-			PlatformCap = new DesiredCapabilities();
-			PlatformCap.setCapability("platformName", platForm);
-			PlatformCap.setCapability("platformVersion", version);
-			PlatformCap.setCapability("deviceName", emulator);
-			PlatformCap.setCapability("app", getAppPath(appName));
-			PlatformCap.setCapability("appPackage", appPackage);
-			PlatformCap.setCapability("appActivity", appActivity);
-		}
+		DesiredCapabilityUtil desiredCapabilityUtil = new DesiredCapabilityUtil();
+		return desiredCapabilityUtil.desireCapability(AppName);
 
-		return PlatformCap;
 	}
 
 
@@ -80,16 +71,15 @@ public class BaseClass {
 
 	}
 	
-	@BeforeMethod(alwaysRun=true)
-	protected void appOpen() throws MalformedURLException {
+	public void appOpen(String appName) throws Exception {
 		//Initiate the AppiumDriver			
 			URL Url = new URL(URLAddress);
-			driver = new AppiumDriver<MobileElement>(Url,platformCapabilities("Android", "11.0"));
+			driver = new AppiumDriver<MobileElement>(Url,appCapability(appName));
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	}
 	
 	@AfterMethod(alwaysRun=true)
-	protected void appClose() throws MalformedURLException {
+	protected void appClose(){
 		//Close the AppiumDriver			
 			driver.quit();
 			
@@ -100,8 +90,7 @@ public class BaseClass {
 
 	@AfterSuite(alwaysRun=true)
 	protected void tearDown() throws Throwable {
-
-
+		
 		//Stop the AppiumServer			
 		AppiumService.stop();
 
@@ -110,7 +99,7 @@ public class BaseClass {
 		Runtime.getRuntime().exec(StopEmulator);
 	}
 
-	public void log(String LogMessage) {
+	public static void log(String LogMessage) {
 		Reporter.log(LogMessage);
 		System.out.println(LogMessage);
 	}		
@@ -121,9 +110,15 @@ public class BaseClass {
 
 	}
 	
+	public static String getPropertyPath(String PropertyName){
+		File property= new File(resourcesRoot,"/Properties/"+PropertyName);
+		return property.getAbsolutePath();
+
+	}
+	
 	public String getExcelPath(String ExcelName){
-		File app= new File(resourcesRoot,"/ExcelData/"+ExcelName);
-		return app.getAbsolutePath();
+		File excel= new File(resourcesRoot,"/ExcelData/"+ExcelName);
+		return excel.getAbsolutePath();
 
 	}
 	
