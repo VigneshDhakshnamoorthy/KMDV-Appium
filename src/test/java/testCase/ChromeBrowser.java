@@ -9,7 +9,7 @@ public class ChromeBrowser extends BaseClass{
 	private String appName="Chrome";
 
 	@Test(groups= {"chrome.main"})
-	public void chromeMain() throws Exception{
+	public void AmazonProductSearch() throws Exception{
 		appOpen(appName);
 
 		driver.get("https://www.amazon.in/");
