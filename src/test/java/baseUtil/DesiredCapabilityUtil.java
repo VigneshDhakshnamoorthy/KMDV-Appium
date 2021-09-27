@@ -2,9 +2,6 @@ package baseUtil;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
-
 public class DesiredCapabilityUtil{
 	public static DesiredCapabilities PlatformCap;
 	public static PropertiesUtil prop;
@@ -17,35 +14,37 @@ public class DesiredCapabilityUtil{
 		case "Azam":
 			prop = new PropertiesUtil("azamTv.properties");
 			PlatformCap = new DesiredCapabilities();
-			PlatformCap.setCapability(MobileCapabilityType.PLATFORM_NAME, prop.getAppProperty("platformName"));
-			PlatformCap.setCapability(MobileCapabilityType.VERSION, prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability(MobileCapabilityType.DEVICE_NAME, bs.emulator);
-			PlatformCap.setCapability(MobileCapabilityType.APP, bs.getAppPath("AzamTV.apk"));
-			PlatformCap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, prop.getAppProperty("appPackage"));
-			PlatformCap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
+			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
+			PlatformCap.setCapability("deviceName", bs.emulator);
+			PlatformCap.setCapability("app", bs.getAppPath("AzamTV.apk"));
+			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
+			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			break;
 		
 		case "ApkInfo":
 			prop = new PropertiesUtil("apkinfo.properties");
 			PlatformCap = new DesiredCapabilities();
-			PlatformCap.setCapability(MobileCapabilityType.PLATFORM_NAME, prop.getAppProperty("platformName"));
-			PlatformCap.setCapability(MobileCapabilityType.PLATFORM_VERSION, prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability(MobileCapabilityType.DEVICE_NAME, bs.emulator);
-			PlatformCap.setCapability(MobileCapabilityType.APP, bs.getAppPath("APKinfo.apk"));
-			PlatformCap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, prop.getAppProperty("appPackage"));
-			PlatformCap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
+			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
+			PlatformCap.setCapability("deviceName", bs.emulator);
+			PlatformCap.setCapability("app", bs.getAppPath("APKinfo.apk"));
+			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
+			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			break;
 			
 		case "Chrome":
 			prop = new PropertiesUtil("chrome.properties");
 			PlatformCap = new DesiredCapabilities();
-			PlatformCap.setCapability(MobileCapabilityType.PLATFORM_NAME, prop.getAppProperty("platformName"));
-			PlatformCap.setCapability(MobileCapabilityType.PLATFORM_VERSION, prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability(MobileCapabilityType.DEVICE_NAME, bs.emulator);
-			PlatformCap.setCapability(MobileCapabilityType.NO_RESET, "true");
-			PlatformCap.setCapability(MobileCapabilityType.FULL_RESET, "false");
-			PlatformCap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, prop.getAppProperty("appPackage"));
-			PlatformCap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
+			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
+			PlatformCap.setCapability("deviceName", bs.emulator);
+			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
+			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("chromedriverExecutable",bs.getDriverPath("chromedriver.exe"));
+			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
+			PlatformCap.setCapability("fullReset", prop.getAppProperty("fullReset"));
+
 			break;
 		
 		default:

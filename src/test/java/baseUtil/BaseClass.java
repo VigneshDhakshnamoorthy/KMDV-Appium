@@ -2,9 +2,10 @@ package baseUtil;
 
 import java.io.File;
 import java.net.URL;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
 import io.appium.java_client.AppiumDriver;
@@ -26,6 +27,7 @@ public class BaseClass {
 	protected AppiumDriverLocalService AppiumService;
 	protected AppiumServiceBuilder AppiumBuilder;
 	protected static AppiumDriver<MobileElement> driver;
+	protected static RemoteWebDriver webdriver;
 
 	protected static File classPathRoot = new File(System.getProperty("user.dir"));
 	protected static File resourcesRoot = new File(classPathRoot,"src/test/resources");
@@ -52,7 +54,7 @@ public class BaseClass {
 
 		//Set Capabilities
 		AppiumCap = new DesiredCapabilities();
-		AppiumCap.setCapability("noReset", "false");
+		AppiumCap.setCapability("noReset", "true");
 
 		//Build the Appium service
 		AppiumBuilder = new AppiumServiceBuilder();
@@ -78,10 +80,11 @@ public class BaseClass {
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	}
 	
+	
 	@AfterMethod(alwaysRun=true)
 	protected void appClose(){
-		//Close the AppiumDriver			
-			driver.quit();
+		//Close the AppiumDriver	
+		driver.quit();
 			
 	}
 	
@@ -122,5 +125,36 @@ public class BaseClass {
 
 	}
 	
+	protected String Context_Native = "NATIVE_APP";
+	protected String Context_WebView = "WEBVIEW_chrome";
+
+ 
+	public String getDriverPath(String browser){
+		File browserdriver= new File(resourcesRoot,"/WebDriver/"+browser);
+		return browserdriver.getAbsolutePath();
+
+	}
+	public void isWebviewEnabled() {
+		while(true) {
+			Set<String> contextHandles = driver.getContextHandles();
+			if(contextHandles.contains(Context_WebView)) {
+				break;
+			}
+		}
+	}
+	public void clearChromeTabs() {
+		String xpath1 = "//*[@resource-id=\"com.android.chrome:id/tab_switcher_button\"]";
+		String xpath2 = "//*[@resource-id=\"com.android.chrome:id/menu_button_wrapper\"]";
+		String xpath3 = "//*[@content-desc=\"Close all tabs\"]";
+		
+		driver.findElementByXPath(xpath1).click();
+		driver.findElementByXPath(xpath2).click();
+		driver.findElementByXPath(xpath3).click();
+	}
+	
+	
 }
+		
+	
+
 
