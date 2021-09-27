@@ -2,7 +2,7 @@ package testCase;
 
 import org.testng.annotations.Test;
 
-import baseUtil.BaseClass;
+import util.Base.BaseClass;
 
 public class ApkInfo extends BaseClass{
 	private String appName="ApkInfo";

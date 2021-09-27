@@ -1,4 +1,4 @@
-package commonUtil;
+package util.Common;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;

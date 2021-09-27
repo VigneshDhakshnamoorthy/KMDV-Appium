@@ -3,10 +3,10 @@ package pageObjects.azamTV;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
-import commonUtil.ComUtil;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import util.Common.ComUtil;
 
 public class MainPage extends ComUtil{
 

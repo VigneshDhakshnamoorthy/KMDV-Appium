@@ -1,4 +1,4 @@
-package baseUtil;
+package util.Base;
 
 import java.io.File;
 import java.net.URL;
@@ -13,6 +13,8 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
+import util.Capability.DesiredCapabilityUtil;
+import util.Capability.PropertiesUtil;
 
 import org.testng.Reporter;
 
@@ -32,12 +34,11 @@ public class BaseClass {
 	protected static File classPathRoot = new File(System.getProperty("user.dir"));
 	protected static File resourcesRoot = new File(classPathRoot,"src/test/resources");
 	protected String appPackage="com.azamtv.max.media";
-	public static PropertiesUtil prop;
+	public PropertiesUtil prop;
 	
-	protected String emulator = "emulator-5554";
+	public String emulator = "emulator-5554";
 	protected String avdName= "Pixel";
 	
-	public DesiredCapabilityUtil desiredCap;
 
 	public DesiredCapabilities appCapability(String AppName) throws Exception {
 

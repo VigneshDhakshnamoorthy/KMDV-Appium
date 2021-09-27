@@ -1,10 +1,12 @@
-package baseUtil;
+package util.Capability;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import util.Base.BaseClass;
+
 public class DesiredCapabilityUtil{
-	public static DesiredCapabilities PlatformCap;
-	public static PropertiesUtil prop;
+	public  DesiredCapabilities PlatformCap;
+	public  PropertiesUtil prop;
 
 	public DesiredCapabilities desireCapability(String AppName) throws Exception {
 		BaseClass bs = new BaseClass();
@@ -20,6 +22,7 @@ public class DesiredCapabilityUtil{
 			PlatformCap.setCapability("app", bs.getAppPath("AzamTV.apk"));
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
 			break;
 		
 		case "ApkInfo":
@@ -31,6 +34,7 @@ public class DesiredCapabilityUtil{
 			PlatformCap.setCapability("app", bs.getAppPath("APKinfo.apk"));
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
 			break;
 			
 		case "Chrome":
@@ -43,8 +47,6 @@ public class DesiredCapabilityUtil{
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			PlatformCap.setCapability("chromedriverExecutable",bs.getDriverPath("chromedriver.exe"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
-			PlatformCap.setCapability("fullReset", prop.getAppProperty("fullReset"));
-
 			break;
 		
 		default:

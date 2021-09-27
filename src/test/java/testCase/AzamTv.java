@@ -3,11 +3,11 @@ package testCase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseUtil.BaseClass;
 import pageObjects.azamTV.MainPage;
 import pageObjects.azamTV.MoviesTabPage;
 import pageObjects.azamTV.RegisterTabPage;
 import pageObjects.azamTV.StartupPage;
+import util.Base.BaseClass;
 
 public class AzamTv  extends BaseClass{
 	

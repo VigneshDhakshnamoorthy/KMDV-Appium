@@ -1,7 +1,9 @@
-package baseUtil;
+package util.Capability;
 
 import java.io.FileReader;
 import java.util.Properties;
+
+import util.Base.BaseClass;
 
 public class PropertiesUtil extends BaseClass{
 	private FileReader reader;

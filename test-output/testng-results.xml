@@ -1,32 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="8" passed="4" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Clicked Get Started Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked English Language Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Continue Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Movies Tab Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Loaded Movies Tab Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Bongo Movies number - 3 Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Register Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Loaded Register Page Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Get Started Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked English Language Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Continue Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Login Tab Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Register Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Loaded Register Page Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Entered New Register Number - 9600000000 - Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Continue Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Entered OTP - 000000 -  Succesfully]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-09-27T19:50:47 IST" name="Default suite" finished-at="2021-09-27T19:51:21 IST" duration-ms="34100">
+  <suite started-at="2021-09-27T23:38:25 IST" name="Suite" finished-at="2021-09-27T23:39:48 IST" duration-ms="83095">
     <groups>
+      <group name="Azam.Register">
+        <method signature="AzamTv.AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@2f217633]" name="AzamTV_Registeration" class="testCase.AzamTv"/>
+      </group> <!-- Azam.Register -->
       <group name="chrome.main">
-        <method signature="ChromeBrowser.chromeMain()[pri:0, instance:testCase.ChromeBrowser@71def8f8]" name="chromeMain" class="testCase.ChromeBrowser"/>
+        <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@a530d0a]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
       </group> <!-- chrome.main -->
+      <group name="Azam.Movies">
+        <method signature="AzamTv.AzamTV_MovieSearch()[pri:0, instance:testCase.AzamTv@2f217633]" name="AzamTV_MovieSearch" class="testCase.AzamTv"/>
+      </group> <!-- Azam.Movies -->
+      <group name="ApkInfo.main">
+        <method signature="ApkInfo.ApkinfoMain()[pri:0, instance:testCase.ApkInfo@7205765b]" name="ApkinfoMain" class="testCase.ApkInfo"/>
+      </group> <!-- ApkInfo.main -->
     </groups>
-    <test started-at="2021-09-27T19:50:47 IST" name="Default test" finished-at="2021-09-27T19:51:21 IST" duration-ms="34100">
-      <class name="testCase.ChromeBrowser">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@71def8f8]" started-at="2021-09-27T19:50:38 IST" name="setup" finished-at="2021-09-27T19:50:47 IST" duration-ms="9255" status="PASS">
+    <test started-at="2021-09-27T23:38:25 IST" name="Test" finished-at="2021-09-27T23:39:48 IST" duration-ms="83095">
+      <class name="testCase.ApkInfo">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@7205765b]" started-at="2021-09-27T23:38:23 IST" name="setup" finished-at="2021-09-27T23:38:25 IST" duration-ms="1844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="chromeMain()[pri:0, instance:testCase.ChromeBrowser@71def8f8]" started-at="2021-09-27T19:50:47 IST" name="chromeMain" finished-at="2021-09-27T19:51:20 IST" duration-ms="33342" status="PASS">
+        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@7205765b]" started-at="2021-09-27T23:38:25 IST" name="ApkinfoMain" finished-at="2021-09-27T23:38:35 IST" duration-ms="10017" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- chromeMain -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@71def8f8]" started-at="2021-09-27T19:51:20 IST" name="appClose" finished-at="2021-09-27T19:51:21 IST" duration-ms="663" status="PASS">
+        </test-method> <!-- ApkinfoMain -->
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@7205765b]" started-at="2021-09-27T23:38:35 IST" name="appClose" finished-at="2021-09-27T23:38:36 IST" duration-ms="503" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@71def8f8]" started-at="2021-09-27T19:51:21 IST" name="tearDown" finished-at="2021-09-27T19:51:21 IST" duration-ms="57" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@7205765b]" started-at="2021-09-27T23:39:48 IST" name="tearDown" finished-at="2021-09-27T23:39:48 IST" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+      </class> <!-- testCase.ApkInfo -->
+      <class name="testCase.AzamTv">
+        <test-method signature="AzamTV_MovieSearch()[pri:0, instance:testCase.AzamTv@2f217633]" started-at="2021-09-27T23:38:36 IST" name="AzamTV_MovieSearch" finished-at="2021-09-27T23:38:54 IST" duration-ms="18752" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Clicked Get Started Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked English Language Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Continue Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Movies Tab Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Loaded Movies Tab Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Bongo Movies number - 3 Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Register Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Loaded Register Page Succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AzamTV_MovieSearch -->
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@2f217633]" started-at="2021-09-27T23:38:54 IST" name="appClose" finished-at="2021-09-27T23:38:55 IST" duration-ms="286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appClose -->
+        <test-method signature="AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@2f217633]" started-at="2021-09-27T23:38:55 IST" name="AzamTV_Registeration" finished-at="2021-09-27T23:39:27 IST" duration-ms="32123" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Clicked Get Started Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked English Language Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Continue Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Login Tab Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Register Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Loaded Register Page Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Entered New Register Number - 9600000000 - Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Continue Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Entered OTP - 000000 -  Succesfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AzamTV_Registeration -->
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@2f217633]" started-at="2021-09-27T23:39:27 IST" name="appClose" finished-at="2021-09-27T23:39:27 IST" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appClose -->
+      </class> <!-- testCase.AzamTv -->
+      <class name="testCase.ChromeBrowser">
+        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@a530d0a]" started-at="2021-09-27T23:39:27 IST" name="AmazonProductSearch" finished-at="2021-09-27T23:39:48 IST" duration-ms="20643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AmazonProductSearch -->
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@a530d0a]" started-at="2021-09-27T23:39:48 IST" name="appClose" finished-at="2021-09-27T23:39:48 IST" duration-ms="394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appClose -->
       </class> <!-- testCase.ChromeBrowser -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

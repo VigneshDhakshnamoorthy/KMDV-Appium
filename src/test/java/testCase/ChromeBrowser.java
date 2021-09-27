@@ -3,7 +3,7 @@ package testCase;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import baseUtil.BaseClass;
+import util.Base.BaseClass;
 
 public class ChromeBrowser extends BaseClass{
 	private String appName="Chrome";
