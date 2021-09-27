@@ -2,16 +2,27 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="testngUtil.Listener"/>
-    <listener class-name="testngUtil.RetryTransform"/>
+    <listener class-name="util.TestNG.Listener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="trial.trialDemo">
+      <class name="testCase.AzamTv">
         <methods>
-          <include name="testtofailTest" invocation-numbers="0 0 0 0 1 1 1 1"/>
+          <include name="tearDown"/>
+          <include name="appClose"/>
+          <include name="AzamTV_Registeration"/>
+          <include name="setup"/>
+          <include name="AzamTV_MovieSearch"/>
         </methods>
-      </class> <!-- trial.trialDemo -->
+      </class> <!-- testCase.AzamTv -->
+      <class name="testCase.ChromeBrowser">
+        <methods>
+          <include name="tearDown"/>
+          <include name="appClose"/>
+          <include name="setup"/>
+          <include name="AmazonProductSearch"/>
+        </methods>
+      </class> <!-- testCase.ChromeBrowser -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

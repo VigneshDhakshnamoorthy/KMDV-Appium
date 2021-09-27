@@ -2,14 +2,18 @@ package util.Capability;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import util.Base.BaseClass;
 
-public class DesiredCapabilityUtil{
-	public  DesiredCapabilities PlatformCap;
+public class DesiredCapabilityUtil extends BaseClass{
+	public  DesiredCapabilities PlatformCap,AppiumCap;
 	public  PropertiesUtil prop;
+	protected String IPAddress = "127.0.0.1";
+	protected int Port = 4723;
+	protected AppiumServiceBuilder AppiumBuilder;
 
-	public DesiredCapabilities desireCapability(String AppName) throws Exception {
-		BaseClass bs = new BaseClass();
+	public DesiredCapabilities App(String AppName) throws Exception {
 		
 		switch (AppName) {
 		
@@ -18,8 +22,8 @@ public class DesiredCapabilityUtil{
 			PlatformCap = new DesiredCapabilities();
 			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
 			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability("deviceName", bs.emulator);
-			PlatformCap.setCapability("app", bs.getAppPath("AzamTV.apk"));
+			PlatformCap.setCapability("deviceName", emulator);
+			PlatformCap.setCapability("app", getAppPath("AzamTV.apk"));
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
@@ -30,8 +34,8 @@ public class DesiredCapabilityUtil{
 			PlatformCap = new DesiredCapabilities();
 			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
 			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability("deviceName", bs.emulator);
-			PlatformCap.setCapability("app", bs.getAppPath("APKinfo.apk"));
+			PlatformCap.setCapability("deviceName", emulator);
+			PlatformCap.setCapability("app", getAppPath("APKinfo.apk"));
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
@@ -42,10 +46,10 @@ public class DesiredCapabilityUtil{
 			PlatformCap = new DesiredCapabilities();
 			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
 			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability("deviceName", bs.emulator);
+			PlatformCap.setCapability("deviceName", emulator);
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
-			PlatformCap.setCapability("chromedriverExecutable",bs.getDriverPath("chromedriver.exe"));
+			PlatformCap.setCapability("chromedriverExecutable",getDriverPath("chromedriver.exe"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
 			break;
 		
@@ -57,5 +61,23 @@ public class DesiredCapabilityUtil{
 		return PlatformCap;
 	}
 	
+	public AppiumServiceBuilder Appium() {
+
+		//Set Capabilities
+		AppiumCap = new DesiredCapabilities();
+		AppiumCap.setCapability("noReset", "true");
+
+		//Build the Appium service
+		AppiumBuilder = new AppiumServiceBuilder();
+		AppiumBuilder.withIPAddress(IPAddress);
+		AppiumBuilder.usingPort(Port);
+		AppiumBuilder.withCapabilities(AppiumCap);
+		AppiumBuilder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
+		AppiumBuilder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
+		
+		return AppiumBuilder;
+		
+		
+	}
 	
 }

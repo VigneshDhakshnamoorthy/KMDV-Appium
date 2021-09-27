@@ -4,80 +4,46 @@ import java.io.File;
 import java.net.URL;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import util.Capability.DesiredCapabilityUtil;
-import util.Capability.PropertiesUtil;
-
 import org.testng.Reporter;
 
 public class BaseClass {
 
-	protected String IPAddress = "127.0.0.1";
-	protected int Port = 4723;
-
 	protected String URLAddress = "http://localhost:4723/wd/hub";
 
-	protected DesiredCapabilities AppiumCap,PlatformCap;
 	protected AppiumDriverLocalService AppiumService;
-	protected AppiumServiceBuilder AppiumBuilder;
 	protected static AppiumDriver<MobileElement> driver;
 	protected static RemoteWebDriver webdriver;
-
 	protected static File classPathRoot = new File(System.getProperty("user.dir"));
 	protected static File resourcesRoot = new File(classPathRoot,"src/test/resources");
-	protected String appPackage="com.azamtv.max.media";
-	public PropertiesUtil prop;
-	
+	private static DesiredCapabilityUtil desireCap;
 	public String emulator = "emulator-5554";
 	protected String avdName= "Pixel";
 	
-
-	public DesiredCapabilities appCapability(String AppName) throws Exception {
-
-		DesiredCapabilityUtil desiredCapabilityUtil = new DesiredCapabilityUtil();
-		return desiredCapabilityUtil.desireCapability(AppName);
-
-	}
 
 
 	@BeforeSuite(alwaysRun=true)
 	protected void setup() throws Throwable {
 		String StartEmulator= "emulator -avd "+avdName+" -netdelay none -netspeed full";
 		Runtime.getRuntime().exec(StartEmulator);
-
-		//Set Capabilities
-		AppiumCap = new DesiredCapabilities();
-		AppiumCap.setCapability("noReset", "true");
-
-		//Build the Appium service
-		AppiumBuilder = new AppiumServiceBuilder();
-		AppiumBuilder.withIPAddress(IPAddress);
-		AppiumBuilder.usingPort(Port);
-		AppiumBuilder.withCapabilities(AppiumCap);
-		AppiumBuilder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
-		AppiumBuilder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
+		desireCap= new DesiredCapabilityUtil();
 
 		//Start the server with the builder
-		AppiumService = AppiumDriverLocalService.buildService(AppiumBuilder);
+		AppiumService = AppiumDriverLocalService.buildService(desireCap.Appium());
 		AppiumService.start();
-
-
-		
 
 	}
 	
 	public void appOpen(String appName) throws Exception {
 		//Initiate the AppiumDriver			
 			URL Url = new URL(URLAddress);
-			driver = new AppiumDriver<MobileElement>(Url,appCapability(appName));
+			driver = new AppiumDriver<MobileElement>(Url,desireCap.App(appName));
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	}
 	
