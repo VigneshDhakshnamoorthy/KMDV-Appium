@@ -10,7 +10,6 @@ public class ApkInfo extends BaseClass{
 	@Test(groups= {"ApkInfo.main"})
 	public void ApkinfoMain() throws Exception{
 		appOpen(appName);
-		
 		scrollUiText("Duo");
 		scrollUiText("YouTube");
 
