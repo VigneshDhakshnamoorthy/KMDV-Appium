@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import util.Capability.DesiredCapabilityUtil;
@@ -108,6 +109,19 @@ public class BaseClass {
 			}
 		}
 	}
+	
+	public void SwitchWebview() {
+		driver.context(Context_WebView);
+		log("Switched to "+Context_WebView+" Succesfully");
+
+
+	}
+	public void SwitchNative() {
+		driver.context(Context_Native);
+		log("Switched to "+Context_Native+" Succesfully");
+
+
+	}
 	public void clearChromeTabs() {
 		String xpath1 = "//*[@resource-id=\"com.android.chrome:id/tab_switcher_button\"]";
 		String xpath2 = "//*[@resource-id=\"com.android.chrome:id/menu_button_wrapper\"]";
@@ -116,6 +130,11 @@ public class BaseClass {
 		driver.findElementByXPath(xpath1).click();
 		driver.findElementByXPath(xpath2).click();
 		driver.findElementByXPath(xpath3).click();
+	}
+	
+	public void scrollUiText(String ScrollText) {
+		driver.findElement(MobileBy.AndroidUIAutomator(
+	    		"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+ScrollText+"\").instance(0))"));
 	}
 	
 	

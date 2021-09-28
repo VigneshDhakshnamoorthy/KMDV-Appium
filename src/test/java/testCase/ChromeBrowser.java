@@ -16,16 +16,14 @@ public class ChromeBrowser extends BaseClass{
 		appOpen(appName);
 		clearChromeTabs();
 		driver.get(browseURL);
-		log(browseURL+"Opened in"+appName+" Succesfully");
+		log(browseURL+"\nOpened in "+appName+" Browser Succesfully");
 
 		isWebviewEnabled();
-		driver.context(Context_WebView);
-		log("Switched to "+Context_WebView+" Succesfully");
+		SwitchWebview();
 
 		driver.findElementByXPath("//input[@id='nav-search-keywords']").sendKeys(searchKeyword+Keys.ENTER);
 		log(searchKeyword+"Searched Succesfully");
-		driver.context(Context_Native);
-		log("Switched to "+Context_Native+" Succesfully");
+		SwitchNative();
 
 		
 		
