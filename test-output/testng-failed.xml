@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.ApkInfo">
+      <class name="testCase.ChromeBrowser">
         <methods>
           <include name="tearDown"/>
           <include name="appClose"/>
           <include name="setup"/>
-          <include name="ApkinfoMain"/>
+          <include name="AmazonProductSearch"/>
         </methods>
-      </class> <!-- testCase.ApkInfo -->
+      </class> <!-- testCase.ChromeBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

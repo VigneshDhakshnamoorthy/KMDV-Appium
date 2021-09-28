@@ -1,5 +1,7 @@
 package util.Capability;
 
+import java.net.URL;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.service.local.AppiumServiceBuilder;
@@ -9,9 +11,9 @@ import util.Base.BaseClass;
 public class DesiredCapabilityUtil extends BaseClass{
 	public  DesiredCapabilities PlatformCap,AppiumCap;
 	public  PropertiesUtil prop;
-	protected String IPAddress = "127.0.0.1";
-	protected int Port = 4723;
 	protected AppiumServiceBuilder AppiumBuilder;
+	protected String URLAddress = "http://localhost:4723/wd/hub";
+
 
 	public DesiredCapabilities App(String AppName) throws Exception {
 		
@@ -61,23 +63,28 @@ public class DesiredCapabilityUtil extends BaseClass{
 		return PlatformCap;
 	}
 	
-	public AppiumServiceBuilder Appium() {
+	public AppiumServiceBuilder Appium() throws Exception {
+		prop = new PropertiesUtil("appiumserver.properties");
 
 		//Set Capabilities
 		AppiumCap = new DesiredCapabilities();
-		AppiumCap.setCapability("noReset", "true");
+		AppiumCap.setCapability("noReset", prop.getAppProperty("noReset"));
 
 		//Build the Appium service
 		AppiumBuilder = new AppiumServiceBuilder();
-		AppiumBuilder.withIPAddress(IPAddress);
-		AppiumBuilder.usingPort(Port);
+		AppiumBuilder.withIPAddress(prop.getAppProperty("IPAddress"));
+		AppiumBuilder.usingPort(Integer.parseInt(prop.getAppProperty("Port")));
 		AppiumBuilder.withCapabilities(AppiumCap);
 		AppiumBuilder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
 		AppiumBuilder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
 		
 		return AppiumBuilder;
 		
-		
 	}
 	
+	public URL Url() throws Exception {
+		URL Url = new URL(URLAddress);
+		return Url;
+
+	}
 }

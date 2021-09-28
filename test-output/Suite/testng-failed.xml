@@ -12,17 +12,8 @@
           <include name="appClose"/>
           <include name="AzamTV_Registeration"/>
           <include name="setup"/>
-          <include name="AzamTV_MovieSearch"/>
         </methods>
       </class> <!-- testCase.AzamTv -->
-      <class name="testCase.ChromeBrowser">
-        <methods>
-          <include name="tearDown"/>
-          <include name="appClose"/>
-          <include name="setup"/>
-          <include name="AmazonProductSearch"/>
-        </methods>
-      </class> <!-- testCase.ChromeBrowser -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

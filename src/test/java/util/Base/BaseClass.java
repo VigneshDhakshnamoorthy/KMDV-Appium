@@ -1,7 +1,6 @@
 package util.Base;
 
 import java.io.File;
-import java.net.URL;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -11,11 +10,11 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import util.Capability.DesiredCapabilityUtil;
+
 import org.testng.Reporter;
 
 public class BaseClass {
 
-	protected String URLAddress = "http://localhost:4723/wd/hub";
 
 	protected AppiumDriverLocalService AppiumService;
 	protected static AppiumDriver<MobileElement> driver;
@@ -23,7 +22,8 @@ public class BaseClass {
 	protected static File classPathRoot = new File(System.getProperty("user.dir"));
 	protected static File resourcesRoot = new File(classPathRoot,"src/test/resources");
 	private static DesiredCapabilityUtil desireCap;
-	public String emulator = "emulator-5554";
+
+	protected String emulator = "emulator-5554";
 	protected String avdName= "Pixel";
 	
 
@@ -42,8 +42,7 @@ public class BaseClass {
 	
 	public void appOpen(String appName) throws Exception {
 		//Initiate the AppiumDriver			
-			URL Url = new URL(URLAddress);
-			driver = new AppiumDriver<MobileElement>(Url,desireCap.App(appName));
+			driver = new AppiumDriver<MobileElement>(desireCap.Url(),desireCap.App(appName));
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	}
 	

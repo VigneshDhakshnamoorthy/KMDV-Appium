@@ -14,7 +14,7 @@ public class ChromeBrowser extends BaseClass{
 	@Test(groups= {"chrome.main"})
 	public void AmazonProductSearch() throws Exception{
 		appOpen(appName);
-
+		clearChromeTabs();
 		driver.get(browseURL);
 		log(browseURL+"Opened in"+appName+" Succesfully");
 
