@@ -21,27 +21,27 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 public class BaseClass {
-
-
-	protected AppiumDriverLocalService AppiumService;
-	protected static AppiumDriver<MobileElement> driver;
-	protected static RemoteWebDriver webdriver;
 	protected static File classPathRoot = new File(System.getProperty("user.dir"));
 	protected static File resourcesRoot = new File(classPathRoot,"src/test/resources");
 	protected static File screenShotRoot = new File(classPathRoot,"/ScreenShot/");
 
+	protected AppiumDriverLocalService AppiumService;
+	protected static AppiumDriver<MobileElement> driver;
+	protected static RemoteWebDriver webdriver;
 	private static DesiredCapabilityUtil desireCap;
 
-	protected String emulator = "emulator-5554";
-	protected String avdName= "Pixel";
+	protected static String emulator;
+	protected static String avdName;
 	protected String APPName;
 
 
 	@BeforeSuite(alwaysRun=true)
 	protected void setup() throws Throwable {
+		desireCap= new DesiredCapabilityUtil();
+		emulator = desireCap.emulatorID();
+		avdName = desireCap.avdName();
 		String StartEmulator= "emulator -avd "+avdName+" -netdelay none -netspeed full";
 		Runtime.getRuntime().exec(StartEmulator);
-		desireCap= new DesiredCapabilityUtil();
 
 		//Start the server with the builder
 		AppiumService = AppiumDriverLocalService.buildService(desireCap.Appium());
@@ -66,8 +66,6 @@ public class BaseClass {
 			
 	}
 	
-
-
 
 	@AfterSuite(alwaysRun=true)
 	protected void tearDown() throws Throwable {
@@ -148,6 +146,7 @@ public class BaseClass {
 	    		"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+ScrollText+"\").instance(0))"));
 		log("Scroll to - "+ScrollText+" -  Succesfully");
 	}
+	
 	protected static ITestResult BaseResult;
 	public void AppScreenShot() {
 		File screenShotLocation= new File(screenShotRoot,BaseResult.getName()+".jpg");

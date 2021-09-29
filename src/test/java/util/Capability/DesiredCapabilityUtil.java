@@ -12,7 +12,7 @@ public class DesiredCapabilityUtil extends BaseClass{
 	public  DesiredCapabilities PlatformCap,AppiumCap;
 	public  PropertiesUtil prop;
 	protected AppiumServiceBuilder AppiumBuilder;
-	protected String URLAddress = "http://localhost:4723/wd/hub";
+	protected static String URLAddress;
 
 
 	public DesiredCapabilities App(String AppName) throws Exception {
@@ -83,8 +83,23 @@ public class DesiredCapabilityUtil extends BaseClass{
 	}
 	
 	public URL Url() throws Exception {
+		prop = new PropertiesUtil("appiumserver.properties");
+		URLAddress = prop.getAppProperty("URLAddress");
 		URL Url = new URL(URLAddress);
 		return Url;
 
 	}
+	
+	public String emulatorID() throws Exception {
+		prop = new PropertiesUtil("appiumserver.properties");
+		return prop.getAppProperty("emulator");
+		
+	}
+	
+	public String avdName() throws Exception {
+		prop = new PropertiesUtil("appiumserver.properties");
+		return prop.getAppProperty("avdName");
+		
+	}
+	
 }
