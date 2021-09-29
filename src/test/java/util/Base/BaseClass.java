@@ -26,7 +26,7 @@ public class BaseClass {
 
 	protected String emulator = "emulator-5554";
 	protected String avdName= "Pixel";
-	
+	protected String APPName;
 
 
 	@BeforeSuite(alwaysRun=true)
@@ -42,15 +42,18 @@ public class BaseClass {
 	}
 	
 	public void appOpen(String appName) throws Exception {
+		APPName = appName;
 		//Initiate the AppiumDriver			
 			driver = new AppiumDriver<MobileElement>(desireCap.Url(),desireCap.App(appName));
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			log(APPName+" - Aplication is Opening");
 	}
 	
 	
 	@AfterMethod(alwaysRun=true)
 	protected void appClose(){
 		//Close the AppiumDriver	
+		log(APPName+" - Aplication is Closing");
 		driver.quit();
 			
 	}

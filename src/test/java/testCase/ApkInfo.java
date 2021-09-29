@@ -1,7 +1,6 @@
 package testCase;
 
 import org.testng.annotations.Test;
-
 import util.Base.BaseClass;
 
 public class ApkInfo extends BaseClass{

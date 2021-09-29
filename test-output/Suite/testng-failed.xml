@@ -6,14 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testCase.AzamTv">
+      <class name="testCase.ApkInfo">
         <methods>
           <include name="tearDown"/>
           <include name="appClose"/>
-          <include name="AzamTV_Registeration"/>
           <include name="setup"/>
+          <include name="ApkinfoMain"/>
         </methods>
-      </class> <!-- testCase.AzamTv -->
+      </class> <!-- testCase.ApkInfo -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
