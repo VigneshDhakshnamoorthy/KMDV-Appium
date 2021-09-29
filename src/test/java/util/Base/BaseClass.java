@@ -1,8 +1,13 @@
 package util.Base;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
@@ -12,6 +17,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import util.Capability.DesiredCapabilityUtil;
 
+import org.testng.ITestResult;
 import org.testng.Reporter;
 
 public class BaseClass {
@@ -22,6 +28,8 @@ public class BaseClass {
 	protected static RemoteWebDriver webdriver;
 	protected static File classPathRoot = new File(System.getProperty("user.dir"));
 	protected static File resourcesRoot = new File(classPathRoot,"src/test/resources");
+	protected static File screenShotRoot = new File(classPathRoot,"/ScreenShot/");
+
 	private static DesiredCapabilityUtil desireCap;
 
 	protected String emulator = "emulator-5554";
@@ -138,8 +146,20 @@ public class BaseClass {
 	public void scrollUiText(String ScrollText) {
 		driver.findElement(MobileBy.AndroidUIAutomator(
 	    		"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+ScrollText+"\").instance(0))"));
+		log("Scroll to - "+ScrollText+" -  Succesfully");
 	}
-	
+	protected static ITestResult BaseResult;
+	public void AppScreenShot() {
+		File screenShotLocation= new File(screenShotRoot,BaseResult.getName()+".jpg");
+		File screenShot  = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, screenShotLocation);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		log("Screenshot Taken : "+screenShotLocation.getAbsolutePath());
+	}
 	
 }
 		

@@ -9,6 +9,7 @@ import util.Base.BaseClass;
 public class Listener  extends BaseClass implements ITestListener {
 	 	@Override  
 	    public void onTestStart(ITestResult result) {  
+	 		BaseResult=result;
 	 		log("\n===============================================\n\nTest Started - "+result.getName());
 
 	    }  
@@ -20,7 +21,8 @@ public class Listener  extends BaseClass implements ITestListener {
 	  
 	    @Override  
 	    public void onTestFailure(ITestResult result) {  
-	    	log("Failure test cases : "+result.getName()+" // "+result.getThrowable());  
+	    	log("Failure test cases : "+result.getName()+" // "+result.getThrowable()); 
+	    
 	    }  
 	  
 	    @Override  

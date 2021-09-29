@@ -32,6 +32,7 @@ public class AzamTv  extends BaseClass{
 		
 		MoviesTabPage moviesTabPage = new MoviesTabPage(driver);
 		Assert.assertTrue(moviesTabPage.isPageLoaded());
+		AppScreenShot();
 		moviesTabPage.clickAnymovies(movienumber);
 		
 		mainPage.clickregisterBtn();
@@ -43,6 +44,7 @@ public class AzamTv  extends BaseClass{
 	@Test(groups= {"Azam.Register"})
 	public void AzamTV_Registeration() throws Exception{
 		appOpen(appName);
+		AppScreenShot();
 		StartupPage startUpPage = new StartupPage(driver);
 		startUpPage.clickGetStarted();
 		startUpPage.clickenglishLanguageBtn();
@@ -54,6 +56,7 @@ public class AzamTv  extends BaseClass{
 		
 		RegisterTabPage registerTabPage = new RegisterTabPage(driver);
 		Assert.assertTrue(registerTabPage.isPageLoaded());
+		AppScreenShot();
 		registerTabPage.enterPhonenumber(phonenumber);
 		registerTabPage.clickContinue();
 		registerTabPage.enterOTP(otpnumber);
