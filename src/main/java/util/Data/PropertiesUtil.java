@@ -1,4 +1,4 @@
-package util.Capability;
+package util.Data;
 
 import java.io.FileReader;
 import java.util.Properties;

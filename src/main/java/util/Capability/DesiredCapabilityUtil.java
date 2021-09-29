@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import util.Base.BaseClass;
+import util.Data.PropertiesUtil;
 
 public class DesiredCapabilityUtil extends BaseClass{
 	public  DesiredCapabilities PlatformCap,AppiumCap;

@@ -20,7 +20,7 @@ public class ChromeBrowser extends BaseClass{
 
 		isWebviewEnabled();
 		SwitchWebview();
-		AppScreenShot();
+		AppScreenShot("Pass");
 
 		driver.findElementByXPath("//input[@id='nav-search-keywords']").sendKeys(searchKeyword+Keys.ENTER);
 		log(searchKeyword+"Searched Succesfully");

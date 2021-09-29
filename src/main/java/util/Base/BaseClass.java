@@ -15,6 +15,7 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import util.Capability.DesiredCapabilityUtil;
+import util.Report.ExtentReportsUtil;
 
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -22,20 +23,20 @@ import org.testng.Reporter;
 public class BaseClass {
 	protected static File classPathRoot = new File(System.getProperty("user.dir"));
 	protected static File resourcesRoot = new File(classPathRoot,"src/test/resources");
-	protected static File screenShotRoot = new File(classPathRoot,"/ScreenShot/");
+	protected static File screenShotRoot = new File(classPathRoot,"/Report-ScreenShot/ScreenShots/");
 
 	protected AppiumDriverLocalService AppiumService;
 	protected static AppiumDriver<MobileElement> driver;
 	private static DesiredCapabilityUtil desireCap;
-
+	protected static ExtentReportsUtil ERU;
 	protected static String emulator;
 	protected static String avdName;
 	protected String APPName;
-
-
+	
 	@BeforeSuite(alwaysRun=true)
 	protected void setup() throws Throwable {
 		desireCap= new DesiredCapabilityUtil();
+		ERU= new ExtentReportsUtil();
 		emulator = desireCap.emulatorID();
 		avdName = desireCap.avdName();
 		String StartEmulator= "emulator -avd "+avdName+" -netdelay none -netspeed full";
@@ -78,8 +79,14 @@ public class BaseClass {
 
 	public static void log(String LogMessage) {
 		Reporter.log(LogMessage);
+		ERU.ExtentPass(LogMessage);
 		System.out.println(LogMessage);
 	}		
+	
+	public static void logC(String LogMessage) {
+		Reporter.log(LogMessage);
+		System.out.println(LogMessage);
+	}	
 	
 	public String getAppPath(String AppName){
 		File app= new File(resourcesRoot,"/APK/"+AppName);
@@ -148,7 +155,7 @@ public class BaseClass {
 	}
 	
 	protected static ITestResult BaseResult;
-	public void AppScreenShot() {
+	public void AppScreenShot(String testStatus) {
 		File screenShotLocation= new File(screenShotRoot,BaseResult.getName()+".jpg");
 		File screenShot  = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -158,6 +165,7 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 		log("Screenshot Taken : "+screenShotLocation.getAbsolutePath());
+		ERU.ExtentScreenShot(testStatus,screenShotLocation.getAbsolutePath());
 	}
 	
 }

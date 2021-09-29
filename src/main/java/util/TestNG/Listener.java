@@ -10,24 +10,27 @@ public class Listener  extends BaseClass implements ITestListener {
 	 	@Override  
 	    public void onTestStart(ITestResult result) {  
 	 		BaseResult=result;
-	 		log("\n===============================================\n\nTest Started - "+result.getName());
+	 		ERU.StartExtentTest(result.getName());
+	 		logC("\n===============================================\n\nTest Started - "+result.getName());
 
 	    }  
 	 	
 	    @Override  
 	    public void onTestSuccess(ITestResult result) {  
-	    	log("Success test cases : "+result.getName());  
+	    	logC("Test Success : "+result.getName());
 	    }  
 	  
 	    @Override  
 	    public void onTestFailure(ITestResult result) {  
-	    	log("Failure test cases : "+result.getName()+" // "+result.getThrowable()); 
+	    	logC("Test Failure : "+result.getName()+" // "+result.getThrowable());
+	    	AppScreenShot("Fail");
+
 	    
 	    }  
 	  
 	    @Override  
 	    public void onTestSkipped(ITestResult result) {  
-	    	log("Skip test cases : "+result.getName());  
+	    	logC("Test Skip : "+result.getName());  
 	    }  
 	  
 	    @Override  
@@ -36,14 +39,15 @@ public class Listener  extends BaseClass implements ITestListener {
 	    }  
 	  
 	    @Override  
-	    public void onStart(ITestContext context) {  
-	    	log("\n===============================================\n\nTest Suite Started");
+	    public void onStart(ITestContext context) { 
+	    	ERU.StartExtentReport();
+	    	logC("\n===============================================\n\nTest Suite Started");
 	          
 	    }  
 	  
 	    @Override  
 	    public void onFinish(ITestContext context) {  
-	    	log("\n===============================================\n\nTest Suite End"); 
-	          
+	    	logC("\n===============================================\n\nTest Suite End"); 
+	    	ERU.EndExtentReport();
 	    }  
 }

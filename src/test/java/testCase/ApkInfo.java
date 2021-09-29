@@ -11,9 +11,6 @@ public class ApkInfo extends BaseClass{
 		appOpen(appName);
 		scrollUiText("Duo");
 		scrollUiText("YouTube");
-		AppScreenShot();
-
-
 	}
 
 
