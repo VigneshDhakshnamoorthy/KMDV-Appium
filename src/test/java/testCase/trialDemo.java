@@ -1,4 +1,4 @@
-package trial;
+package testCase;
 
 
 public class trialDemo {

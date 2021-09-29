@@ -6,11 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import util.Common.ComUtil;
+import util.Base.BaseClass;
 
-public class MoviesTabPage extends ComUtil {
+public class MoviesTabPage extends BaseClass {
 	public MoviesTabPage(AppiumDriver<MobileElement> driver){
-		this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		
 	}

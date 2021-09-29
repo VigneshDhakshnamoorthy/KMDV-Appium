@@ -99,15 +99,17 @@ public class BaseClass {
 
 	}
 	
-	protected String Context_Native = "NATIVE_APP";
-	protected String Context_WebView = "WEBVIEW_chrome";
 
- 
 	public String getDriverPath(String browser){
 		File browserdriver= new File(resourcesRoot,"/WebDriver/"+browser);
 		return browserdriver.getAbsolutePath();
 
 	}
+	
+	protected String Context_Native = "NATIVE_APP";
+	protected String Context_WebView = "WEBVIEW_chrome";
+
+ 
 	public void isWebviewEnabled() {
 		while(true) {
 			Set<String> contextHandles = driver.getContextHandles();
