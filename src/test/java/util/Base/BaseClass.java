@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
 import io.appium.java_client.AppiumDriver;
@@ -27,7 +26,6 @@ public class BaseClass {
 
 	protected AppiumDriverLocalService AppiumService;
 	protected static AppiumDriver<MobileElement> driver;
-	protected static RemoteWebDriver webdriver;
 	private static DesiredCapabilityUtil desireCap;
 
 	protected static String emulator;
