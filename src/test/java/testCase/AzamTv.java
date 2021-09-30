@@ -7,7 +7,7 @@ import pageObjects.azamTV.MainPage;
 import pageObjects.azamTV.MoviesTabPage;
 import pageObjects.azamTV.RegisterTabPage;
 import pageObjects.azamTV.StartupPage;
-import util.Base.BaseClass;
+import util.Common.BaseClass;
 
 public class AzamTv  extends BaseClass{
 	
@@ -32,7 +32,7 @@ public class AzamTv  extends BaseClass{
 		
 		MoviesTabPage moviesTabPage = new MoviesTabPage(driver);
 		Assert.assertTrue(moviesTabPage.isPageLoaded());
-		AppScreenShot("Pass");
+		screenShotUtil.ExtentShot("Pass");
 		moviesTabPage.clickAnymovies(movienumber);
 		
 		mainPage.clickregisterBtn();

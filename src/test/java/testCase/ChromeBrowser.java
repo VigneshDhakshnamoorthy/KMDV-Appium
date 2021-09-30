@@ -3,7 +3,7 @@ package testCase;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import util.Base.BaseClass;
+import util.Common.BaseClass;
 
 public class ChromeBrowser extends BaseClass{
 	private String appName="Chrome";
@@ -14,19 +14,17 @@ public class ChromeBrowser extends BaseClass{
 	@Test(groups= {"chrome.main"})
 	public void AmazonProductSearch() throws Exception{
 		appOpen(appName);
-		clearChromeTabs();
+		actionClass.clearChromeTabs();
 		driver.get(browseURL);
-		log(browseURL+"\nOpened in "+appName+" Browser Succesfully");
+		logUtil.logE(browseURL+"\nOpened in "+appName+" Browser Succesfully");
 
-		isWebviewEnabled();
-		SwitchWebview();
-		AppScreenShot("Pass");
+		actionClass.isWebviewEnabled();
+		actionClass.SwitchWebview();
+		screenShotUtil.ExtentShot("Pass");
 
 		driver.findElementByXPath("//input[@id='nav-search-keywords']").sendKeys(searchKeyword+Keys.ENTER);
-		log(searchKeyword+"Searched Succesfully");
-		SwitchNative();
-
-		
+		logUtil.logE(searchKeyword+"Searched Succesfully");
+		actionClass.SwitchNative();
 		
 	}
 }

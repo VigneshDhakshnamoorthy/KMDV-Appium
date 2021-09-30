@@ -6,10 +6,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
-import util.Base.BaseClass;
+import util.Common.BaseClass;
 import util.Data.PropertiesUtil;
 
-public class DesiredCapabilityUtil extends BaseClass{
+public class DesirCapUtil extends BaseClass{
 	public  DesiredCapabilities PlatformCap,AppiumCap;
 	public  PropertiesUtil prop;
 	protected AppiumServiceBuilder AppiumBuilder;
@@ -26,7 +26,7 @@ public class DesiredCapabilityUtil extends BaseClass{
 			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
 			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
 			PlatformCap.setCapability("deviceName", emulator);
-			PlatformCap.setCapability("app", getAppPath("AzamTV.apk"));
+			PlatformCap.setCapability("app", pathUtil.getAppPath("AzamTV.apk"));
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
@@ -38,7 +38,7 @@ public class DesiredCapabilityUtil extends BaseClass{
 			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
 			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
 			PlatformCap.setCapability("deviceName", emulator);
-			PlatformCap.setCapability("app", getAppPath("APKinfo.apk"));
+			PlatformCap.setCapability("app", pathUtil.getAppPath("APKinfo.apk"));
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
@@ -52,7 +52,7 @@ public class DesiredCapabilityUtil extends BaseClass{
 			PlatformCap.setCapability("deviceName", emulator);
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
-			PlatformCap.setCapability("chromedriverExecutable",getDriverPath("chromedriver.exe"));
+			PlatformCap.setCapability("chromedriverExecutable",pathUtil.getDriverPath("chromedriver.exe"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
 			break;
 		

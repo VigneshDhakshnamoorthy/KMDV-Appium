@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import util.Base.BaseClass;
+import util.Common.BaseClass;
 
 public class MainPage extends BaseClass{
 
@@ -24,44 +24,44 @@ public class MainPage extends BaseClass{
 	
 	public void clickhomeTab() {
 		driver.findElement(homeTab).click();
-		log("Clicked Home Tab Button Succesfully");
+		logUtil.logE("Clicked Home Tab Button Succesfully");
 
 	}
 	
 	public void clicklivetvTab() {
 		driver.findElement(livetvTab).click();
-		log("Clicked Live TV Tab Button Succesfully");
+		logUtil.logE("Clicked Live TV Tab Button Succesfully");
 
 	}
 	
 	public void clickmoviesTab() {
 		driver.findElement(moviesTab).click();
-		log("Clicked Movies Tab Button Succesfully");
+		logUtil.logE("Clicked Movies Tab Button Succesfully");
 
 	}
 	
 	public void clicksportsTab() {
 		driver.findElement(sportsTab).click();
-		log("Clicked Sports Tab Button Succesfully");
+		logUtil.logE("Clicked Sports Tab Button Succesfully");
 
 	}
 	
 	public void clickloginTab() {
 		driver.findElement(loginTab).click();
-		log("Clicked Login Tab Button Succesfully");
+		logUtil.logE("Clicked Login Tab Button Succesfully");
 
 	}
 	
 	public void clickregisterBtn() {
 		driver.findElement(registerBtn).click();
-		log("Clicked Register Button Succesfully");
+		logUtil.logE("Clicked Register Button Succesfully");
 
 
 	}
 	
 	public void clicksignInBtn() {
 		driver.findElement(signInBtn).click();
-		log("Clicked SignIn Button Succesfully");
+		logUtil.logE("Clicked SignIn Button Succesfully");
 
 
 	}

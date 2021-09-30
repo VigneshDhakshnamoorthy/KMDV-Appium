@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import util.Base.BaseClass;
+import util.Common.BaseClass;
 
 public class MoviesTabPage extends BaseClass {
 	public MoviesTabPage(AppiumDriver<MobileElement> driver){
@@ -21,9 +21,9 @@ public class MoviesTabPage extends BaseClass {
 	public boolean isPageLoaded() {
 		boolean IsPageLoaded = driver.findElement(pageLoad).getText().toString().equals("MOVIES");
 		if (IsPageLoaded ) {
-			log("Loaded Movies Tab Succesfully");
+			logUtil.logE("Loaded Movies Tab Succesfully");
 		}else {
-			log("Error : Movies Tab Not Loaded");
+			logUtil.logE("Error : Movies Tab Not Loaded");
 
 		}
 		return IsPageLoaded;
@@ -33,7 +33,7 @@ public class MoviesTabPage extends BaseClass {
 	public void clickAnymovies(String movienum) {
 		By bongoMovies = By.xpath("(//android.view.ViewGroup["+movienum+"]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView)[2]");
 		driver.findElement(bongoMovies).click();
-		log("Clicked Bongo Movies number - "+movienum+" Succesfully");
+		logUtil.logE("Clicked Bongo Movies number - "+movienum+" Succesfully");
 
 	}
 }

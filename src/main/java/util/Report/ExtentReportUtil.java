@@ -8,13 +8,13 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-import util.Base.BaseClass;
+import util.Common.BaseClass;
 
-public class ExtentReportsUtil extends BaseClass{
-	private static ExtentReports Ereport;
-	private static ExtentSparkReporter Espark;
-	private static ExtentTest Etest;
-	private static File extentReportRoot = new File(classPathRoot,"/Report-ScreenShot/ExtentReport/ExtentReport.html");
+public class ExtentReportUtil extends BaseClass{
+	public ExtentReports Ereport;
+	public ExtentSparkReporter Espark;
+	public ExtentTest Etest;
+	public File extentReportRoot = new File(pathUtil.classPathRoot,"/Report-ScreenShot/ExtentReport/ExtentReport.html");
 
 	public void StartExtentReport() {
 		Ereport = new ExtentReports();

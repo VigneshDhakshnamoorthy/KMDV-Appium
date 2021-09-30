@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import util.Base.BaseClass;
+import util.Common.BaseClass;
 
 public class RegisterTabPage  extends BaseClass{
 
@@ -23,9 +23,9 @@ public class RegisterTabPage  extends BaseClass{
 	public boolean isPageLoaded() {
 		boolean IsPageLoaded = driver.findElement(pageLoad).getText().toString().equals("Your phone number");
 		if (IsPageLoaded ) {
-			log("Loaded Register Page Succesfully");
+			logUtil.logE("Loaded Register Page Succesfully");
 		}else {
-			log("Error : Register Page Not Loaded");
+			logUtil.logE("Error : Register Page Not Loaded");
 
 		}
 		return IsPageLoaded;
@@ -35,13 +35,13 @@ public class RegisterTabPage  extends BaseClass{
 	public void enterPhonenumber(String phnum) {
 		driver.findElement(phonenumberBox).click();
 		driver.findElement(phonenumberBox).sendKeys(phnum);
-		log("Entered New Register Number - "+phnum+" - Succesfully");
+		logUtil.logE("Entered New Register Number - "+phnum+" - Succesfully");
 
 	}
 	
 	public void clickContinue() {
 		driver.findElement(registerContinueButton).click();
-		log("Clicked Continue Button Succesfully");
+		logUtil.logE("Clicked Continue Button Succesfully");
 
 	}
 	
@@ -54,7 +54,7 @@ public class RegisterTabPage  extends BaseClass{
 		driver.findElement(otpBox).click();
 		driver.findElement(otpBox).sendKeys(otp);
 		}
-		log("Entered OTP - "+OTP+" -  Succesfully");
+		logUtil.logE("Entered OTP - "+OTP+" -  Succesfully");
 
 	}
 
