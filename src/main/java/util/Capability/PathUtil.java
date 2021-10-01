@@ -22,7 +22,7 @@ public class PathUtil extends BaseClass {
 	}
 	
 	public String getExcelPath(String ExcelName){
-		File excel= new File(resourcesRoot,"/ExcelData/"+ExcelName);
+		File excel= new File(resourcesRoot,"/TestData/"+ExcelName);
 		return excel.getAbsolutePath();
 
 	}

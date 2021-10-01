@@ -21,11 +21,10 @@ public class BaseClass {
 	protected static AppiumDriver<MobileElement> driver;
 	protected static PathUtil pathUtil= new PathUtil();
 	protected static DesirCapUtil desireCap = new DesirCapUtil();
-	protected static ExtentReportUtil ERU= new ExtentReportUtil(); 
 	protected static LogUtil logUtil= new LogUtil(); 
-
-	protected static ActionClass actionClass= new ActionClass();
+	protected static ExtentReportUtil ERU= new ExtentReportUtil(); 
 	protected static ScreenShotUtil screenShotUtil= new ScreenShotUtil();
+	protected static ActionClass actionClass= new ActionClass();
 
 	protected static String emulator;
 	protected static String avdName;
