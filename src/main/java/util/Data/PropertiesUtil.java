@@ -2,6 +2,7 @@ package util.Data;
 
 import java.io.FileReader;
 import java.util.Properties;
+import java.util.Set;
 
 import util.Common.BaseClass;
 
@@ -21,4 +22,11 @@ public class PropertiesUtil extends BaseClass{
 		
 	}
 
+	public void getAllproperties() {
+		Set<Object> keySet = p.keySet();
+		
+		for (Object key:keySet) {
+			System.out.println(key);
+		}
+	}
 }

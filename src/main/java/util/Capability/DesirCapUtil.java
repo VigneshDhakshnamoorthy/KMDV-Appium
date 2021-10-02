@@ -23,10 +23,10 @@ public class DesirCapUtil extends BaseClass{
 		case "Azam":
 			prop = new PropertiesUtil("azamTv.properties");
 			PlatformCap = new DesiredCapabilities();
+			PlatformCap.setCapability("deviceName", emulator);
+			PlatformCap.setCapability("app", pathUtil.getAppPath(prop.getAppProperty("app")));
 			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
 			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability("deviceName", emulator);
-			PlatformCap.setCapability("app", pathUtil.getAppPath("AzamTV.apk"));
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
@@ -35,10 +35,10 @@ public class DesirCapUtil extends BaseClass{
 		case "ApkInfo":
 			prop = new PropertiesUtil("apkinfo.properties");
 			PlatformCap = new DesiredCapabilities();
+			PlatformCap.setCapability("deviceName", emulator);
+			PlatformCap.setCapability("app", pathUtil.getAppPath(prop.getAppProperty("app")));
 			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
 			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability("deviceName", emulator);
-			PlatformCap.setCapability("app", pathUtil.getAppPath("APKinfo.apk"));
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
@@ -47,12 +47,12 @@ public class DesirCapUtil extends BaseClass{
 		case "Chrome":
 			prop = new PropertiesUtil("chrome.properties");
 			PlatformCap = new DesiredCapabilities();
+			PlatformCap.setCapability("deviceName", emulator);
+			PlatformCap.setCapability("chromedriverExecutable",pathUtil.getDriverPath(prop.getAppProperty("chromedriverExecutable")));
 			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
 			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
-			PlatformCap.setCapability("deviceName", emulator);
 			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
 			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
-			PlatformCap.setCapability("chromedriverExecutable",pathUtil.getDriverPath("chromedriver.exe"));
 			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
 			break;
 		

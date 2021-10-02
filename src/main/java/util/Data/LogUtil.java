@@ -30,7 +30,7 @@ public class LogUtil extends BaseClass {
 
 	public void startLogging(String testName) {
 		LogManager.getLogManager().reset();
-		logsRoot = new File(pathUtil.classPathRoot,"/Report-ScreenShot/Logs/"+testName+".log");
+		logsRoot = new File(pathUtil.getLoggerPath(testName+".log"));
 		System.setProperty("java.util.logging.SimpleFormatter.format",
 				"[%1$tF %1$tT] %5$s %n");
 

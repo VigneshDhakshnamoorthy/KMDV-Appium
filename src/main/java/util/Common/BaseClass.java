@@ -8,6 +8,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import util.Capability.DesirCapUtil;
+import util.Capability.EmulatorUtil;
 import util.Capability.PathUtil;
 import util.Data.LogUtil;
 import util.Report.ExtentReportUtil;
@@ -16,14 +17,16 @@ import util.Report.ScreenShotUtil;
 import org.testng.ITestResult;
 
 public class BaseClass {
-
-	protected AppiumDriverLocalService AppiumService;
+	
+	protected static EmulatorUtil emuUtil = new EmulatorUtil();
+	protected static AppiumDriverLocalService AppiumService;
 	protected static AppiumDriver<MobileElement> driver;
 	protected static PathUtil pathUtil= new PathUtil();
 	protected static DesirCapUtil desireCap = new DesirCapUtil();
-	protected static LogUtil logUtil= new LogUtil(); 
-	protected static ExtentReportUtil ERU= new ExtentReportUtil(); 
+	protected static ExtentReportUtil ERU= new ExtentReportUtil();
 	protected static ScreenShotUtil screenShotUtil= new ScreenShotUtil();
+	protected static LogUtil logUtil= new LogUtil();
+
 	protected static ActionClass actionClass= new ActionClass();
 
 	protected static String emulator;
@@ -36,8 +39,9 @@ public class BaseClass {
 		emulator = desireCap.emulatorID();
 		avdName = desireCap.avdName();
 		
-		String StartEmulator= "emulator -avd "+avdName+" -netdelay none -netspeed full";
-		Runtime.getRuntime().exec(StartEmulator);
+		//Start the emulator 
+		
+		emuUtil.startEmulator(avdName);
 
 		//Start the server with the builder
 			AppiumService = AppiumDriverLocalService.buildService(desireCap.Appium());
@@ -70,8 +74,7 @@ public class BaseClass {
 			AppiumService.stop();
 
 		// Close the Emulator
-			String StopEmulator = "adb -s "+emulator+" emu kill";
-			Runtime.getRuntime().exec(StopEmulator);
+			emuUtil.stopEmulator(emulator);
 	}
 
 	

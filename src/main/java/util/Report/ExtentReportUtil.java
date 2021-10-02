@@ -14,7 +14,7 @@ public class ExtentReportUtil extends BaseClass{
 	public ExtentReports Ereport;
 	public ExtentSparkReporter Espark;
 	public ExtentTest Etest;
-	public File extentReportRoot = new File(pathUtil.classPathRoot,"/Report-ScreenShot/ExtentReport/ExtentReport.html");
+	public File extentReportRoot = new File(pathUtil.getExtentReportPath("ExtentReport.html"));
 
 	public void StartExtentReport() {
 		Ereport = new ExtentReports();
