@@ -18,10 +18,10 @@ public class LogUtil extends BaseClass {
 		Reporter.log(LogMessage);
 		ERU.ExtentPass(LogMessage);
 		System.out.println(LogMessage);
+		logInfo(LogMessage);
 	}		
 
 	public void logC(String LogMessage) {
-		Reporter.log(LogMessage);
 		System.out.println(LogMessage);
 	}	
 	public File logsRoot;

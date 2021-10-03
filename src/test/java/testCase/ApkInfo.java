@@ -11,8 +11,8 @@ public class ApkInfo extends BaseClass{
 	public void ApkinfoMain() throws Exception{
 		appOpen(appName);
 		actionClass.scrollUiText("Duo");
-		screenShotUtil.ExtentShot("Pass");
 		actionClass.scrollUiText("YouTube");
+		screenShotUtil.ExtentShot("Pass");
 	}
 
 
