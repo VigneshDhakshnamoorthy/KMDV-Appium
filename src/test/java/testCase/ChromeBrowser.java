@@ -1,10 +1,12 @@
 package testCase;
 
 import org.openqa.selenium.Keys;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import util.Common.BaseClass;
 
+@Listeners(util.TestNG.Listener.class)
 public class ChromeBrowser extends BaseClass{
 	private String appName="Chrome";
 	private String browseURL="https://www.amazon.in/";

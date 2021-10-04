@@ -1,12 +1,11 @@
 package util.TestNG;
 
 import org.testng.ITestContext;
-import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import util.Common.BaseClass;
 
-public class Listener extends BaseClass implements ITestListener {
+public class Listener extends BaseClass {
 	 	@Override  
 	    public void onTestStart(ITestResult result) {  
 	 		BaseResult=result;

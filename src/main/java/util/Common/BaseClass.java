@@ -14,9 +14,10 @@ import util.Data.LogUtil;
 import util.Report.ExtentReportUtil;
 import util.Report.ScreenShotUtil;
 
+import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class BaseClass {
+public class BaseClass implements ITestListener{
 	
 	protected static EmulatorUtil emuUtil = new EmulatorUtil();
 	protected static AppiumDriverLocalService AppiumService;
@@ -55,6 +56,7 @@ public class BaseClass {
 	
 	public void appOpen(String appName) throws Exception {
 		APPName = appName;
+		
 		//Initiate the AppiumDriver			
 			driver = new AppiumDriver<MobileElement>(desireCap.Url(),desireCap.App(appName));
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
@@ -83,6 +85,7 @@ public class BaseClass {
 			emuUtil.stopEmulator(emulator);
 	}
 
+	
 	
 }
 		

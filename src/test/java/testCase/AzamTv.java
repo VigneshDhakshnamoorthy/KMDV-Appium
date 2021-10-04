@@ -1,6 +1,7 @@
 package testCase;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pageObjects.azamTV.MainPage;
@@ -9,6 +10,7 @@ import pageObjects.azamTV.RegisterTabPage;
 import pageObjects.azamTV.StartupPage;
 import util.Common.BaseClass;
 
+@Listeners(util.TestNG.Listener.class)
 public class AzamTv  extends BaseClass{
 	
 	private String appName="Azam";

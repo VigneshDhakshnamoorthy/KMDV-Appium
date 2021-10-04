@@ -8,7 +8,9 @@ import util.Common.BaseClass;
 public class trialDemo extends BaseClass implements ITestListener{
 
 	private static String methName() {
-		return Thread.currentThread().getStackTrace()[1].getMethodName();
+		return new Throwable()
+                .getStackTrace()[0]
+                .getMethodName();
 	}
 	
 	public static void newMeth () {
