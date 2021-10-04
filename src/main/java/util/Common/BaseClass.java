@@ -46,6 +46,10 @@ public class BaseClass {
 		//Start the server with the builder
 			AppiumService = AppiumDriverLocalService.buildService(desireCap.Appium());
 			AppiumService.start();
+		
+		//Start Extent Report
+	    	ERU.StartExtentReport();
+
 
 	}
 	
@@ -69,7 +73,9 @@ public class BaseClass {
 
 	@AfterSuite(alwaysRun=true)
 	protected void tearDown() throws Throwable {
-		
+		//Stop Extent Report
+    		ERU.EndExtentReport();
+
 		//Stop the AppiumServer			
 			AppiumService.stop();
 

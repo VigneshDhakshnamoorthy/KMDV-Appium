@@ -2,40 +2,16 @@
 <testng-results ignored="6" total="10" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[
-===============================================
-
-Test Suite Started]]>
-    </line>
-    <line>
-      <![CDATA[
-===============================================
-
-Test Started - ApkinfoMain]]>
-    </line>
-    <line>
       <![CDATA[ApkInfo - Aplication is Opening]]>
     </line>
     <line>
       <![CDATA[Scroll to - Duo -  Succesfully]]>
     </line>
     <line>
-      <![CDATA[Screenshot Taken : C:\Users\VigneshD\git\CES-Appium\Report-Log-ScreenShot\ScreenShots\ApkinfoMain.png]]>
-    </line>
-    <line>
       <![CDATA[Scroll to - YouTube -  Succesfully]]>
     </line>
     <line>
-      <![CDATA[Test Success : ApkinfoMain]]>
-    </line>
-    <line>
       <![CDATA[ApkInfo - Aplication is Closing]]>
-    </line>
-    <line>
-      <![CDATA[
-===============================================
-
-Test Started - AzamTV_MovieSearch]]>
     </line>
     <line>
       <![CDATA[Azam - Aplication is Opening]]>
@@ -56,9 +32,6 @@ Test Started - AzamTV_MovieSearch]]>
       <![CDATA[Loaded Movies Tab Succesfully]]>
     </line>
     <line>
-      <![CDATA[Screenshot Taken : C:\Users\VigneshD\git\CES-Appium\Report-Log-ScreenShot\ScreenShots\AzamTV_MovieSearch.png]]>
-    </line>
-    <line>
       <![CDATA[Clicked Bongo Movies number - 3 Succesfully]]>
     </line>
     <line>
@@ -68,16 +41,7 @@ Test Started - AzamTV_MovieSearch]]>
       <![CDATA[Loaded Register Page Succesfully]]>
     </line>
     <line>
-      <![CDATA[Test Success : AzamTV_MovieSearch]]>
-    </line>
-    <line>
       <![CDATA[Azam - Aplication is Closing]]>
-    </line>
-    <line>
-      <![CDATA[
-===============================================
-
-Test Started - AzamTV_Registeration]]>
     </line>
     <line>
       <![CDATA[Azam - Aplication is Opening]]>
@@ -110,16 +74,7 @@ Test Started - AzamTV_Registeration]]>
       <![CDATA[Entered OTP - 000000 -  Succesfully]]>
     </line>
     <line>
-      <![CDATA[Test Success : AzamTV_Registeration]]>
-    </line>
-    <line>
       <![CDATA[Azam - Aplication is Closing]]>
-    </line>
-    <line>
-      <![CDATA[
-===============================================
-
-Test Started - AmazonProductSearch]]>
     </line>
     <line>
       <![CDATA[Chrome - Aplication is Opening]]>
@@ -132,50 +87,38 @@ Opened in Chrome Browser Succesfully]]>
       <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
     </line>
     <line>
-      <![CDATA[Screenshot Taken : C:\Users\VigneshD\git\CES-Appium\Report-Log-ScreenShot\ScreenShots\AmazonProductSearch.png]]>
-    </line>
-    <line>
       <![CDATA[iphoneSearched Succesfully]]>
     </line>
     <line>
       <![CDATA[Switched to NATIVE_APP Succesfully]]>
     </line>
     <line>
-      <![CDATA[Test Success : AmazonProductSearch]]>
-    </line>
-    <line>
       <![CDATA[Chrome - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-02T12:01:44 IST" name="Suite" finished-at="2021-10-02T12:03:29 IST" duration-ms="105320">
+  <suite started-at="2021-10-04T12:33:43 IST" name="Suite" finished-at="2021-10-04T12:35:19 IST" duration-ms="96345">
     <groups>
       <group name="Azam.Register">
-        <method signature="AzamTv.AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@6cd28fa7]" name="AzamTV_Registeration" class="testCase.AzamTv"/>
+        <method signature="AzamTv.AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@25fb8912]" name="AzamTV_Registeration" class="testCase.AzamTv"/>
       </group> <!-- Azam.Register -->
       <group name="chrome.main">
-        <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@614ca7df]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
+        <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@7c24b813]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
       </group> <!-- chrome.main -->
       <group name="Azam.Movies">
-        <method signature="AzamTv.AzamTV_MovieSearch()[pri:0, instance:testCase.AzamTv@6cd28fa7]" name="AzamTV_MovieSearch" class="testCase.AzamTv"/>
+        <method signature="AzamTv.AzamTV_MovieSearch()[pri:0, instance:testCase.AzamTv@25fb8912]" name="AzamTV_MovieSearch" class="testCase.AzamTv"/>
       </group> <!-- Azam.Movies -->
       <group name="ApkInfo.main">
-        <method signature="ApkInfo.ApkinfoMain()[pri:0, instance:testCase.ApkInfo@3f6b0be5]" name="ApkinfoMain" class="testCase.ApkInfo"/>
+        <method signature="ApkInfo.ApkinfoMain()[pri:0, instance:testCase.ApkInfo@1e04fa0a]" name="ApkinfoMain" class="testCase.ApkInfo"/>
       </group> <!-- ApkInfo.main -->
     </groups>
-    <test started-at="2021-10-02T12:01:44 IST" name="Test" finished-at="2021-10-02T12:03:29 IST" duration-ms="105320">
+    <test started-at="2021-10-04T12:33:43 IST" name="Test" finished-at="2021-10-04T12:35:19 IST" duration-ms="96345">
       <class name="testCase.ApkInfo">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@3f6b0be5]" started-at="2021-10-02T12:01:42 IST" name="setup" finished-at="2021-10-02T12:01:44 IST" duration-ms="2336" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@1e04fa0a]" started-at="2021-10-04T12:33:41 IST" name="setup" finished-at="2021-10-04T12:33:43 IST" duration-ms="1934" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@3f6b0be5]" started-at="2021-10-02T12:01:44 IST" name="ApkinfoMain" finished-at="2021-10-02T12:02:03 IST" duration-ms="18109" status="PASS">
+        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@1e04fa0a]" started-at="2021-10-04T12:33:43 IST" name="ApkinfoMain" finished-at="2021-10-04T12:33:57 IST" duration-ms="14920" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[
-===============================================
-
-Test Started - ApkinfoMain]]>
-            </line>
             <line>
               <![CDATA[ApkInfo - Aplication is Opening]]>
             </line>
@@ -183,37 +126,25 @@ Test Started - ApkinfoMain]]>
               <![CDATA[Scroll to - Duo -  Succesfully]]>
             </line>
             <line>
-              <![CDATA[Screenshot Taken : C:\Users\VigneshD\git\CES-Appium\Report-Log-ScreenShot\ScreenShots\ApkinfoMain.png]]>
-            </line>
-            <line>
               <![CDATA[Scroll to - YouTube -  Succesfully]]>
-            </line>
-            <line>
-              <![CDATA[Test Success : ApkinfoMain]]>
             </line>
           </reporter-output>
         </test-method> <!-- ApkinfoMain -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@3f6b0be5]" started-at="2021-10-02T12:02:03 IST" name="appClose" finished-at="2021-10-02T12:02:03 IST" duration-ms="427" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@1e04fa0a]" started-at="2021-10-04T12:33:57 IST" name="appClose" finished-at="2021-10-04T12:33:58 IST" duration-ms="277" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ApkInfo - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@3f6b0be5]" started-at="2021-10-02T12:03:30 IST" name="tearDown" finished-at="2021-10-02T12:03:30 IST" duration-ms="63" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@1e04fa0a]" started-at="2021-10-04T12:35:19 IST" name="tearDown" finished-at="2021-10-04T12:35:19 IST" duration-ms="323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCase.ApkInfo -->
       <class name="testCase.AzamTv">
-        <test-method signature="AzamTV_MovieSearch()[pri:0, instance:testCase.AzamTv@6cd28fa7]" started-at="2021-10-02T12:02:03 IST" name="AzamTV_MovieSearch" finished-at="2021-10-02T12:02:25 IST" duration-ms="22391" status="PASS">
+        <test-method signature="AzamTV_MovieSearch()[pri:0, instance:testCase.AzamTv@25fb8912]" started-at="2021-10-04T12:33:58 IST" name="AzamTV_MovieSearch" finished-at="2021-10-04T12:34:29 IST" duration-ms="30853" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[
-===============================================
-
-Test Started - AzamTV_MovieSearch]]>
-            </line>
             <line>
               <![CDATA[Azam - Aplication is Opening]]>
             </line>
@@ -233,9 +164,6 @@ Test Started - AzamTV_MovieSearch]]>
               <![CDATA[Loaded Movies Tab Succesfully]]>
             </line>
             <line>
-              <![CDATA[Screenshot Taken : C:\Users\VigneshD\git\CES-Appium\Report-Log-ScreenShot\ScreenShots\AzamTV_MovieSearch.png]]>
-            </line>
-            <line>
               <![CDATA[Clicked Bongo Movies number - 3 Succesfully]]>
             </line>
             <line>
@@ -244,26 +172,17 @@ Test Started - AzamTV_MovieSearch]]>
             <line>
               <![CDATA[Loaded Register Page Succesfully]]>
             </line>
-            <line>
-              <![CDATA[Test Success : AzamTV_MovieSearch]]>
-            </line>
           </reporter-output>
         </test-method> <!-- AzamTV_MovieSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@6cd28fa7]" started-at="2021-10-02T12:02:25 IST" name="appClose" finished-at="2021-10-02T12:02:26 IST" duration-ms="492" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@25fb8912]" started-at="2021-10-04T12:34:29 IST" name="appClose" finished-at="2021-10-04T12:34:29 IST" duration-ms="320" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Azam - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method signature="AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@6cd28fa7]" started-at="2021-10-02T12:02:26 IST" name="AzamTV_Registeration" finished-at="2021-10-02T12:03:02 IST" duration-ms="35727" status="PASS">
+        <test-method signature="AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@25fb8912]" started-at="2021-10-04T12:34:29 IST" name="AzamTV_Registeration" finished-at="2021-10-04T12:34:59 IST" duration-ms="30006" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[
-===============================================
-
-Test Started - AzamTV_Registeration]]>
-            </line>
             <line>
               <![CDATA[Azam - Aplication is Opening]]>
             </line>
@@ -294,12 +213,9 @@ Test Started - AzamTV_Registeration]]>
             <line>
               <![CDATA[Entered OTP - 000000 -  Succesfully]]>
             </line>
-            <line>
-              <![CDATA[Test Success : AzamTV_Registeration]]>
-            </line>
           </reporter-output>
         </test-method> <!-- AzamTV_Registeration -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@6cd28fa7]" started-at="2021-10-02T12:03:02 IST" name="appClose" finished-at="2021-10-02T12:03:02 IST" duration-ms="446" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@25fb8912]" started-at="2021-10-04T12:34:59 IST" name="appClose" finished-at="2021-10-04T12:34:59 IST" duration-ms="307" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Azam - Aplication is Closing]]>
@@ -308,14 +224,8 @@ Test Started - AzamTV_Registeration]]>
         </test-method> <!-- appClose -->
       </class> <!-- testCase.AzamTv -->
       <class name="testCase.ChromeBrowser">
-        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@614ca7df]" started-at="2021-10-02T12:03:02 IST" name="AmazonProductSearch" finished-at="2021-10-02T12:03:29 IST" duration-ms="26786" status="PASS">
+        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@7c24b813]" started-at="2021-10-04T12:34:59 IST" name="AmazonProductSearch" finished-at="2021-10-04T12:35:18 IST" duration-ms="19205" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[
-===============================================
-
-Test Started - AmazonProductSearch]]>
-            </line>
             <line>
               <![CDATA[Chrome - Aplication is Opening]]>
             </line>
@@ -327,20 +237,14 @@ Opened in Chrome Browser Succesfully]]>
               <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
             </line>
             <line>
-              <![CDATA[Screenshot Taken : C:\Users\VigneshD\git\CES-Appium\Report-Log-ScreenShot\ScreenShots\AmazonProductSearch.png]]>
-            </line>
-            <line>
               <![CDATA[iphoneSearched Succesfully]]>
             </line>
             <line>
               <![CDATA[Switched to NATIVE_APP Succesfully]]>
             </line>
-            <line>
-              <![CDATA[Test Success : AmazonProductSearch]]>
-            </line>
           </reporter-output>
         </test-method> <!-- AmazonProductSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@614ca7df]" started-at="2021-10-02T12:03:29 IST" name="appClose" finished-at="2021-10-02T12:03:29 IST" duration-ms="587" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@7c24b813]" started-at="2021-10-04T12:35:18 IST" name="appClose" finished-at="2021-10-04T12:35:19 IST" duration-ms="425" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Closing]]>

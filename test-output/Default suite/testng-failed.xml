@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.ApkInfo">
+      <class name="testCase.trialDemo">
         <methods>
-          <include name="tearDown"/>
+          <include name="newMeth"/>
+          <include name="oldMeth"/>
           <include name="appClose"/>
           <include name="setup"/>
-          <include name="ApkinfoMain"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- testCase.ApkInfo -->
+      </class> <!-- testCase.trialDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

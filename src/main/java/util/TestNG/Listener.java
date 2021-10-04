@@ -46,7 +46,6 @@ public class Listener extends BaseClass implements ITestListener {
 	  
 	    @Override  
 	    public void onStart(ITestContext context) { 
-	    	ERU.StartExtentReport();
 	    	logUtil.logC("\n===============================================\n\nTest Suite Started");
 	          
 	    }  
@@ -54,6 +53,5 @@ public class Listener extends BaseClass implements ITestListener {
 	    @Override  
 	    public void onFinish(ITestContext context) { 
 	    	logUtil.logC("\n===============================================\n\nTest Suite Completed"); 
-	    	ERU.EndExtentReport();
 	    }  
 }

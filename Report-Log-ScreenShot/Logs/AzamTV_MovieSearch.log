@@ -1,2 +1,12 @@
-[2021-10-02 12:02:03] Test Started - AzamTV_MovieSearch 
-[2021-10-02 12:02:25] Test Success : AzamTV_MovieSearch 
+[2021-10-04 12:33:58] Test Started - AzamTV_MovieSearch 
+[2021-10-04 12:34:05] Azam - Aplication is Opening 
+[2021-10-04 12:34:09] Clicked Get Started Button Succesfully 
+[2021-10-04 12:34:20] Clicked English Language Button Succesfully 
+[2021-10-04 12:34:21] Clicked Continue Button Succesfully 
+[2021-10-04 12:34:24] Clicked Movies Tab Button Succesfully 
+[2021-10-04 12:34:25] Loaded Movies Tab Succesfully 
+[2021-10-04 12:34:27] Clicked Bongo Movies number - 3 Succesfully 
+[2021-10-04 12:34:27] Clicked Register Button Succesfully 
+[2021-10-04 12:34:29] Loaded Register Page Succesfully 
+[2021-10-04 12:34:29] Test Success : AzamTV_MovieSearch 
+[2021-10-04 12:34:29] Azam - Aplication is Closing 

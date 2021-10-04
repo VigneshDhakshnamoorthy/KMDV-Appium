@@ -1,2 +1,6 @@
-[2021-10-02 12:01:44] Test Started - ApkinfoMain 
-[2021-10-02 12:02:03] Test Success : ApkinfoMain 
+[2021-10-04 12:33:43] Test Started - ApkinfoMain 
+[2021-10-04 12:33:52] ApkInfo - Aplication is Opening 
+[2021-10-04 12:33:53] Scroll to - Duo -  Succesfully 
+[2021-10-04 12:33:57] Scroll to - YouTube -  Succesfully 
+[2021-10-04 12:33:57] Test Success : ApkinfoMain 
+[2021-10-04 12:33:57] ApkInfo - Aplication is Closing 
