@@ -41,8 +41,7 @@ public class BaseClass implements ITestListener{
 		avdName = desireCap.avdName();
 		
 		//Start the emulator 
-		
-		emuUtil.startEmulator(avdName);
+			emuUtil.startEmulator(avdName);
 
 		//Start the server with the builder
 			AppiumService = AppiumDriverLocalService.buildService(desireCap.Appium());
@@ -55,7 +54,7 @@ public class BaseClass implements ITestListener{
 	}
 	
 	public void appOpen(String appName) throws Exception {
-		APPName = appName;
+			APPName = appName;
 		
 		//Initiate the AppiumDriver			
 			driver = new AppiumDriver<MobileElement>(desireCap.Url(),desireCap.App(appName));
