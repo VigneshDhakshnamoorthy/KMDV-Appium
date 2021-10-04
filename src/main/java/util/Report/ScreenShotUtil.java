@@ -19,8 +19,8 @@ public class ScreenShotUtil extends BaseClass{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		logUtil.logC("Screenshot Taken : "+screenShotLocation.getAbsolutePath());
 		ERU.ExtentScreenShot(testStatus,screenShotLocation.getAbsolutePath());
+		logUtil.logC("Screenshot Taken : "+screenShotLocation.getAbsolutePath());
 
 	}
 }

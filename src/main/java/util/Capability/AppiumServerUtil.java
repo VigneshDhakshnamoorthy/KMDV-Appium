@@ -32,9 +32,8 @@ public class AppiumServerUtil  extends BaseClass{
 	
 	public void stopServer() {
 		AppiumService.stop();
-		Runtime runtime = Runtime.getRuntime();
 		try {
-			runtime.exec("taskkill /F /IM node.exe");
+			Runtime.getRuntime().exec("taskkill /F /IM node.exe");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

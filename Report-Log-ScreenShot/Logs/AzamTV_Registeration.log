@@ -1,13 +1,13 @@
-[2021-10-05 00:17:15] Test Started - AzamTV_Registeration 
-[2021-10-05 00:17:23] Azam - Aplication is Opening 
-[2021-10-05 00:17:31] Clicked Get Started Button Succesfully 
-[2021-10-05 00:17:32] Clicked English Language Button Succesfully 
-[2021-10-05 00:17:33] Clicked Continue Button Succesfully 
-[2021-10-05 00:17:38] Clicked Login Tab Button Succesfully 
-[2021-10-05 00:17:39] Clicked Register Button Succesfully 
-[2021-10-05 00:17:41] Loaded Register Page Succesfully 
-[2021-10-05 00:17:46] Entered New Register Number - 9600000000 - Succesfully 
-[2021-10-05 00:17:46] Clicked Continue Button Succesfully 
-[2021-10-05 00:18:01] Entered OTP - 111111 -  Succesfully 
-[2021-10-05 00:18:01] Test Success : AzamTV_Registeration 
-[2021-10-05 00:18:01] Azam - Aplication is Closing 
+[2021-10-05 00:53:13] Test Started - AzamTV_Registeration 
+[2021-10-05 00:53:30] Azam - Aplication is Opening 
+[2021-10-05 00:53:37] Clicked Get Started Button Succesfully 
+[2021-10-05 00:53:39] Clicked English Language Button Succesfully 
+[2021-10-05 00:53:39] Clicked Continue Button Succesfully 
+[2021-10-05 00:53:43] Clicked Login Tab Button Succesfully 
+[2021-10-05 00:53:45] Clicked Register Button Succesfully 
+[2021-10-05 00:53:46] Loaded Register Page Succesfully 
+[2021-10-05 00:53:49] Entered New Register Number - 9600000000 - Succesfully 
+[2021-10-05 00:53:50] Clicked Continue Button Succesfully 
+[2021-10-05 00:54:06] Entered OTP - 111111 -  Succesfully 
+[2021-10-05 00:54:06] Test Success : AzamTV_Registeration 
+[2021-10-05 00:54:06] Azam - Aplication is Closing 

@@ -20,6 +20,8 @@ public class EmulatorUtil extends BaseClass{
 		String StopEmulator = "adb -s "+emulator+" emu kill";
 		try {
 			Runtime.getRuntime().exec(StopEmulator);
+			Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

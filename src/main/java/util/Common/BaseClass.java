@@ -25,18 +25,19 @@ public class BaseClass implements ITestListener{
 	protected static EmulatorUtil emuUtil = new EmulatorUtil();
 	protected static AppiumServerUtil appiumUtil = new AppiumServerUtil();
 	protected static AppiumDriver<MobileElement> driver;
+	
 	protected static PathUtil pathUtil= new PathUtil();
 	protected static DesirCapUtil desireCap = new DesirCapUtil();
-	protected static ExtentReportUtil ERU= new ExtentReportUtil();
-	protected static ScreenShotUtil screenShotUtil= new ScreenShotUtil();
 	protected static LogUtil logUtil= new LogUtil();
-	protected static ExcelUtil xlutil;
+	protected static ExtentReportUtil ERU= new ExtentReportUtil();
 	protected static ActionClass actionClass= new ActionClass();
+	protected static ScreenShotUtil screenShotUtil= new ScreenShotUtil();
+	protected static ExcelUtil xlutil;
 
 	protected static String emulator;
 	protected static String avdName;
-	protected String APPName;
 	protected static ITestResult BaseResult;
+	protected String APPName;
 
 	@BeforeSuite(alwaysRun=true)
 	protected void setup() throws Throwable {
