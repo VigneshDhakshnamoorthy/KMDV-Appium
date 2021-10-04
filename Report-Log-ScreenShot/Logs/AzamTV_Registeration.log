@@ -1,4 +1,13 @@
-[2021-10-04 16:27:33] Test Started - AzamTV_Registeration 
-[2021-10-04 16:27:48] Azam - Aplication is Opening 
-[2021-10-04 16:27:53] Test Failure : AzamTV_Registeration // java.lang.NoClassDefFoundError: Could not initialize class net.sf.cglib.proxy.Enhancer 
-[2021-10-04 16:27:57] Azam - Aplication is Closing 
+[2021-10-04 18:44:59] Test Started - AzamTV_Registeration 
+[2021-10-04 18:45:16] Azam - Aplication is Opening 
+[2021-10-04 18:45:22] Clicked Get Started Button Succesfully 
+[2021-10-04 18:45:23] Clicked English Language Button Succesfully 
+[2021-10-04 18:45:24] Clicked Continue Button Succesfully 
+[2021-10-04 18:45:29] Clicked Login Tab Button Succesfully 
+[2021-10-04 18:45:31] Clicked Register Button Succesfully 
+[2021-10-04 18:45:32] Loaded Register Page Succesfully 
+[2021-10-04 18:45:36] Entered New Register Number - 9600000000 - Succesfully 
+[2021-10-04 18:45:37] Clicked Continue Button Succesfully 
+[2021-10-04 18:45:52] Entered OTP - 111111 -  Succesfully 
+[2021-10-04 18:45:52] Test Success : AzamTV_Registeration 
+[2021-10-04 18:45:52] Azam - Aplication is Closing 

@@ -9,21 +9,19 @@ import pageObjects.azamTV.MoviesTabPage;
 import pageObjects.azamTV.RegisterTabPage;
 import pageObjects.azamTV.StartupPage;
 import util.Common.BaseClass;
+import util.Data.ExcelUtil;
 
 @Listeners(util.TestNG.Listener.class)
 public class AzamTv  extends BaseClass{
 	
 	private String appName="Azam";
-	
-	private String movienumber = "3";
-	
-	private String phonenumber = "9600000000";
-	private String otpnumber = "000000";
 
-	
 	@Test(groups= {"Azam.Movies"})
 	public void AzamTV_MovieSearch() throws Exception{
 		appOpen(appName);
+		xlutil = new ExcelUtil(pathUtil.getExcelPath("AzamExcelData.xlsx"));
+		String movienumber = xlutil.getCellDataByValue("Sheet1", "movienumber", "value");
+
 		StartupPage startUpPage = new StartupPage(driver);
 		startUpPage.clickGetStarted();
 		startUpPage.clickenglishLanguageBtn();
@@ -46,6 +44,9 @@ public class AzamTv  extends BaseClass{
 	@Test(groups= {"Azam.Register"})
 	public void AzamTV_Registeration() throws Exception{
 		appOpen(appName);
+		String phonenumber = xlutil.getCellDataByValue("Sheet1", "phonenumber", "value");;
+		String otpnumber = xlutil.getCellDataByValue("Sheet1", "otpnumber", "value");;
+
 		StartupPage startUpPage = new StartupPage(driver);
 		startUpPage.clickGetStarted();
 		startUpPage.clickenglishLanguageBtn();

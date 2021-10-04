@@ -5,17 +5,19 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import util.Common.BaseClass;
+import util.Data.ExcelUtil;
 
 @Listeners(util.TestNG.Listener.class)
 public class ChromeBrowser extends BaseClass{
 	private String appName="Chrome";
-	private String browseURL="https://www.amazon.in/";
-	private String searchKeyword="iphone";
 
 
 	@Test(groups= {"chrome.main"})
 	public void AmazonProductSearch() throws Exception{
 		appOpen(appName);
+		xlutil = new ExcelUtil(pathUtil.getExcelPath("ChromeExcelData.xlsx"));
+		String browseURL=xlutil.getCellDataByValue("Sheet1", "browseURL", "value");
+		String searchKeyword=xlutil.getCellDataByValue("Sheet1", "searchKeyword", "value");
 		actionClass.clearChromeTabs();
 		driver.get(browseURL);
 		logUtil.logE(browseURL+"\nOpened in "+appName+" Browser Succesfully");
@@ -25,7 +27,7 @@ public class ChromeBrowser extends BaseClass{
 		screenShotUtil.ExtentShot("Pass");
 
 		driver.findElementByXPath("//input[@id='nav-search-keywords']").sendKeys(searchKeyword+Keys.ENTER);
-		logUtil.logE(searchKeyword+"Searched Succesfully");
+		logUtil.logE(searchKeyword+" - Searched Succesfully");
 		actionClass.SwitchNative();
 		
 	}

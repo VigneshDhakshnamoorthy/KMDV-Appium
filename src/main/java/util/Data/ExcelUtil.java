@@ -25,9 +25,11 @@ public class ExcelUtil {
 	public static CellStyle xstyle;   
 	String excelPath;
 
-	public ExcelUtil(String excelPath)
+	public ExcelUtil(String excelPath) throws IOException
 	{
 		this.excelPath=excelPath;
+		fin=new FileInputStream(excelPath);
+		xbook=new XSSFWorkbook(fin);
 	}
 
 	public String[][] getFullExcelData(String sheetName) throws IOException {
@@ -41,14 +43,14 @@ public class ExcelUtil {
 		{
 			for(int j=0;j<totalcols;j++)
 			{
-				loginData[i-1][j]=getCellData(sheetName, i, j);
+				loginData[i-1][j]=getCellDataByNum(sheetName, i, j);
 			}
 
 		}
 		return loginData;
 	}
 	
-	public int[] getRowCol(String sheetName, String Value) throws IOException {
+	public int[] getRowColNumbers(String sheetName, String Value) throws IOException {
 
 		int totalrows=getRowCount(sheetName);
 		int totalcols=getCellCount(sheetName,1);	
@@ -58,7 +60,7 @@ public class ExcelUtil {
 		{
 			for(int j=0;j<totalcols;j++)
 			{
-				if(getCellData(sheetName, i, j).equals(Value)) {
+				if(getCellDataByNum(sheetName, i, j).equals(Value)) {
 					intcol[0]=i;
 					intcol[1]=j;
 				}
@@ -80,7 +82,7 @@ public class ExcelUtil {
 		{
 			for(int j=0;j<totalcols;j++)
 			{
-				if(getCellData(sheetName, i, j).equals(Value)) {
+				if(getCellDataByNum(sheetName, i, j).equals(Value)) {
 					RowNumber = i;
 				}
 				
@@ -101,7 +103,7 @@ public class ExcelUtil {
 		{
 			for(int j=0;j<totalcols;j++)
 			{
-				if(getCellData(sheetName, i, j).equals(Value)) {
+				if(getCellDataByNum(sheetName, i, j).equals(Value)) {
 					ColumnNumber = j;
 				}
 				
@@ -114,8 +116,6 @@ public class ExcelUtil {
 	
 	public int getRowCount(String sheetName) throws IOException 
 	{
-		fin=new FileInputStream(excelPath);
-		xbook=new XSSFWorkbook(fin);
 		xsheet=xbook.getSheet(sheetName);
 		int rowcount=xsheet.getLastRowNum();
 		xbook.close();
@@ -126,8 +126,6 @@ public class ExcelUtil {
 
 	public int getCellCount(String sheetName,int rownum) throws IOException
 	{
-		fin=new FileInputStream(excelPath);
-		xbook=new XSSFWorkbook(fin);
 		xsheet=xbook.getSheet(sheetName);
 		xrow=xsheet.getRow(rownum);
 		int cellcount=xrow.getLastCellNum();
@@ -136,11 +134,15 @@ public class ExcelUtil {
 		return cellcount;
 	}
 
+	public String getCellDataByValue(String sheetName,String rowName,String colName) throws IOException {
+		int rowNum = getRowNumber(sheetName, rowName);
+		int colNum = getColumnNumber(sheetName, colName);
+		return getCellDataByNum(sheetName, rowNum, colNum);
 
-	public String getCellData(String sheetName,int rownum,int colnum) throws IOException
+	}
+
+	public String getCellDataByNum(String sheetName,int rownum,int colnum) throws IOException
 	{
-		fin=new FileInputStream(excelPath);
-		xbook=new XSSFWorkbook(fin);
 		xsheet=xbook.getSheet(sheetName);
 		xrow=xsheet.getRow(rownum);
 		xcell=xrow.getCell(colnum);
@@ -169,8 +171,6 @@ public class ExcelUtil {
 			xbook.write(fout);
 		}
 
-		fin=new FileInputStream(excelPath);
-		xbook=new XSSFWorkbook(fin);
 
 		if(xbook.getSheetIndex(sheetName)==-1) // If sheet not exists then create new Sheet
 			xbook.createSheet(sheetName);
@@ -193,8 +193,6 @@ public class ExcelUtil {
 
 	public void fillGreenColor(String sheetName,int rownum,int colnum) throws IOException
 	{
-		fin=new FileInputStream(excelPath);
-		xbook=new XSSFWorkbook(fin);
 		xsheet=xbook.getSheet(sheetName);
 
 		xrow=xsheet.getRow(rownum);
@@ -215,8 +213,6 @@ public class ExcelUtil {
 
 	public void fillRedColor(String sheetName,int rownum,int colnum) throws IOException
 	{
-		fin=new FileInputStream(excelPath);
-		xbook=new XSSFWorkbook(fin);
 		xsheet=xbook.getSheet(sheetName);
 		xrow=xsheet.getRow(rownum);
 		xcell=xrow.getCell(colnum);

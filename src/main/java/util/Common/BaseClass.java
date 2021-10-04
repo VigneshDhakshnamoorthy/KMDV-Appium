@@ -10,6 +10,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import util.Capability.DesirCapUtil;
 import util.Capability.EmulatorUtil;
 import util.Capability.PathUtil;
+import util.Data.ExcelUtil;
 import util.Data.LogUtil;
 import util.Report.ExtentReportUtil;
 import util.Report.ScreenShotUtil;
@@ -27,7 +28,7 @@ public class BaseClass implements ITestListener{
 	protected static ExtentReportUtil ERU= new ExtentReportUtil();
 	protected static ScreenShotUtil screenShotUtil= new ScreenShotUtil();
 	protected static LogUtil logUtil= new LogUtil();
-
+	protected static ExcelUtil xlutil;
 	protected static ActionClass actionClass= new ActionClass();
 
 	protected static String emulator;
