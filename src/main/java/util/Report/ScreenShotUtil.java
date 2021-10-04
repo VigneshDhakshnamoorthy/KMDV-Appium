@@ -10,12 +10,10 @@ import org.openqa.selenium.TakesScreenshot;
 import util.Common.BaseClass;
 
 public class ScreenShotUtil extends BaseClass{
-	private static String screenshotType= "png";
-	private File screenShot,screenShotLocation;
 	
 	public void ExtentShot(String testStatus) {
-		screenShotLocation = new File(pathUtil.getScreenshotPath(BaseResult.getName()+"."+screenshotType));
-		screenShot  = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		File screenShot  = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		File screenShotLocation = new File(pathUtil.getScreenshotPath(BaseResult.getName()+".png"));
 		try {
 			FileUtils.copyFile(screenShot, screenShotLocation);
 		} catch (IOException e) {

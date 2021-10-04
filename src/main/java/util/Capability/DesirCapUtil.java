@@ -1,7 +1,6 @@
 package util.Capability;
 
 import java.net.URL;
-import java.util.Set;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -22,15 +21,39 @@ public class DesirCapUtil extends BaseClass{
 		switch (AppName) {
 		
 		case "Azam":
-			setDesireCap("azamTv.properties");
+			prop = new PropertiesUtil("azamTv.properties");
+			PlatformCap = new DesiredCapabilities();
+			PlatformCap.setCapability("deviceName", emulator);
+			PlatformCap.setCapability("app", pathUtil.getAppPath(prop.getAppProperty("app")));
+			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
+			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
+			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
+			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
 			break;
 		
 		case "ApkInfo":
-			setDesireCap("apkinfo.properties");
+			prop = new PropertiesUtil("apkinfo.properties");
+			PlatformCap = new DesiredCapabilities();
+			PlatformCap.setCapability("deviceName", emulator);
+			PlatformCap.setCapability("app", pathUtil.getAppPath(prop.getAppProperty("app")));
+			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
+			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
+			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
+			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
 			break;
 			
 		case "Chrome":
-			setDesireCap("chrome.properties");
+			prop = new PropertiesUtil("chrome.properties");
+			PlatformCap = new DesiredCapabilities();
+			PlatformCap.setCapability("deviceName", emulator);
+			PlatformCap.setCapability("chromedriverExecutable",pathUtil.getDriverPath(prop.getAppProperty("chromedriverExecutable")));
+			PlatformCap.setCapability("platformName", prop.getAppProperty("platformName"));
+			PlatformCap.setCapability("platformVersion", prop.getAppProperty("platformVersion"));
+			PlatformCap.setCapability("appPackage", prop.getAppProperty("appPackage"));
+			PlatformCap.setCapability("appActivity", prop.getAppProperty("appActivity"));
+			PlatformCap.setCapability("noReset", prop.getAppProperty("noReset"));
 			break;
 		
 		default:
@@ -78,26 +101,6 @@ public class DesirCapUtil extends BaseClass{
 		prop = new PropertiesUtil("appiumserver.properties");
 		return prop.getAppProperty("avdName");
 		
-	}
-	
-	public void setDesireCap(String appProperty) throws Exception {
-		prop = new PropertiesUtil(appProperty);
-		PlatformCap = new DesiredCapabilities();
-		Set<Object> allPropertyKeys = prop.getAllPropertyKeys();
-		PlatformCap.setCapability("deviceName", emulator);
-		for (Object propKey:allPropertyKeys)
-		{
-		if (propKey.toString().equalsIgnoreCase("app")) {
-			PlatformCap.setCapability(propKey.toString(),pathUtil.getAppPath(prop.getAppProperty(propKey.toString())));
-		}
-		else if(propKey.toString().equalsIgnoreCase("chromedriverExecutable")){
-			PlatformCap.setCapability(propKey.toString(),pathUtil.getDriverPath(prop.getAppProperty(propKey.toString())));
-		}
-		else 
-		{
-			PlatformCap.setCapability(propKey.toString(),prop.getAppProperty(propKey.toString()));
-		}
-		}
 	}
 	
 }

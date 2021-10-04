@@ -22,8 +22,11 @@ public class PropertiesUtil extends BaseClass{
 		
 	}
 
-	public Set<Object> getAllPropertyKeys() {
-		return p.keySet();
-	
+	public void getAllproperties() {
+		Set<Object> keySet = p.keySet();
+		
+		for (Object key:keySet) {
+			System.out.println(key);
+		}
 	}
 }
