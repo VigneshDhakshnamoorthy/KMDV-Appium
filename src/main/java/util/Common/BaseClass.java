@@ -6,12 +6,13 @@ import org.testng.annotations.*;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
+import util.Capability.AppiumServerUtil;
 import util.Capability.DesirCapUtil;
 import util.Capability.EmulatorUtil;
 import util.Capability.PathUtil;
 import util.Data.ExcelUtil;
 import util.Data.LogUtil;
+import util.Data.PropertiesUtil;
 import util.Report.ExtentReportUtil;
 import util.Report.ScreenShotUtil;
 
@@ -20,8 +21,9 @@ import org.testng.ITestResult;
 
 public class BaseClass implements ITestListener{
 	
+	protected static PropertiesUtil prop;
 	protected static EmulatorUtil emuUtil = new EmulatorUtil();
-	protected static AppiumDriverLocalService AppiumService;
+	protected static AppiumServerUtil appiumUtil = new AppiumServerUtil();
 	protected static AppiumDriver<MobileElement> driver;
 	protected static PathUtil pathUtil= new PathUtil();
 	protected static DesirCapUtil desireCap = new DesirCapUtil();
@@ -45,8 +47,7 @@ public class BaseClass implements ITestListener{
 			emuUtil.startEmulator(avdName);
 
 		//Start the server with the builder
-			AppiumService = AppiumDriverLocalService.buildService(desireCap.Appium());
-			AppiumService.start();
+			appiumUtil.startServer();
 		
 		//Start Extent Report
 	    	ERU.StartExtentReport();
@@ -79,7 +80,7 @@ public class BaseClass implements ITestListener{
     		ERU.EndExtentReport();
 
 		//Stop the AppiumServer			
-			AppiumService.stop();
+    		appiumUtil.stopServer();
 
 		// Close the Emulator
 			emuUtil.stopEmulator(emulator);

@@ -5,15 +5,11 @@ import java.util.Set;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import util.Common.BaseClass;
 import util.Data.PropertiesUtil;
 
 public class DesirCapUtil extends BaseClass{
-	public  DesiredCapabilities PlatformCap,AppiumCap;
-	public  PropertiesUtil prop;
-	protected AppiumServiceBuilder AppiumBuilder;
+	public  DesiredCapabilities PlatformCap;
 	protected static String URLAddress;
 
 
@@ -41,24 +37,6 @@ public class DesirCapUtil extends BaseClass{
 		return PlatformCap;
 	}
 	
-	public AppiumServiceBuilder Appium() throws Exception {
-		prop = new PropertiesUtil("appiumserver.properties");
-
-		//Set Capabilities
-		AppiumCap = new DesiredCapabilities();
-		AppiumCap.setCapability("noReset", prop.getAppProperty("noReset"));
-
-		//Build the Appium service
-		AppiumBuilder = new AppiumServiceBuilder();
-		AppiumBuilder.withIPAddress(prop.getAppProperty("IPAddress"));
-		AppiumBuilder.usingPort(Integer.parseInt(prop.getAppProperty("Port")));
-		AppiumBuilder.withCapabilities(AppiumCap);
-		AppiumBuilder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
-		AppiumBuilder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
-		
-		return AppiumBuilder;
-		
-	}
 	
 	public URL Url() throws Exception {
 		prop = new PropertiesUtil("appiumserver.properties");
