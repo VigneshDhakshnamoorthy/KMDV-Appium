@@ -11,9 +11,9 @@ import util.Capability.DesirCapUtil;
 import util.Capability.EmulatorUtil;
 import util.Capability.PathUtil;
 import util.Data.ExcelUtil;
-import util.Data.LogUtil;
 import util.Data.PropertiesUtil;
 import util.Report.ExtentReportUtil;
+import util.Report.LogUtil;
 import util.Report.ScreenShotUtil;
 
 import org.testng.ITestListener;

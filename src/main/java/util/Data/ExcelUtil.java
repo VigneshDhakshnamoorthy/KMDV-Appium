@@ -32,6 +32,13 @@ public class ExcelUtil {
 		xbook=new XSSFWorkbook(fin);
 	}
 
+	public String getCellDataByValue(String sheetName,String rowName,String colName) throws IOException {
+		int rowNum = getRowNumber(sheetName, rowName);
+		int colNum = getColumnNumber(sheetName, colName);
+		return getCellDataByNum(sheetName, rowNum, colNum);
+
+	}
+
 	public String[][] getFullExcelData(String sheetName) throws IOException {
 
 		int totalrows=getRowCount(sheetName);
@@ -49,7 +56,7 @@ public class ExcelUtil {
 		}
 		return loginData;
 	}
-	
+
 	public int[] getRowColNumbers(String sheetName, String Value) throws IOException {
 
 		int totalrows=getRowCount(sheetName);
@@ -64,14 +71,14 @@ public class ExcelUtil {
 					intcol[0]=i;
 					intcol[1]=j;
 				}
-				
+
 
 			}
 
 		}
 		return intcol;
 	}
-	
+
 	public int getRowNumber(String sheetName, String Value) throws IOException {
 
 		int totalrows=getRowCount(sheetName);
@@ -85,14 +92,14 @@ public class ExcelUtil {
 				if(getCellDataByNum(sheetName, i, j).equals(Value)) {
 					RowNumber = i;
 				}
-				
+
 
 			}
 
 		}
 		return RowNumber;
 	}
-	
+
 	public int getColumnNumber(String sheetName, String Value) throws IOException {
 
 		int totalrows=getRowCount(sheetName);
@@ -106,14 +113,14 @@ public class ExcelUtil {
 				if(getCellDataByNum(sheetName, i, j).equals(Value)) {
 					ColumnNumber = j;
 				}
-				
+
 
 			}
 
 		}
 		return ColumnNumber;
 	}
-	
+
 	public int getRowCount(String sheetName) throws IOException 
 	{
 		xsheet=xbook.getSheet(sheetName);
@@ -134,12 +141,7 @@ public class ExcelUtil {
 		return cellcount;
 	}
 
-	public String getCellDataByValue(String sheetName,String rowName,String colName) throws IOException {
-		int rowNum = getRowNumber(sheetName, rowName);
-		int colNum = getColumnNumber(sheetName, colName);
-		return getCellDataByNum(sheetName, rowNum, colNum);
 
-	}
 
 	public String getCellDataByNum(String sheetName,int rownum,int colnum) throws IOException
 	{
