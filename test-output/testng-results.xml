@@ -96,7 +96,7 @@ Opened in Chrome Browser Succesfully]]>
       <![CDATA[Chrome - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-05T13:04:28 IST" name="Suite" finished-at="2021-10-05T13:07:00 IST" duration-ms="151507">
+  <suite started-at="2021-10-06T13:13:10 IST" name="Suite" finished-at="2021-10-06T13:16:03 IST" duration-ms="172690">
     <groups>
       <group name="Azam.Register">
         <method signature="AzamTv.AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@2c35e847]" name="AzamTV_Registeration" class="testCase.AzamTv"/>
@@ -111,13 +111,13 @@ Opened in Chrome Browser Succesfully]]>
         <method signature="ApkInfo.ApkinfoMain()[pri:0, instance:testCase.ApkInfo@18d87d80]" name="ApkinfoMain" class="testCase.ApkInfo"/>
       </group> <!-- ApkInfo.main -->
     </groups>
-    <test started-at="2021-10-05T13:04:28 IST" name="Test" finished-at="2021-10-05T13:07:00 IST" duration-ms="151507">
+    <test started-at="2021-10-06T13:13:10 IST" name="Test" finished-at="2021-10-06T13:16:03 IST" duration-ms="172690">
       <class name="testCase.ApkInfo">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@18d87d80]" started-at="2021-10-05T13:04:25 IST" name="setup" finished-at="2021-10-05T13:04:28 IST" duration-ms="3160" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@18d87d80]" started-at="2021-10-06T13:13:06 IST" name="setup" finished-at="2021-10-06T13:13:10 IST" duration-ms="3667" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@18d87d80]" started-at="2021-10-05T13:04:29 IST" name="ApkinfoMain" finished-at="2021-10-05T13:04:53 IST" duration-ms="23999" status="PASS">
+        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@18d87d80]" started-at="2021-10-06T13:13:10 IST" name="ApkinfoMain" finished-at="2021-10-06T13:13:41 IST" duration-ms="31164" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ApkInfo - Aplication is Opening]]>
@@ -130,20 +130,20 @@ Opened in Chrome Browser Succesfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- ApkinfoMain -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@18d87d80]" started-at="2021-10-05T13:04:53 IST" name="appClose" finished-at="2021-10-05T13:04:53 IST" duration-ms="858" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@18d87d80]" started-at="2021-10-06T13:13:41 IST" name="appClose" finished-at="2021-10-06T13:13:42 IST" duration-ms="805" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ApkInfo - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@18d87d80]" started-at="2021-10-05T13:07:00 IST" name="tearDown" finished-at="2021-10-05T13:07:01 IST" duration-ms="793" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@18d87d80]" started-at="2021-10-06T13:16:03 IST" name="tearDown" finished-at="2021-10-06T13:16:03 IST" duration-ms="594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCase.ApkInfo -->
       <class name="testCase.AzamTv">
-        <test-method signature="AzamTV_MovieSearch()[pri:0, instance:testCase.AzamTv@2c35e847]" started-at="2021-10-05T13:04:53 IST" name="AzamTV_MovieSearch" finished-at="2021-10-05T13:05:35 IST" duration-ms="41201" status="PASS">
+        <test-method signature="AzamTV_MovieSearch()[pri:0, instance:testCase.AzamTv@2c35e847]" started-at="2021-10-06T13:13:42 IST" name="AzamTV_MovieSearch" finished-at="2021-10-06T13:14:28 IST" duration-ms="46246" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Azam - Aplication is Opening]]>
@@ -174,14 +174,14 @@ Opened in Chrome Browser Succesfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- AzamTV_MovieSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@2c35e847]" started-at="2021-10-05T13:05:35 IST" name="appClose" finished-at="2021-10-05T13:05:35 IST" duration-ms="562" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@2c35e847]" started-at="2021-10-06T13:14:28 IST" name="appClose" finished-at="2021-10-06T13:14:29 IST" duration-ms="605" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Azam - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method signature="AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@2c35e847]" started-at="2021-10-05T13:05:35 IST" name="AzamTV_Registeration" finished-at="2021-10-05T13:06:24 IST" duration-ms="49320" status="PASS">
+        <test-method signature="AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@2c35e847]" started-at="2021-10-06T13:14:29 IST" name="AzamTV_Registeration" finished-at="2021-10-06T13:15:24 IST" duration-ms="55242" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Azam - Aplication is Opening]]>
@@ -215,7 +215,7 @@ Opened in Chrome Browser Succesfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- AzamTV_Registeration -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@2c35e847]" started-at="2021-10-05T13:06:24 IST" name="appClose" finished-at="2021-10-05T13:06:25 IST" duration-ms="580" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@2c35e847]" started-at="2021-10-06T13:15:24 IST" name="appClose" finished-at="2021-10-06T13:15:25 IST" duration-ms="813" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Azam - Aplication is Closing]]>
@@ -224,7 +224,7 @@ Opened in Chrome Browser Succesfully]]>
         </test-method> <!-- appClose -->
       </class> <!-- testCase.AzamTv -->
       <class name="testCase.ChromeBrowser">
-        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@7bd4937b]" started-at="2021-10-05T13:06:25 IST" name="AmazonProductSearch" finished-at="2021-10-05T13:06:59 IST" duration-ms="34159" status="PASS">
+        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@7bd4937b]" started-at="2021-10-06T13:15:25 IST" name="AmazonProductSearch" finished-at="2021-10-06T13:16:02 IST" duration-ms="37123" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Opening]]>
@@ -244,7 +244,7 @@ Opened in Chrome Browser Succesfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- AmazonProductSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@7bd4937b]" started-at="2021-10-05T13:06:59 IST" name="appClose" finished-at="2021-10-05T13:07:00 IST" duration-ms="753" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@7bd4937b]" started-at="2021-10-06T13:16:02 IST" name="appClose" finished-at="2021-10-06T13:16:03 IST" duration-ms="613" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Closing]]>
