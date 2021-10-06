@@ -3,6 +3,7 @@ package util.Common;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.*;
+import org.testng.ITestResult;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -16,10 +17,8 @@ import util.Report.ExtentReportUtil;
 import util.Report.LogUtil;
 import util.Report.ScreenShotUtil;
 
-import org.testng.ITestListener;
-import org.testng.ITestResult;
 
-public class BaseClass implements ITestListener{
+public class BaseClass{
 	
 	protected static PropertiesUtil prop;
 	protected static EmulatorUtil emuUtil = new EmulatorUtil();

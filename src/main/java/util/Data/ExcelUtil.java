@@ -14,7 +14,9 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelUtil {
+import util.Common.BaseClass;
+
+public class ExcelUtil extends BaseClass{
 
 	public static FileInputStream fin;
 	public static FileOutputStream fout;
