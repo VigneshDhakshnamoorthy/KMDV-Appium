@@ -1,6 +1,5 @@
 package util.Common;
 
-import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.*;
 import org.testng.ITestResult;
@@ -19,19 +18,19 @@ import util.Report.ScreenShotUtil;
 
 
 public class BaseClass{
-	
+	protected static InitiationClass init;
 	protected static PropertiesUtil prop;
-	protected static EmulatorUtil emuUtil = new EmulatorUtil();
-	protected static AppiumServerUtil appiumUtil = new AppiumServerUtil();
+	protected static EmulatorUtil emuUtil;
+	protected static AppiumServerUtil appiumUtil;
 	protected static AppiumDriver<MobileElement> driver;
 	
-	protected static PathUtil pathUtil= new PathUtil();
-	protected static DesirCapUtil desireCap = new DesirCapUtil();
-	protected static LogUtil logUtil= new LogUtil();
-	protected static ExtentReportUtil ERU= new ExtentReportUtil();
-	protected static ActionClass actionClass= new ActionClass();
-	protected static ScreenShotUtil screenShotUtil= new ScreenShotUtil();
+	protected static PathUtil pathUtil;
+	protected static DesirCapUtil desireCap;
+	protected static LogUtil logUtil;
+	protected static ExtentReportUtil ERU;
+	protected static ActionClass actionClass;
 	protected static ExcelUtil xlutil;
+	protected static ScreenShotUtil screenShotUtil;
 
 	protected static String emulator;
 	protected static String avdName;
@@ -39,51 +38,48 @@ public class BaseClass{
 	protected String APPName;
 
 	@BeforeSuite(alwaysRun=true)
-	protected void setup() throws Throwable {
-		emulator = desireCap.emulatorID();
-		avdName = desireCap.avdName();
+	protected void setup() {
+		//Initiate necessary classes
+		init = new InitiationClass();
+		init.InitiateClasses();
 		
 		//Start the emulator 
-			emuUtil.startEmulator(avdName);
+		emuUtil.startEmulator(avdName);
 
 		//Start the server with the builder
-			appiumUtil.startServer();
+		appiumUtil.startServer();
 		
 		//Start Extent Report
-	    	ERU.StartExtentReport();
+	    ERU.StartExtentReport();
 
 
 	}
 	
-	public void appOpen(String appName) throws Exception {
-			APPName = appName;
-		
-		//Initiate the AppiumDriver			
-			driver = new AppiumDriver<MobileElement>(desireCap.Url(),desireCap.App(appName));
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-			logUtil.logE(APPName+" - Aplication is Opening");
+	public void appOpen(String appName) {
+		//Initiate the AppiumDriver	
+		APPName = appName;
+		init.InitiateAppiumDriver(APPName);
 	}
 	
 	
 	@AfterMethod(alwaysRun=true)
 	protected void appClose(){
 		//Close the AppiumDriver	
-			logUtil.logE(APPName+" - Aplication is Closing");
-			driver.quit();
-			
+		logUtil.logE(APPName+" - Aplication is Closing");
+		driver.quit();
 	}
 	
 
 	@AfterSuite(alwaysRun=true)
-	protected void tearDown() throws Throwable {
+	protected void tearDown() {
 		//Stop Extent Report
-    		ERU.EndExtentReport();
+    	ERU.EndExtentReport();
 
 		//Stop the AppiumServer			
-    		appiumUtil.stopServer();
+    	appiumUtil.stopServer();
 
 		// Close the Emulator
-			emuUtil.stopEmulator(emulator);
+		emuUtil.stopEmulator(emulator);
 	}
 
 	

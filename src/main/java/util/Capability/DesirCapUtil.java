@@ -1,5 +1,6 @@
 package util.Capability;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
 
@@ -13,7 +14,7 @@ public class DesirCapUtil extends BaseClass{
 	protected static String URLAddress;
 
 
-	public DesiredCapabilities App(String AppName) throws Exception {
+	public DesiredCapabilities App(String AppName) {
 		
 		switch (AppName) {
 		
@@ -30,7 +31,7 @@ public class DesirCapUtil extends BaseClass{
 			break;
 		
 		default:
-			throw new Exception("Provide Proper App Name");
+			logUtil.logC("Provide Proper App Name");
 			
 		}
 
@@ -38,26 +39,30 @@ public class DesirCapUtil extends BaseClass{
 	}
 	
 	
-	public URL Url() throws Exception {
+	public URL Url() {
 		prop = new PropertiesUtil("appiumserver.properties");
 		URLAddress = prop.getAppProperty("URLAddress");
-		URL Url = new URL(URLAddress);
+		URL Url = null;
+		try {
+			Url = new URL(URLAddress);
+		} catch (MalformedURLException e) {
+		}
 		return Url;
 
 	}
 	
-	public String emulatorID() throws Exception {
+	public String emulatorID() {
 		prop = new PropertiesUtil("appiumserver.properties");
 		return prop.getAppProperty("emulator");
 		
 	}
 	
-	public String avdName() throws Exception {
+	public String avdName() {
 		prop = new PropertiesUtil("appiumserver.properties");
 		return prop.getAppProperty("avdName");
 		
 	}
-	public void setDesireCap(String appProperty) throws Exception {
+	public void setDesireCap(String appProperty) {
 		prop = new PropertiesUtil(appProperty);
 		PlatformCap = new DesiredCapabilities();
 		Set<Object> allPropertyKeys = prop.getAllPropertyKeys();

@@ -10,11 +10,13 @@ public class ApkInfo extends BaseClass{
 	private String appName="ApkInfo";
 
 	@Test(groups= {"ApkInfo.main"})
-	public void ApkinfoMain() throws Exception{
+	public void ApkinfoMain(){
 		appOpen(appName);
 		actionClass.scrollUiText("Duo");
 		screenShotUtil.ExtentShot("Pass");
 		actionClass.scrollUiText("YouTube");
+		screenShotUtil.ExtentShot("Pass");
+
 	}
 
 

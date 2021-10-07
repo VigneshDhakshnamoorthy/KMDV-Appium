@@ -2,6 +2,8 @@ package util.Common;
 
 import java.util.Set;
 
+import org.openqa.selenium.By;
+
 import io.appium.java_client.MobileBy;
 
 public class ActionClass extends BaseClass {
@@ -41,8 +43,11 @@ public class ActionClass extends BaseClass {
 	}
 	
 	public void scrollUiText(String ScrollText) {
-		driver.findElement(MobileBy.AndroidUIAutomator(
-	    		"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+ScrollText+"\").instance(0))"));
+		String ScrollCommand = "new UiScrollable(new UiSelector().scrollable(true)."
+				+ "instance(0)).scrollIntoView(new UiSelector()."
+				+ "textContains(\""+ScrollText+"\").instance(0))";
+		By androidUIScroll = MobileBy.AndroidUIAutomator(ScrollCommand);
+		driver.findElement(androidUIScroll);
 		logUtil.logE("Scroll to - "+ScrollText+" -  Succesfully");
 	}
 	
