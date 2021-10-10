@@ -6,7 +6,6 @@
       <class name="testCase.AzamTv">
         <methods>
           <include name="AzamTV_Registeration"/>
-          <include name="AzamTV_MovieSearch"/>
           <include name="appClose"/>
           <include name="setup"/>
           <include name="tearDown"/>

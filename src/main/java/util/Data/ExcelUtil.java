@@ -2,6 +2,7 @@ package util.Data;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -27,39 +28,50 @@ public class ExcelUtil extends BaseClass{
 	public static CellStyle xstyle;   
 	String excelPath;
 
-	public ExcelUtil(String excelPath) throws IOException
+	public ExcelUtil(String excelPath)
 	{
 		this.excelPath=excelPath;
-		fin=new FileInputStream(excelPath);
-		xbook=new XSSFWorkbook(fin);
+		try {
+			fin=new FileInputStream(excelPath);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		try {
+			xbook=new XSSFWorkbook(fin);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
-	public String getCellDataByValue(String sheetName,String rowName,String colName) throws IOException {
+	public String getCellDataByValue(String sheetName,String rowName,String colName) 
+	{
 		int rowNum = getRowNumber(sheetName, rowName);
 		int colNum = getColumnNumber(sheetName, colName);
 		return getCellDataByNum(sheetName, rowNum, colNum);
 
 	}
 
-	public String[][] getFullExcelData(String sheetName) throws IOException {
+	public String[][] getFullExcelData(String sheetName) 
+	{
 
 		int totalrows=getRowCount(sheetName);
 		int totalcols=getCellCount(sheetName,1);	
 
 
-		String loginData[][]=new String[totalrows][totalcols];
+		String XLData[][]=new String[totalrows][totalcols];
 		for(int i=1;i<=totalrows;i++)
 		{
 			for(int j=0;j<totalcols;j++)
 			{
-				loginData[i-1][j]=getCellDataByNum(sheetName, i, j);
+				XLData[i-1][j]=getCellDataByNum(sheetName, i, j);
 			}
 
 		}
-		return loginData;
+		return XLData;
 	}
 
-	public int[] getRowColNumbers(String sheetName, String Value) throws IOException {
+	public int[] getRowColNumbers(String sheetName, String Value) 
+	{
 
 		int totalrows=getRowCount(sheetName);
 		int totalcols=getCellCount(sheetName,1);	
@@ -81,7 +93,8 @@ public class ExcelUtil extends BaseClass{
 		return intcol;
 	}
 
-	public int getRowNumber(String sheetName, String Value) throws IOException {
+	public int getRowNumber(String sheetName, String Value) 
+	{
 
 		int totalrows=getRowCount(sheetName);
 		int totalcols=getCellCount(sheetName,1);	
@@ -102,7 +115,8 @@ public class ExcelUtil extends BaseClass{
 		return RowNumber;
 	}
 
-	public int getColumnNumber(String sheetName, String Value) throws IOException {
+	public int getColumnNumber(String sheetName, String Value) 
+	{
 
 		int totalrows=getRowCount(sheetName);
 		int totalcols=getCellCount(sheetName,1);	
@@ -123,29 +137,29 @@ public class ExcelUtil extends BaseClass{
 		return ColumnNumber;
 	}
 
-	public int getRowCount(String sheetName) throws IOException 
+	public int getRowCount(String sheetName)
 	{
 		xsheet=xbook.getSheet(sheetName);
 		int rowcount=xsheet.getLastRowNum();
-		xbook.close();
-		fin.close();
+		xbookClose();
+		finClose();
 		return rowcount;		
 	}
 
 
-	public int getCellCount(String sheetName,int rownum) throws IOException
+	public int getCellCount(String sheetName,int rownum)
 	{
 		xsheet=xbook.getSheet(sheetName);
 		xrow=xsheet.getRow(rownum);
 		int cellcount=xrow.getLastCellNum();
-		xbook.close();
-		fin.close();
+		xbookClose();
+		finClose();
 		return cellcount;
 	}
 
 
 
-	public String getCellDataByNum(String sheetName,int rownum,int colnum) throws IOException
+	public String getCellDataByNum(String sheetName,int rownum,int colnum)
 	{
 		xsheet=xbook.getSheet(sheetName);
 		xrow=xsheet.getRow(rownum);
@@ -160,8 +174,8 @@ public class ExcelUtil extends BaseClass{
 		{
 			data="";
 		}
-		xbook.close();
-		fin.close();
+		xbookClose();
+		finClose();
 		return data;
 	}
 
@@ -189,9 +203,9 @@ public class ExcelUtil extends BaseClass{
 		xcell.setCellValue(data);
 		fout=new FileOutputStream(excelPath);
 		xbook.write(fout);		
-		xbook.close();
-		fin.close();
-		fout.close();
+		xbookClose();
+		finClose();
+		foutClose();
 	}
 
 
@@ -209,9 +223,9 @@ public class ExcelUtil extends BaseClass{
 
 		xcell.setCellStyle(xstyle);
 		xbook.write(fout);
-		xbook.close();
-		fin.close();
-		fout.close();
+		xbookClose();
+		finClose();
+		foutClose();
 	}
 
 
@@ -228,9 +242,33 @@ public class ExcelUtil extends BaseClass{
 
 		xcell.setCellStyle(xstyle);		
 		xbook.write(fout);
-		xbook.close();
-		fin.close();
-		fout.close();
+		xbookClose();
+		finClose();
+		foutClose();
 	}
 
+	public void xbookClose() {
+		try {
+			xbook.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void finClose() {
+		try {
+			fin.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void foutClose() {
+		try {
+			fout.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

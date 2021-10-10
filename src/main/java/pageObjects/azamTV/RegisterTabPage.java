@@ -18,7 +18,8 @@ public class RegisterTabPage  extends BaseClass{
 	private By pageLoad = By.xpath("//android.widget.TextView[@text='Your phone number']");
 	private By phonenumberBox = By.xpath("//android.widget.EditText");
 	private By registerContinueButton = By.xpath("//android.widget.TextView[@text='Continue']");
-
+	private By ISDCodeButton = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView[1]");
+	private By ISDCodeSearch = By.xpath("//android.widget.EditText");
 
 	public boolean isPageLoaded() {
 		boolean IsPageLoaded = driver.findElement(pageLoad).getText().toString().equals("Your phone number");
@@ -29,6 +30,21 @@ public class RegisterTabPage  extends BaseClass{
 
 		}
 		return IsPageLoaded;
+
+	}
+	public void clickISDCodeButton() {
+		driver.findElement(ISDCodeButton).click();
+		logUtil.logE("Clicked ISDCode Button Succesfully");
+
+	}
+	public void enterISDCode(String ISDCode) {
+		driver.findElement(ISDCodeSearch).sendKeys(ISDCode);
+		actionClass.WaitSec(1);
+		logUtil.logE("Entered ISDCode - "+ISDCode+" - Succesfully");
+		By CountryButton = By.xpath("//android.widget.TextView[@text='"+ISDCode+"']");
+		driver.findElement(CountryButton).click();
+		actionClass.WaitSec(3);
+
 
 	}
 	
@@ -44,6 +60,8 @@ public class RegisterTabPage  extends BaseClass{
 		logUtil.logE("Clicked Continue Button Succesfully");
 
 	}
+	
+	
 	
 	public void enterOTP(String OTP) {
 		char[] ch = OTP.toCharArray();

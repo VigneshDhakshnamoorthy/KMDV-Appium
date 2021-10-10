@@ -28,7 +28,7 @@ public class InitiationClass extends BaseClass  {
 		try {
 			emulator = desireCap.emulatorID();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		try {
 			avdName = desireCap.avdName();

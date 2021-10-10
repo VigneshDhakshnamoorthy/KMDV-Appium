@@ -35,7 +35,7 @@ public class BaseClass{
 	protected static String emulator;
 	protected static String avdName;
 	protected static ITestResult BaseResult;
-	protected String APPName;
+	protected static String APPName;
 
 	@BeforeSuite(alwaysRun=true)
 	protected void setup() {

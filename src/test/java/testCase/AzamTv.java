@@ -17,7 +17,7 @@ public class AzamTv  extends BaseClass{
 	private String appName="Azam";
 
 	@Test(groups= {"Azam.Movies"})
-	public void AzamTV_MovieSearch() throws Exception{
+	public void AzamTV_MovieSearch() {
 		appOpen(appName);
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("AzamExcelData.xlsx"));
 		String movienumber = xlutil.getCellDataByValue("Sheet1", "movienumber", "value");
@@ -42,10 +42,11 @@ public class AzamTv  extends BaseClass{
 	}
 
 	@Test(groups= {"Azam.Register"})
-	public void AzamTV_Registeration() throws Exception{
+	public void AzamTV_Registeration() {
 		appOpen(appName);
-		String phonenumber = xlutil.getCellDataByValue("Sheet1", "phonenumber", "value");;
-		String otpnumber = xlutil.getCellDataByValue("Sheet1", "otpnumber", "value");;
+		xlutil = new ExcelUtil(pathUtil.getExcelPath("AzamExcelData.xlsx"));
+		String phonenumber = xlutil.getCellDataByValue("Sheet1", "phonenumber", "value");
+		String otpnumber = xlutil.getCellDataByValue("Sheet1", "otpnumber", "value");
 
 		StartupPage startUpPage = new StartupPage(driver);
 		startUpPage.clickGetStarted();
