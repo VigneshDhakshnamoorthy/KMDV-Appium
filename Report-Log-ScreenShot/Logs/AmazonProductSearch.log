@@ -1,9 +1,9 @@
-[2021-10-10 13:47:33] Test Started - AmazonProductSearch 
-[2021-10-10 13:47:45] Chrome - Aplication is Opening 
-[2021-10-10 13:48:00] https://www.amazon.in/
+[2021-10-13 15:41:19] Test Started - AmazonProductSearch 
+[2021-10-13 15:41:27] Chrome - Aplication is Opening 
+[2021-10-13 15:41:32] https://www.amazon.in/
 Opened in Chrome Browser Succesfully 
-[2021-10-10 13:48:06] Switched to WEBVIEW_chrome Succesfully 
-[2021-10-10 13:48:13] iphone - Searched Succesfully 
-[2021-10-10 13:48:13] Switched to NATIVE_APP Succesfully 
-[2021-10-10 13:48:13] Test Success : AmazonProductSearch 
-[2021-10-10 13:48:13] Chrome - Aplication is Closing 
+[2021-10-13 15:41:44] Switched to WEBVIEW_chrome Succesfully 
+[2021-10-13 15:41:50] iphone - Searched Succesfully 
+[2021-10-13 15:41:50] Switched to NATIVE_APP Succesfully 
+[2021-10-13 15:41:50] Test Success : AmazonProductSearch 
+[2021-10-13 15:41:50] Chrome - Aplication is Closing 
