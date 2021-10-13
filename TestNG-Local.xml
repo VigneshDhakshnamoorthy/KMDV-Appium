@@ -6,8 +6,10 @@
 	<listener class-name="util.TestNG.Listener"></listener>
   </listeners>
   <test name="Appium-TestPackage">
-   <packages>
-      <package name="testCase"/>
-    </packages>
+	   <classes>
+	 	 <class name="testCase.ApkInfo"></class>
+	     <class name="testCase.AzamTv"></class>
+	     <class name="testCase.ChromeBrowser"></class>
+	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
