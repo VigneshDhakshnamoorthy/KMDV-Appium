@@ -51,8 +51,6 @@ public class BaseClass{
 		
 		//Start Extent Report
 	    ERU.StartExtentReport();
-
-
 	}
 	
 	public void appOpen(String appName) {
@@ -65,8 +63,7 @@ public class BaseClass{
 	@AfterMethod(alwaysRun=true)
 	protected void appClose(){
 		//Close the AppiumDriver	
-		logUtil.logE(APPName+" - Aplication is Closing");
-		driver.quit();
+		init.QuitDriver();
 	}
 	
 
@@ -82,8 +79,6 @@ public class BaseClass{
 		emuUtil.stopEmulator(emulator);
 	}
 
-	
-	
 }
 		
 	

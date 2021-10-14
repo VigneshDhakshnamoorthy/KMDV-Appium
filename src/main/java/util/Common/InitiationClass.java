@@ -43,4 +43,9 @@ public class InitiationClass extends BaseClass  {
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		logUtil.logE(appName+" - Aplication is Opening");
 	}
+	
+	public void QuitDriver() {
+		logUtil.logE(APPName+" - Aplication is Closing");
+		driver.quit();
+	}
 }

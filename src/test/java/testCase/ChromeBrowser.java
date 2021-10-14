@@ -22,7 +22,6 @@ public class ChromeBrowser extends BaseClass{
 		driver.get(browseURL);
 		logUtil.logE(browseURL+"\nOpened in "+appName+" Browser Succesfully");
 
-		actionClass.isWebviewEnabled();
 		actionClass.SwitchWebview();
 		screenShotUtil.ExtentShot("Pass");
 

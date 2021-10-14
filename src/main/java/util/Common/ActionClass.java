@@ -17,6 +17,14 @@ public class ActionClass extends BaseClass {
 			e.printStackTrace();
 		}
 	}
+	
+	public void WaitMilliSec(int MilliSec) {
+		try {
+			Thread.sleep(MilliSec);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 	public void isWebviewEnabled() {
 		while(true) {
 			Set<String> contextHandles = driver.getContextHandles();
@@ -25,8 +33,35 @@ public class ActionClass extends BaseClass {
 			}
 		}
 	}
-
+	
+	public void WaitElement(By by, int Seconds) {
+		for (int i =1; i<=Seconds*1000 ; i++) {
+			if (driver.findElement(by).isDisplayed()){
+				break;
+			}else {
+				WaitMilliSec(1);
+			}
+		}
+	}
+	public void WaitUnlimit(By by) {
+		while(true) {
+			if(driver.findElement(by).isDisplayed()) {
+				break;
+			}
+		}
+	}
+	public void ClickElement(By by) {
+		WaitElement(by,10);
+		driver.findElement(by).click();
+	}
+	
+	public void TypeinElement(By by, String Value) {
+		WaitElement(by,10);
+		driver.findElement(by).sendKeys(Value);
+	}
+	
 	public void SwitchWebview() {
+		isWebviewEnabled();
 		driver.context(Context_WebView);
 		logUtil.logE("Switched to "+Context_WebView+" Succesfully");
 

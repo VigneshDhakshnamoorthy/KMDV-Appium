@@ -13,7 +13,7 @@ import io.appium.java_client.MobileElement;
 
 public class SauceLabsAzamTV {
 	
-	private static AppiumDriver<MobileElement> driver;
+	public static AppiumDriver<MobileElement> driver;
 	private By getStartedBtn = By.xpath("//android.widget.TextView[@text='Get Started']");
 	private By englishLanguageBtn = By.xpath("//android.widget.TextView[@text='English']");
 	private By continueBtn = By.xpath("//android.widget.TextView[@text='Continue']");
