@@ -34,14 +34,15 @@ public class ActionClass extends BaseClass {
 		}
 	}
 	
-	public void WaitElement(By by, int Seconds) {
+	public boolean WaitElement(By by, int Seconds) {
 		for (int i =1; i<=Seconds*1000 ; i++) {
 			if (driver.findElement(by).isDisplayed()){
-				break;
+				return true;
 			}else {
 				WaitMilliSec(1);
 			}
 		}
+		return false;
 	}
 	public void WaitUnlimit(By by) {
 		while(true) {
@@ -51,13 +52,19 @@ public class ActionClass extends BaseClass {
 		}
 	}
 	public void ClickElement(By by) {
-		WaitElement(by,10);
-		driver.findElement(by).click();
+		if(WaitElement(by,60)) {
+			driver.findElement(by).click();
+		}else {
+			logUtil.logE("Element Not Found :  "+by);
+		}
 	}
 	
 	public void TypeinElement(By by, String Value) {
-		WaitElement(by,10);
-		driver.findElement(by).sendKeys(Value);
+		if(WaitElement(by,60)) {
+			driver.findElement(by).sendKeys(Value);
+		}else {
+			logUtil.logE("Element Not Found :  "+by);
+		}
 	}
 	
 	public void SwitchWebview() {
