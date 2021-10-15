@@ -16,7 +16,7 @@ public class AzamTv  extends BaseClass{
 	
 	private String appName="Azam";
 
-	@Test(groups= {"Azam.Movies"})
+	@Test(groups= {"LocalAppium"})
 	public void AzamTV_MovieSearch() {
 		appOpen(appName);
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("AzamExcelData.xlsx"));
@@ -41,7 +41,7 @@ public class AzamTv  extends BaseClass{
 		
 	}
 
-	@Test(groups= {"Azam.Register"})
+	@Test(groups= {"LocalAppium"})
 	public void AzamTV_Registeration() {
 		appOpen(appName);
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("AzamExcelData.xlsx"));

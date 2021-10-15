@@ -12,7 +12,7 @@ public class ChromeBrowser extends BaseClass{
 	private String appName="Chrome";
 
 
-	@Test(groups= {"chrome.main"})
+	@Test(groups= {"LocalAppium"})
 	public void AmazonProductSearch() throws Exception{
 		appOpen(appName);
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("ChromeExcelData.xlsx"));

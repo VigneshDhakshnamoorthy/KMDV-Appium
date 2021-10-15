@@ -21,19 +21,19 @@ Opened in Chrome Browser Succesfully]]>
       <![CDATA[Chrome - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-14T21:34:17 IST" name="Default suite" finished-at="2021-10-14T21:34:54 IST" duration-ms="37286">
+  <suite started-at="2021-10-15T16:55:56 IST" name="Default suite" finished-at="2021-10-15T16:56:28 IST" duration-ms="32016">
     <groups>
       <group name="chrome.main">
-        <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
+        <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@71238fc2]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
       </group> <!-- chrome.main -->
     </groups>
-    <test started-at="2021-10-14T21:34:17 IST" name="Default test" finished-at="2021-10-14T21:34:54 IST" duration-ms="37286">
+    <test started-at="2021-10-15T16:55:56 IST" name="Default test" finished-at="2021-10-15T16:56:28 IST" duration-ms="32016">
       <class name="testCase.ChromeBrowser">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-14T21:34:14 IST" name="setup" finished-at="2021-10-14T21:34:17 IST" duration-ms="3255" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@71238fc2]" started-at="2021-10-15T16:55:52 IST" name="setup" finished-at="2021-10-15T16:55:56 IST" duration-ms="3809" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-14T21:34:17 IST" name="AmazonProductSearch" finished-at="2021-10-14T21:34:54 IST" duration-ms="36550" status="PASS">
+        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@71238fc2]" started-at="2021-10-15T16:55:56 IST" name="AmazonProductSearch" finished-at="2021-10-15T16:56:28 IST" duration-ms="31383" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Opening]]>
@@ -53,14 +53,14 @@ Opened in Chrome Browser Succesfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- AmazonProductSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-14T21:34:54 IST" name="appClose" finished-at="2021-10-14T21:34:54 IST" duration-ms="683" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@71238fc2]" started-at="2021-10-15T16:56:28 IST" name="appClose" finished-at="2021-10-15T16:56:28 IST" duration-ms="604" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-14T21:34:55 IST" name="tearDown" finished-at="2021-10-14T21:34:55 IST" duration-ms="669" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@71238fc2]" started-at="2021-10-15T16:56:28 IST" name="tearDown" finished-at="2021-10-15T16:56:29 IST" duration-ms="530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

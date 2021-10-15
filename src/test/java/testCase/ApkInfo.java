@@ -9,7 +9,7 @@ import util.Common.BaseClass;
 public class ApkInfo extends BaseClass{
 	private String appName="ApkInfo";
 
-	@Test(groups= {"ApkInfo.main"})
+	@Test(groups= {"LocalAppium"})
 	public void ApkinfoMain(){
 		appOpen(appName);
 		actionClass.scrollUiText("Duo");
