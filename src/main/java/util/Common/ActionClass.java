@@ -1,8 +1,10 @@
 package util.Common;
 
+import java.util.HashMap;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.appium.java_client.MobileBy;
 
@@ -98,6 +100,13 @@ public class ActionClass extends BaseClass {
 		driver.findElement(androidUIAutomator);
 		driver.findElement(By.xpath("//*[contains(@text, '"+ScrollText+"')]"));
 		logUtil.logE("Scroll to - "+ScrollText+" -  Succesfully");
+	}
+	
+	public void SwipeTo(By by) {
+		HashMap<String, String> scrollObject = new HashMap<String, String>();
+		scrollObject.put("direction", "down");
+		scrollObject.put("element", ((RemoteWebElement) driver.findElement(by)).getId());
+		js.executeScript("mobile: scroll", scrollObject);
 	}
 
 }

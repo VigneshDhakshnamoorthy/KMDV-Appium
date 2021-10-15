@@ -2,6 +2,8 @@ package util.Common;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import util.Capability.AppiumServerUtil;
@@ -23,7 +25,7 @@ public class InitiationClass extends BaseClass  {
 		ERU= new ExtentReportUtil();
 		actionClass= new ActionClass();
 		screenShotUtil= new ScreenShotUtil();
-
+		js = (JavascriptExecutor) driver;
 		
 		try {
 			emulator = desireCap.emulatorID();
