@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.AzamTv">
+      <class name="testCase.ApkInfo">
         <methods>
-          <include name="AzamTV_Registeration"/>
+          <include name="ApkinfoMain"/>
           <include name="appClose"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testCase.AzamTv -->
+      </class> <!-- testCase.ApkInfo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

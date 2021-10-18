@@ -26,7 +26,79 @@ public class SauceLabsAzamTV {
 
 
 @Test(enabled=false)
-public void sauceLabTest() throws IOException, InterruptedException {
+public void sauceLabTest1() throws IOException, InterruptedException {
+	String userName = System.getenv("SAUCE_USERNAME");
+	final String accessKey = System.getenv("SAUCE_ACCESS_KEY");
+	URL url = new URL("https://"+userName+":"+accessKey+"@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
+	
+	MutableCapabilities caps = new MutableCapabilities();
+	MutableCapabilities sauceOptions = new MutableCapabilities();
+	sauceOptions.setCapability("appiumVersion", "1.20.2");
+	caps.setCapability("sauce:options", sauceOptions);
+	caps.setCapability("platformName", "Android");
+	caps.setCapability("app", "storage:filename=AzamTV.apk");
+	caps.setCapability("appium:deviceName", "Google Pixel 3a GoogleAPI Emulator");
+	caps.setCapability("appium:platformVersion", "10.0");
+	caps.setCapability("appPackage", "com.azamtv.max.media");
+	caps.setCapability("appActivity", "com.azamtv.max.media.MainActivity");
+
+	
+	
+	driver = new AppiumDriver<MobileElement>(url,caps);
+	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	
+
+	driver.findElement(getStartedBtn).click();
+	System.out.println("Clicked Get Started Button Succesfully");
+	driver.findElement(englishLanguageBtn).click();
+	System.out.println("Clicked English Language Button Succesfully");
+	driver.findElement(continueBtn).click();
+	System.out.println("Clicked Continue Button Succesfully");
+
+	
+	driver.findElement(loginTab).click();
+	System.out.println("Clicked Login Tab Button Succesfully");
+
+	driver.findElement(registerBtn).click();
+	System.out.println("Clicked Register Button Succesfully");
+	
+	driver.findElement(ISDCodeButton).click();
+	System.out.println("Clicked ISDCode Button Succesfully");
+
+	String ISDCode = "+91";
+
+	driver.findElement(ISDCodeSearch).sendKeys(ISDCode);
+	System.out.println("Entered ISDCodeSearch - "+ISDCode+" - Succesfully");
+	
+	By CountryButton = By.xpath("//android.widget.TextView[@text='"+ISDCode+"']");
+	driver.findElement(CountryButton).click();
+
+	Thread.sleep(5000);
+	String phonenumber = "9600000000";
+
+	driver.findElement(phonenumberBox).click();
+	driver.findElement(phonenumberBox).sendKeys(phonenumber);
+	System.out.println("Entered New Register Number - "+phonenumber+" - Succesfully");
+	
+	driver.findElement(registerContinueButton).click();
+	System.out.println("Clicked Continue Button Succesfully");
+	
+	String otpnumber = "000000";
+
+	char[] ch = otpnumber.toCharArray();
+	for (int i =1 ; i<=ch.length;i++)
+	{
+	By otpBox = By.xpath("//android.view.ViewGroup["+i+"]/android.widget.EditText");
+	String otp = String.valueOf(ch[i-1]);
+	driver.findElement(otpBox).click();
+	driver.findElement(otpBox).sendKeys(otp);
+	}
+	System.out.println("Entered OTP - "+otpnumber+" -  Succesfully");
+
+}
+
+@Test(enabled=false)
+public void sauceLabTest2() throws IOException, InterruptedException {
 	String userName = System.getenv("SAUCE_USERNAME");
 	final String accessKey = System.getenv("SAUCE_ACCESS_KEY");
 	URL url = new URL("https://"+userName+":"+accessKey+"@ondemand.eu-central-1.saucelabs.com:443/wd/hub");

@@ -12,7 +12,7 @@ public class ApkInfo extends BaseClass{
 	@Test(groups= {"LocalAppium"})
 	public void ApkinfoMain(){
 		appOpen(appName);
-		actionClass.scrollUiText("Duo");
+		actionClass.scrollUiText("Photos");
 		screenShotUtil.ExtentShot("Pass");
 		actionClass.scrollUiText("YouTube");
 		screenShotUtil.ExtentShot("Pass");
