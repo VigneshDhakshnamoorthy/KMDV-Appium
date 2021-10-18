@@ -10,8 +10,8 @@ import util.Common.BaseClass;
 import util.Data.PropertiesUtil;
 
 public class DesirCapUtil extends BaseClass{
-	public  DesiredCapabilities PlatformCap;
-	protected static String URLAddress;
+	private  DesiredCapabilities PlatformCap;
+	private  String URLAddress;
 
 
 	public DesiredCapabilities App(String AppName) {

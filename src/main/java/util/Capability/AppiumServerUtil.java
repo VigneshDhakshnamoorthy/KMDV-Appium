@@ -9,8 +9,8 @@ import util.Common.BaseClass;
 import util.Data.PropertiesUtil;
 
 public class AppiumServerUtil  extends BaseClass{
-	protected AppiumServiceBuilder AppiumBuilder;
-	protected static AppiumDriverLocalService AppiumService;
+	private AppiumServiceBuilder AppiumBuilder;
+	private AppiumDriverLocalService AppiumService;
 
 	public void startServer() {
 		try {

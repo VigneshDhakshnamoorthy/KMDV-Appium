@@ -95,7 +95,6 @@ public class ActionClass extends BaseClass {
 				+ "new UiSelector().textContains(\""+ScrollText+"\"));";
 		By androidUIAutomator = MobileBy.AndroidUIAutomator(ScrollCommand);
 		driver.findElement(androidUIAutomator);
-		driver.findElement(By.xpath("//*[contains(@text, '"+ScrollText+"')]"));
 		logUtil.logE("Scroll to - "+ScrollText+" -  Succesfully");
 	}
 	

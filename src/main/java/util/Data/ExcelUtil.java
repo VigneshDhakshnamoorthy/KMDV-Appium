@@ -19,14 +19,14 @@ import util.Common.BaseClass;
 
 public class ExcelUtil extends BaseClass{
 
-	public static FileInputStream fin;
-	public static FileOutputStream fout;
-	public static XSSFWorkbook xbook;
-	public static XSSFSheet xsheet;
-	public static XSSFRow xrow;
-	public static XSSFCell xcell;
-	public static CellStyle xstyle;   
-	String excelPath;
+	private  FileInputStream fin;
+	private  FileOutputStream fout;
+	private  XSSFWorkbook xbook;
+	private  XSSFSheet xsheet;
+	private  XSSFRow xrow;
+	private  XSSFCell xcell;
+	private  CellStyle xstyle;   
+	private String excelPath;
 
 	public ExcelUtil(String excelPath)
 	{
