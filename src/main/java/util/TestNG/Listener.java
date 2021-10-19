@@ -29,8 +29,7 @@ public class Listener extends BaseClass  implements ITestListener{
 	    	logUtil.logC("Test Failure : "+result.getName()+" // "+result.getThrowable());
 	    	screenShotUtil.ExtentShot("Fail");
 	    	ERU.Etest.fail(result.getThrowable());
-
-	    ;
+	    
 	    }  
 	  
 	    @Override  

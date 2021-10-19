@@ -15,7 +15,6 @@ public class ApkInfo extends BaseClass{
 		actionClass.scrollUiText("Photos");
 		screenShotUtil.ExtentShot("Pass");
 		actionClass.scrollUiText("YouTube");
-		screenShotUtil.ExtentShot("Pass");
 
 
 	}

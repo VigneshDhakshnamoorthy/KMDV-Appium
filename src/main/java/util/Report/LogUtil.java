@@ -14,6 +14,10 @@ import util.Common.BaseClass;
 
 public class LogUtil extends BaseClass {
 
+	private File logsRoot;
+	private Logger logger;
+	private FileHandler fh;
+	
 	public void logE(String LogMessage) {
 		Reporter.log(LogMessage);
 		ERU.ExtentPass(LogMessage);
@@ -24,9 +28,7 @@ public class LogUtil extends BaseClass {
 	public void logC(String LogMessage) {
 		System.out.println(LogMessage);
 	}	
-	public File logsRoot;
-	public Logger logger;
-	public FileHandler fh;
+
 
 	public void startLogging(String testName) {
 		LogManager.getLogManager().reset();
