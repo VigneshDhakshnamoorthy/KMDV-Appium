@@ -23,18 +23,9 @@ public class InitiationClass extends BaseClass  {
 		ERU= new ExtentReportUtil();
 		actionClass= new ActionClass();
 		screenShotUtil= new ScreenShotUtil();
+		emulator = desireCap.emulatorID();
+	    avdName = desireCap.avdName();
 		
-		
-		try {
-			emulator = desireCap.emulatorID();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		try {
-			avdName = desireCap.avdName();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		
 	}
 	

@@ -41,6 +41,8 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
 		</dependency>
+
+
 		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
 		<dependency>
 			<groupId>io.appium</groupId>
@@ -72,8 +74,8 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.7.32</version>
 			<scope>compile</scope>
-			
-			
+
+
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>

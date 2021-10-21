@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.ApkInfo">
+      <class name="testCase.trialDemo">
         <methods>
-          <include name="ApkinfoMain"/>
-          <include name="appClose"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
+          <include name="AppiumSessions"/>
         </methods>
-      </class> <!-- testCase.ApkInfo -->
+      </class> <!-- testCase.trialDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

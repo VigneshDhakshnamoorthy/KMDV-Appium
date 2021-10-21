@@ -13,13 +13,9 @@ public class AppiumServerUtil  extends BaseClass{
 	private AppiumDriverLocalService AppiumService;
 
 	public void startServer() {
-		try {
-			prop = new PropertiesUtil("appiumserver.properties");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-
+		
+		prop = new PropertiesUtil("appiumserver.properties");
+		
 		//Build the Appium service
 		AppiumBuilder = new AppiumServiceBuilder();
 		AppiumBuilder.withIPAddress(prop.getAppProperty("IPAddress"));
