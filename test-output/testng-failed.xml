@@ -6,6 +6,9 @@
       <class name="testCase.trialDemo">
         <methods>
           <include name="AppiumSessions"/>
+          <include name="appClose"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testCase.trialDemo -->
     </classes>

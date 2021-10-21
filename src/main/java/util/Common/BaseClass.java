@@ -17,7 +17,7 @@ import util.Report.ExtentReportUtil;
 import util.Report.LogUtil;
 import util.Report.ScreenShotUtil;
 
-
+@Listeners(util.TestNG.Listener.class)
 public class BaseClass{
 	protected static InitiationClass init;
 	protected static PropertiesUtil prop;

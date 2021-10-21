@@ -1,13 +1,10 @@
 package testCase;
 
 import org.openqa.selenium.Keys;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import util.Common.BaseClass;
 import util.Data.ExcelUtil;
 
-@Listeners(util.TestNG.Listener.class)
 public class ChromeBrowser extends BaseClass{
 	private String appName="Chrome";
 
@@ -26,6 +23,7 @@ public class ChromeBrowser extends BaseClass{
 		screenShotUtil.ExtentShot("Pass");
 
 		driver.findElementByXPath("//input[@id='nav-search-keywords']").sendKeys(searchKeyword+Keys.ENTER);
+		
 		logUtil.logE(searchKeyword+" - Searched Succesfully");
 		actionClass.SwitchNative();
 		
