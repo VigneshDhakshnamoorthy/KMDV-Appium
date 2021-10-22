@@ -17,7 +17,7 @@ public class ChromeBrowser extends BaseClass{
 		String searchKeyword=xlutil.getCellDataByValue("Sheet1", "searchKeyword", "value");
 		actionClass.clearChromeTabs();
 		driver.get(browseURL);
-		logUtil.logE(browseURL+"\nOpened in "+appName+" Browser Succesfully");
+		logUtil.logE(appName+" Opened URL : "+browseURL);
 
 		actionClass.SwitchWebview();
 
