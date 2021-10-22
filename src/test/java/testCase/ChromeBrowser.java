@@ -20,10 +20,10 @@ public class ChromeBrowser extends BaseClass{
 		logUtil.logE(browseURL+"\nOpened in "+appName+" Browser Succesfully");
 
 		actionClass.SwitchWebview();
-		screenShotUtil.ExtentShot("Pass");
 
 		driver.findElementByXPath("//input[@id='nav-search-keywords']").sendKeys(searchKeyword+Keys.ENTER);
-		
+		screenShotUtil.ExtentShot("Pass");
+
 		logUtil.logE(searchKeyword+" - Searched Succesfully");
 		actionClass.SwitchNative();
 		

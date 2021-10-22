@@ -24,30 +24,7 @@ public class SessionCommands  extends BaseClass{
 
 	}
 
-	public boolean getSessionDetails() {
-		try{
-			driver.getSessionDetails();
-			logUtil.logE("getSessionDetails Command Working Succesfully");
-			return true;
-		} catch (Exception e) {
-			logUtil.logE("getSessionDetails Command Not Working");
-			return false;
-		}
-
-	}
-
-	public boolean getPageSource() {
-		try{
-			driver.getPageSource();
-			logUtil.logE("getPageSource Command Working Succesfully");
-			return true;
-		} catch (Exception e) {
-			logUtil.logE("getPageSource Command Not Working");
-			return false;
-
-		}
-
-	}
+	
 
 	public void allCommands() {
 		driver.quit(); // End Session
