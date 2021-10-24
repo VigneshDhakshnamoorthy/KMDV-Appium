@@ -4,7 +4,6 @@ import java.util.Map;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.html5.Location;
-
 import io.appium.java_client.MobileBy;
 
 public class ActionClass extends BaseClass {
@@ -84,28 +83,30 @@ public class ActionClass extends BaseClass {
 
 		switch (Orientation) {
 
-			case "LANDSCAPE":
-				driver.rotate(ScreenOrientation.LANDSCAPE);
-				break;
-	
-			case "PORTRAIT":
-				driver.rotate(ScreenOrientation.PORTRAIT);
-				break;
-	
-			default:
-				logUtil.logC("Provide Proper App Name");
+		case "LANDSCAPE":
+			driver.rotate(ScreenOrientation.LANDSCAPE);
+			break;
+
+		case "PORTRAIT":
+			driver.rotate(ScreenOrientation.PORTRAIT);
+			break;
+
+		default:
+			logUtil.logC("Provide Proper App Name");
 
 		}
 
 	}
-	
+
 	public Location getLocation() {
 		return driver.location();
 	}
-	
+
 	public void setLocation(Location location) {
 		driver.setLocation(location);
+		
 	}
+
 	
 
 }

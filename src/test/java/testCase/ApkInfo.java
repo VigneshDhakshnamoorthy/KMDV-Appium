@@ -11,6 +11,7 @@ public class ApkInfo extends BaseClass{
 		appOpen(appName);
 		actionClass.scrollUiText("Photos");
 		screenShotUtil.ExtentShot("Pass");
+		System.out.println(actionClass.getOrientation());
 		actionClass.scrollUiText("YouTube");
 
 

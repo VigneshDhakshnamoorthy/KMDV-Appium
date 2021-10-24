@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.trialDemo">
+      <class name="testCase.ChromeBrowser">
         <methods>
-          <include name="AppiumSessions"/>
+          <include name="AmazonProductSearch"/>
           <include name="appClose"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testCase.trialDemo -->
+      </class> <!-- testCase.ChromeBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
