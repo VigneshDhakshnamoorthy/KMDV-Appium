@@ -33,6 +33,7 @@ public class ChromeBase  extends BaseClass{
 		
 		logUtil.logE("Switched to "+Context_WebView+" Succesfully");
 	}
+	
 	public void SwitchNative() {
 		while(true) {
 			Set<String> contextHandles = driver.getContextHandles();
