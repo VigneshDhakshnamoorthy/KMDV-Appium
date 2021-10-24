@@ -22,6 +22,7 @@ public class InitiationClass extends BaseClass  {
 		logUtil= new LogUtil();
 		ERU= new ExtentReportUtil();
 		actionClass= new ActionClass();
+		chromeBase = new ChromeBase();
 		screenShotUtil= new ScreenShotUtil();
 		emulator = desireCap.emulatorID();
 	    avdName = desireCap.avdName();

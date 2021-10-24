@@ -2,55 +2,67 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[ApkInfo - Aplication is Opening]]>
+      <![CDATA[Chrome - Aplication is Opening]]>
     </line>
     <line>
-      <![CDATA[Scroll to - Photos -  Succesfully]]>
+      <![CDATA[Opened URL : https://www.amazon.in/]]>
     </line>
     <line>
-      <![CDATA[Scroll to - YouTube -  Succesfully]]>
+      <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
     </line>
     <line>
-      <![CDATA[ApkInfo - Aplication is Closing]]>
+      <![CDATA[iphone - Searched Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Switched to NATIVE_APP Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Chrome - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-21T20:06:33 IST" name="Default suite" finished-at="2021-10-21T20:07:15 IST" duration-ms="42060">
+  <suite started-at="2021-10-24T23:09:18 IST" name="Default suite" finished-at="2021-10-24T23:10:02 IST" duration-ms="43453">
     <groups>
       <group name="LocalAppium">
-        <method signature="ApkInfo.ApkinfoMain()[pri:0, instance:testCase.ApkInfo@2a54a73f]" name="ApkinfoMain" class="testCase.ApkInfo"/>
+        <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
       </group> <!-- LocalAppium -->
     </groups>
-    <test started-at="2021-10-21T20:06:33 IST" name="Default test" finished-at="2021-10-21T20:07:15 IST" duration-ms="42060">
-      <class name="testCase.ApkInfo">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@2a54a73f]" started-at="2021-10-21T20:06:32 IST" name="setup" finished-at="2021-10-21T20:06:33 IST" duration-ms="1473" status="PASS">
+    <test started-at="2021-10-24T23:09:18 IST" name="Default test" finished-at="2021-10-24T23:10:02 IST" duration-ms="43453">
+      <class name="testCase.ChromeBrowser">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-24T23:09:15 IST" name="setup" finished-at="2021-10-24T23:09:18 IST" duration-ms="3032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@2a54a73f]" started-at="2021-10-21T20:06:33 IST" name="ApkinfoMain" finished-at="2021-10-21T20:07:15 IST" duration-ms="41379" status="PASS">
+        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-24T23:09:18 IST" name="AmazonProductSearch" finished-at="2021-10-24T23:10:01 IST" duration-ms="42763" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[ApkInfo - Aplication is Opening]]>
+              <![CDATA[Chrome - Aplication is Opening]]>
             </line>
             <line>
-              <![CDATA[Scroll to - Photos -  Succesfully]]>
+              <![CDATA[Opened URL : https://www.amazon.in/]]>
             </line>
             <line>
-              <![CDATA[Scroll to - YouTube -  Succesfully]]>
+              <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[iphone - Searched Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Switched to NATIVE_APP Succesfully]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ApkinfoMain -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@2a54a73f]" started-at="2021-10-21T20:07:15 IST" name="appClose" finished-at="2021-10-21T20:07:15 IST" duration-ms="639" status="PASS">
+        </test-method> <!-- AmazonProductSearch -->
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-24T23:10:01 IST" name="appClose" finished-at="2021-10-24T23:10:02 IST" duration-ms="650" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[ApkInfo - Aplication is Closing]]>
+              <![CDATA[Chrome - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@2a54a73f]" started-at="2021-10-21T20:07:15 IST" name="tearDown" finished-at="2021-10-21T20:07:16 IST" duration-ms="527" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-24T23:10:02 IST" name="tearDown" finished-at="2021-10-24T23:10:02 IST" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCase.ApkInfo -->
+      </class> <!-- testCase.ChromeBrowser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,7 +1,8 @@
 package testCase;
 
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
+
+import pageObjects.chromeBrowser.AmazonPage;
 import util.Common.BaseClass;
 import util.Data.ExcelUtil;
 
@@ -15,17 +16,16 @@ public class ChromeBrowser extends BaseClass{
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("ChromeExcelData.xlsx"));
 		String browseURL=xlutil.getCellDataByValue("Sheet1", "browseURL", "value");
 		String searchKeyword=xlutil.getCellDataByValue("Sheet1", "searchKeyword", "value");
-		actionClass.clearChromeTabs();
-		driver.get(browseURL);
-		logUtil.logE(appName+" Opened URL : "+browseURL);
+		
+		chromeBase.clearChromeTabs();
+		chromeBase.open(browseURL);
+		chromeBase.SwitchWebview();
 
-		actionClass.SwitchWebview();
-
-		driver.findElementByXPath("//input[@id='nav-search-keywords']").sendKeys(searchKeyword+Keys.ENTER);
+		AmazonPage amazonPage = new AmazonPage(driver);
+		amazonPage.enterSearchBox(searchKeyword);
+		
 		screenShotUtil.ExtentShot("Pass");
-
-		logUtil.logE(searchKeyword+" - Searched Succesfully");
-		actionClass.SwitchNative();
+		chromeBase.SwitchNative();
 		
 	}
 }

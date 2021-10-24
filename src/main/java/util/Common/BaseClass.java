@@ -30,6 +30,7 @@ public class BaseClass{
 	protected static LogUtil logUtil;
 	protected static ExtentReportUtil ERU;
 	protected static ActionClass actionClass;
+	protected static ChromeBase chromeBase;
 	protected static ExcelUtil xlutil;
 	protected static ScreenShotUtil screenShotUtil;
 
