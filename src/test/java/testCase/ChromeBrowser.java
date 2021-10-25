@@ -13,11 +13,12 @@ public class ChromeBrowser extends BaseClass{
 	@Test(groups= {"LocalAppium"})
 	public void AmazonProductSearch() throws Exception{
 		appOpen(appName);
+		chromeBase.clearChromeTabs();
+
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("ChromeExcelData.xlsx"));
 		String browseURL=xlutil.getCellDataByValue("Sheet1", "browseURL", "value");
 		String searchKeyword=xlutil.getCellDataByValue("Sheet1", "searchKeyword", "value");
 		
-		chromeBase.clearChromeTabs();
 		chromeBase.open(browseURL);
 		chromeBase.SwitchWebview();
 

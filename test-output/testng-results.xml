@@ -11,7 +11,10 @@
       <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
     </line>
     <line>
-      <![CDATA[iphone - Searched Succesfully]]>
+      <![CDATA[Hamburger Menu - Clicked Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Menu Mobiles - Clicked Succesfully]]>
     </line>
     <line>
       <![CDATA[Switched to NATIVE_APP Succesfully]]>
@@ -20,19 +23,19 @@
       <![CDATA[Chrome - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-25T14:41:26 IST" name="Default suite" finished-at="2021-10-25T14:41:53 IST" duration-ms="26848">
+  <suite started-at="2021-10-25T15:13:56 IST" name="Default suite" finished-at="2021-10-25T15:14:25 IST" duration-ms="29715">
     <groups>
       <group name="LocalAppium">
         <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
       </group> <!-- LocalAppium -->
     </groups>
-    <test started-at="2021-10-25T14:41:26 IST" name="Default test" finished-at="2021-10-25T14:41:53 IST" duration-ms="26848">
+    <test started-at="2021-10-25T15:13:56 IST" name="Default test" finished-at="2021-10-25T15:14:25 IST" duration-ms="29715">
       <class name="testCase.ChromeBrowser">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T14:41:24 IST" name="setup" finished-at="2021-10-25T14:41:26 IST" duration-ms="1901" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T15:13:50 IST" name="setup" finished-at="2021-10-25T15:13:56 IST" duration-ms="5336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T14:41:26 IST" name="AmazonProductSearch" finished-at="2021-10-25T14:41:53 IST" duration-ms="26516" status="PASS">
+        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T15:13:56 IST" name="AmazonProductSearch" finished-at="2021-10-25T15:14:25 IST" duration-ms="29190" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Opening]]>
@@ -44,21 +47,24 @@
               <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
             </line>
             <line>
-              <![CDATA[iphone - Searched Succesfully]]>
+              <![CDATA[Hamburger Menu - Clicked Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Menu Mobiles - Clicked Succesfully]]>
             </line>
             <line>
               <![CDATA[Switched to NATIVE_APP Succesfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- AmazonProductSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T14:41:53 IST" name="appClose" finished-at="2021-10-25T14:41:53 IST" duration-ms="309" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T15:14:25 IST" name="appClose" finished-at="2021-10-25T15:14:25 IST" duration-ms="502" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T14:41:53 IST" name="tearDown" finished-at="2021-10-25T14:41:53 IST" duration-ms="324" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T15:14:25 IST" name="tearDown" finished-at="2021-10-25T15:14:26 IST" duration-ms="399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
