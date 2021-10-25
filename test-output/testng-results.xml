@@ -11,10 +11,10 @@
       <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
     </line>
     <line>
-      <![CDATA[Hamburger Menu - Clicked Succesfully]]>
+      <![CDATA[iphone - Searched Succesfully]]>
     </line>
     <line>
-      <![CDATA[Menu Mobiles - Clicked Succesfully]]>
+      <![CDATA[Scroll By X : 0 | Y : 1000]]>
     </line>
     <line>
       <![CDATA[Switched to NATIVE_APP Succesfully]]>
@@ -23,19 +23,19 @@
       <![CDATA[Chrome - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-25T15:13:56 IST" name="Default suite" finished-at="2021-10-25T15:14:25 IST" duration-ms="29715">
+  <suite started-at="2021-10-26T01:31:12 IST" name="Default suite" finished-at="2021-10-26T01:31:35 IST" duration-ms="22932">
     <groups>
       <group name="LocalAppium">
         <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
       </group> <!-- LocalAppium -->
     </groups>
-    <test started-at="2021-10-25T15:13:56 IST" name="Default test" finished-at="2021-10-25T15:14:25 IST" duration-ms="29715">
+    <test started-at="2021-10-26T01:31:12 IST" name="Default test" finished-at="2021-10-26T01:31:35 IST" duration-ms="22932">
       <class name="testCase.ChromeBrowser">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T15:13:50 IST" name="setup" finished-at="2021-10-25T15:13:56 IST" duration-ms="5336" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-26T01:31:10 IST" name="setup" finished-at="2021-10-26T01:31:12 IST" duration-ms="1944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T15:13:56 IST" name="AmazonProductSearch" finished-at="2021-10-25T15:14:25 IST" duration-ms="29190" status="PASS">
+        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-26T01:31:12 IST" name="AmazonProductSearch" finished-at="2021-10-26T01:31:34 IST" duration-ms="22556" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Opening]]>
@@ -47,24 +47,24 @@
               <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
             </line>
             <line>
-              <![CDATA[Hamburger Menu - Clicked Succesfully]]>
+              <![CDATA[iphone - Searched Succesfully]]>
             </line>
             <line>
-              <![CDATA[Menu Mobiles - Clicked Succesfully]]>
+              <![CDATA[Scroll By X : 0 | Y : 1000]]>
             </line>
             <line>
               <![CDATA[Switched to NATIVE_APP Succesfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- AmazonProductSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T15:14:25 IST" name="appClose" finished-at="2021-10-25T15:14:25 IST" duration-ms="502" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-26T01:31:34 IST" name="appClose" finished-at="2021-10-26T01:31:35 IST" duration-ms="351" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T15:14:25 IST" name="tearDown" finished-at="2021-10-25T15:14:26 IST" duration-ms="399" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-26T01:31:35 IST" name="tearDown" finished-at="2021-10-26T01:31:35 IST" duration-ms="312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

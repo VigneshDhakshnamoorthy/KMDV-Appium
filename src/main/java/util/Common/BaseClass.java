@@ -2,7 +2,6 @@ package util.Common;
 
 
 import org.testng.annotations.*;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.ITestResult;
 
 import io.appium.java_client.AppiumDriver;
@@ -39,7 +38,6 @@ public class BaseClass{
 	protected static String APPName;
 
 	protected static ITestResult BaseResult;
-	protected static JavascriptExecutor js;
 
 	@BeforeSuite(alwaysRun=true)
 	protected void setup() {

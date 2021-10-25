@@ -2,6 +2,9 @@ package util.Common;
 
 import java.util.Set;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+
 public class ChromeBase  extends BaseClass{
 	
 	protected String Context_Native = "NATIVE_APP";
@@ -46,6 +49,18 @@ public class ChromeBase  extends BaseClass{
 		logUtil.logE("Switched to "+Context_Native+" Succesfully");
 	}
 	
+	public void jseScrolltoEle(By by) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        actionClass.WaitForElement(by,30);
+        js.executeScript("arguments[0].scrollIntoView();", driver.findElement(by));
+	}
+	
+	public void jseScrollbyDim(int x, int y) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1000)");
+        logUtil.logE("Scroll By X : "+x+" | Y : "+y);
+        
+	}
 	
 
 }

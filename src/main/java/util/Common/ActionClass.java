@@ -24,25 +24,30 @@ public class ActionClass extends BaseClass {
 		}
 	}
 
-	public boolean WaitElement(By by, int Seconds) {
+	public boolean WaitForElement(By by, int Seconds) {
 		for (int i =1; i<=Seconds*1000 ; i++) {
-			if (driver.findElement(by).isDisplayed()){
+			try {
+				driver.findElement(by);
 				return true;
-			}else {
+			}catch(Exception e) {
 				WaitMilliSec(1);
 			}
 		}
 		return false;
 	}
-	public void WaitUnlimit(By by) {
+	public boolean WaitUnlimit(By by) {
 		while(true) {
-			if(driver.findElement(by).isDisplayed()) {
-				break;
+			try {
+				driver.findElement(by);
+				return true;
+			}catch(Exception e) {
+				WaitMilliSec(1);
 			}
-		}
+			}
+		
 	}
 	public void ClickElement(By by) {
-		if(WaitElement(by,60)) {
+		if(WaitForElement(by,60)) {
 			driver.findElement(by).click();
 		}else {
 			logUtil.logE("Element Not Found :  "+by);
@@ -50,7 +55,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	public void TypeinElement(By by, String Value) {
-		if(WaitElement(by,60)) {
+		if(WaitForElement(by,60)) {
 			driver.findElement(by).sendKeys(Value);
 		}else {
 			logUtil.logE("Element Not Found :  "+by);
