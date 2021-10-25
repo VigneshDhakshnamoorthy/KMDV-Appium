@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\VigneshD\AppData\Local\Temp\testng-eclipse-1312421918\testng-customsuite.xml</span>
+                    <span>C:\Users\VigneshD\AppData\Local\Temp\testng-eclipse-745244940\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCase.ChromeBrowser" class="method navigator-link" hash-for-method="AmazonProductSearch">AmazonProductSearch</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testCase.ApkInfo" class="method navigator-link" hash-for-method="ApkinfoMain">ApkinfoMain</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,26 +122,35 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testCase.ChromeBrowser</span>
+              <span class="class-name">testCase.ApkInfo</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AmazonProductSearch">
-                  </a> <!-- AmazonProductSearch -->
-                  <span class="method-name">AmazonProductSearch</span>
-                  <div class="stack-trace">java.lang.ExceptionInInitializerError
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:53)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:216)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:214)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:107)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at pageObjects.chromeBrowser.AmazonPage.&lt;init&gt;(AmazonPage.java:16)
-	at testCase.ChromeBrowser.AmazonProductSearch(ChromeBrowser.java:24)
+                  <a name="ApkinfoMain">
+                  </a> <!-- ApkinfoMain -->
+                  <span class="method-name">ApkinfoMain</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidArgumentException: Both strategy and selector arguments must be provided
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CESIT-LAP-0135&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, databaseEnabled: false, desired: {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, deviceName: emulator-5554, noReset: false, platformName: android, platformVersion: 11.0}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2082, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 427cc819-b352-4589-9242-eaa5ac62368d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at testCase.ApkInfo.ApkinfoMain(ApkInfo.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -170,34 +179,6 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException--&gt;Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @3551a94
-	at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
-	at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
-	at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:73)
-	... 39 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @3551a94
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
-	at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at net.sf.cglib.core.ReflectUtils.&lt;clinit&gt;(ReflectUtils.java:52)
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
-	... 51 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -207,7 +188,7 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\VigneshD\AppData\Local\Temp\testng-eclipse-1312421918\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\VigneshD\AppData\Local\Temp\testng-eclipse-745244940\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -216,7 +197,7 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCase.ChromeBrowser&quot;/&gt;
+      &lt;class name=&quot;testCase.ApkInfo&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -244,7 +225,7 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
               <span class="test-group-name">LocalAppium</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">AmazonProductSearch</span>
+                <span class="method-in-group-name">ApkinfoMain</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -266,14 +247,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AmazonProductSearch')
-data.setCell(0, 2, 'testCase.ChromeBrowser')
-data.setCell(0, 3, 28278);
+data.setCell(0, 1, 'ApkinfoMain')
+data.setCell(0, 2, 'testCase.ApkInfo')
+data.setCell(0, 3, 22600);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -285,11 +266,10 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">AmazonProductSearch</span>
+              <span class="reporter-method-name">ApkinfoMain</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Chrome - Aplication is Opening</span>
-                <span class="reporter-method-output">Opened URL : https://www.amazon.in/</span>
-                <span class="reporter-method-output">Switched to WEBVIEW_chrome Succesfully</span>
+                <span class="reporter-method-output">ApkInfo - Aplication is Opening</span>
+                <span class="reporter-method-output">Scroll to - Photos -  Succesfully</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -307,7 +287,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCase.ChromeBrowser</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCase.ApkInfo</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
@@ -315,16 +295,16 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">AmazonProductSearch</span>
-                <span class="method-start">3805 ms</span>
+                <span class="method-name">ApkinfoMain</span>
+                <span class="method-start">1924 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">appClose</span>
-                <span class="method-start">38800 ms</span>
+                <span class="method-start">25019 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">39402 ms</span>
+                <span class="method-start">25310 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

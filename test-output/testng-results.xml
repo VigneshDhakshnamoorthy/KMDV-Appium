@@ -2,45 +2,59 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Chrome - Aplication is Opening]]>
+      <![CDATA[ApkInfo - Aplication is Opening]]>
     </line>
     <line>
-      <![CDATA[Opened URL : https://www.amazon.in/]]>
+      <![CDATA[Scroll to - Photos -  Succesfully]]>
     </line>
     <line>
-      <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
-    </line>
-    <line>
-      <![CDATA[Chrome - Aplication is Closing]]>
+      <![CDATA[ApkInfo - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-25T00:53:58 IST" name="Default suite" finished-at="2021-10-25T00:54:34 IST" duration-ms="35551">
+  <suite started-at="2021-10-25T13:07:57 IST" name="Default suite" finished-at="2021-10-25T13:08:20 IST" duration-ms="23375">
     <groups>
       <group name="LocalAppium">
-        <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
+        <method signature="ApkInfo.ApkinfoMain()[pri:0, instance:testCase.ApkInfo@2a54a73f]" name="ApkinfoMain" class="testCase.ApkInfo"/>
       </group> <!-- LocalAppium -->
     </groups>
-    <test started-at="2021-10-25T00:53:58 IST" name="Default test" finished-at="2021-10-25T00:54:34 IST" duration-ms="35551">
-      <class name="testCase.ChromeBrowser">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T00:53:54 IST" name="setup" finished-at="2021-10-25T00:53:58 IST" duration-ms="3773" status="PASS">
+    <test started-at="2021-10-25T13:07:57 IST" name="Default test" finished-at="2021-10-25T13:08:20 IST" duration-ms="23375">
+      <class name="testCase.ApkInfo">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@2a54a73f]" started-at="2021-10-25T13:07:55 IST" name="setup" finished-at="2021-10-25T13:07:57 IST" duration-ms="1906" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T00:53:58 IST" name="AmazonProductSearch" finished-at="2021-10-25T00:54:26 IST" duration-ms="28278" status="FAIL">
-          <exception class="java.lang.ExceptionInInitializerError">
+        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@2a54a73f]" started-at="2021-10-25T13:07:57 IST" name="ApkinfoMain" finished-at="2021-10-25T13:08:20 IST" duration-ms="22600" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidArgumentException">
+            <message>
+              <![CDATA[Both strategy and selector arguments must be provided
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CESIT-LAP-0135', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, databaseEnabled: false, desired: {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, deviceName: emulator-5554, noReset: false, platformName: android, platformVersion: 11.0}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2082, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 427cc819-b352-4589-9242-eaa5ac62368d]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ExceptionInInitializerError
-at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:53)
-at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
-at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:216)
-at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:214)
-at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:107)
-at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
-at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-at pageObjects.chromeBrowser.AmazonPage.<init>(AmazonPage.java:16)
-at testCase.ChromeBrowser.AmazonProductSearch(ChromeBrowser.java:24)
+              <![CDATA[org.openqa.selenium.InvalidArgumentException: Both strategy and selector arguments must be provided
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CESIT-LAP-0135', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, databaseEnabled: false, desired: {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, deviceName: emulator-5554, noReset: false, platformName: android, platformVersion: 11.0}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2082, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 427cc819-b352-4589-9242-eaa5ac62368d
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+at testCase.ApkInfo.ApkinfoMain(ApkInfo.java:17)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,61 +83,30 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @3551a94
-at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
-at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
-at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
-at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
-at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
-at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
-at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
-at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
-at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
-at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
-at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
-at net.sf.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
-... 39 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @3551a94
-at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
-at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
-at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
-at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
-at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-at net.sf.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:52)
-at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
-at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
-at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
-... 51 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ExceptionInInitializerError -->
+          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
           <reporter-output>
             <line>
-              <![CDATA[Chrome - Aplication is Opening]]>
+              <![CDATA[ApkInfo - Aplication is Opening]]>
             </line>
             <line>
-              <![CDATA[Opened URL : https://www.amazon.in/]]>
-            </line>
-            <line>
-              <![CDATA[Switched to WEBVIEW_chrome Succesfully]]>
+              <![CDATA[Scroll to - Photos -  Succesfully]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AmazonProductSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T00:54:33 IST" name="appClose" finished-at="2021-10-25T00:54:34 IST" duration-ms="521" status="PASS">
+        </test-method> <!-- ApkinfoMain -->
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@2a54a73f]" started-at="2021-10-25T13:08:20 IST" name="appClose" finished-at="2021-10-25T13:08:20 IST" duration-ms="259" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Chrome - Aplication is Closing]]>
+              <![CDATA[ApkInfo - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@2a54a73f]" started-at="2021-10-25T00:54:34 IST" name="tearDown" finished-at="2021-10-25T00:54:34 IST" duration-ms="488" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@2a54a73f]" started-at="2021-10-25T13:08:20 IST" name="tearDown" finished-at="2021-10-25T13:08:21 IST" duration-ms="355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCase.ChromeBrowser -->
+      </class> <!-- testCase.ApkInfo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

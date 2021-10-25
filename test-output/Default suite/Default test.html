@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 25 00:53:58 IST 2021</td>
+<td>Started on:</td><td>Mon Oct 25 13:07:57 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>35 seconds (35551 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23375 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,28 +75,36 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCase.ChromeBrowser.AmazonProductSearch()'><b>AmazonProductSearch</b><br>Test class: testCase.ChromeBrowser<br/>
+<td title='testCase.ApkInfo.ApkinfoMain()'><b>ApkinfoMain</b><br>Test class: testCase.ApkInfo<br/>
 <a href="#Output-353891891" onClick='toggleBox("Output-353891891", this, "Show output", "Hide output");'>Show output</a>
 
 <a href="#Output-353891891" onClick="toggleAllBoxes();">Show all outputs</a>
 <div class='log' id="Output-353891891">
-Chrome - Aplication is Opening<br/>
-Opened URL : https://www.amazon.in/<br/>
-Switched to WEBVIEW_chrome Succesfully<br/>
+ApkInfo - Aplication is Opening<br/>
+Scroll to - Photos -  Succesfully<br/>
 </div>
 </td>
-<td><div><pre>java.lang.ExceptionInInitializerError
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:53)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:216)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:214)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:107)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at pageObjects.chromeBrowser.AmazonPage.&lt;init&gt;(AmazonPage.java:16)
-	at testCase.ChromeBrowser.AmazonProductSearch(ChromeBrowser.java:24)
+<td><div><pre>org.openqa.selenium.InvalidArgumentException: Both strategy and selector arguments must be provided
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CESIT-LAP-0135&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, databaseEnabled: false, desired: {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, deviceName: emulator-5554, noReset: false, platformName: android, platformVersion: 11.0}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2082, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 427cc819-b352-4589-9242-eaa5ac62368d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at testCase.ApkInfo.ApkinfoMain(ApkInfo.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -125,47 +133,28 @@ Switched to WEBVIEW_chrome Succesfully<br/>
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException--&gt;Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @3551a94
-	at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
-	at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
-	at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:73)
-	... 39 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @3551a94
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
-	at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at net.sf.cglib.core.ReflectUtils.&lt;clinit&gt;(ReflectUtils.java:52)
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
-	... 51 more
 </pre></div><a href='#' onClick='toggleBox("stack-trace353891891", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace353891891'><pre>java.lang.ExceptionInInitializerError
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:53)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:216)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:214)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:107)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at pageObjects.chromeBrowser.AmazonPage.&lt;init&gt;(AmazonPage.java:16)
-	at testCase.ChromeBrowser.AmazonProductSearch(ChromeBrowser.java:24)
+<div class='stack-trace' id='stack-trace353891891'><pre>org.openqa.selenium.InvalidArgumentException: Both strategy and selector arguments must be provided
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CESIT-LAP-0135&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, databaseEnabled: false, desired: {app: C:\Users\VigneshD\git\CES-A..., appActivity: com.wt.apkinfo.activities.S..., appPackage: com.wt.apkinfo, deviceName: emulator-5554, noReset: false, platformName: android, platformVersion: 11.0}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2082, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 427cc819-b352-4589-9242-eaa5ac62368d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at testCase.ApkInfo.ApkinfoMain(ApkInfo.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -194,37 +183,9 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException--&gt;Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @3551a94
-	at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
-	at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
-	at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:73)
-	... 39 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @3551a94
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
-	at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at net.sf.cglib.core.ReflectUtils.&lt;clinit&gt;(ReflectUtils.java:52)
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
-	... 51 more
 </pre></div></td>
-<td>28</td>
-<td>testCase.ChromeBrowser@2a54a73f</td></tr>
+<td>22</td>
+<td>testCase.ApkInfo@2a54a73f</td></tr>
 </table><p>
 </body>
 </html>

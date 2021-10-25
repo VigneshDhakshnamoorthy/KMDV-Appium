@@ -76,6 +76,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	public ScreenOrientation getOrientation() {
+		logUtil.logE("Orientation : "+driver.getOrientation());
 		return driver.getOrientation();
 	}
 
@@ -99,6 +100,7 @@ public class ActionClass extends BaseClass {
 	}
 
 	public Location getLocation() {
+		logUtil.logE("Location - "+driver.location().toString());
 		return driver.location();
 	}
 

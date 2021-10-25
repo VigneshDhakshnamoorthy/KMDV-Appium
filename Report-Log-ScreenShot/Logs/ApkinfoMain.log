@@ -1,6 +1,7 @@
-[2021-10-25 01:50:12] Test Started - ApkinfoMain 
-[2021-10-25 01:50:21] ApkInfo - Aplication is Opening 
-[2021-10-25 01:50:26] Scroll to - Photos -  Succesfully 
-[2021-10-25 01:50:31] Scroll to - YouTube -  Succesfully 
-[2021-10-25 01:50:31] Test Success : ApkinfoMain 
-[2021-10-25 01:50:31] ApkInfo - Aplication is Closing 
+[2021-10-25 13:46:23] Test Started - ApkinfoMain 
+[2021-10-25 13:46:31] ApkInfo - Aplication is Opening 
+[2021-10-25 13:46:35] Scroll to - Photos -  Succesfully 
+[2021-10-25 13:46:36] Orientation : PORTRAIT 
+[2021-10-25 13:46:41] Scroll to - YouTube -  Succesfully 
+[2021-10-25 13:46:41] Test Success : ApkinfoMain 
+[2021-10-25 13:46:41] ApkInfo - Aplication is Closing 

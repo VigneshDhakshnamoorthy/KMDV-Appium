@@ -1,6 +1,7 @@
 package testCase;
 
 import org.testng.annotations.Test;
+
 import util.Common.BaseClass;
 
 public class ApkInfo extends BaseClass{
@@ -11,9 +12,8 @@ public class ApkInfo extends BaseClass{
 		appOpen(appName);
 		actionClass.scrollUiText("Photos");
 		screenShotUtil.ExtentShot("Pass");
-		System.out.println(actionClass.getOrientation());
+		actionClass.getOrientation();
 		actionClass.scrollUiText("YouTube");
-
 
 	}
 

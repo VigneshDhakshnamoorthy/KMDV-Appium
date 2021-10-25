@@ -35,7 +35,7 @@ public class AzamTv  extends BaseClass{
 		mainPage.clickregisterBtn();
 		RegisterTabPage registerTabPage = new RegisterTabPage(driver);
 		Assert.assertTrue(registerTabPage.isPageLoaded());
-		logUtil.logE("Location - "+actionClass.getLocation().toString());
+		actionClass.getLocation();
 	}
 
 	@Test(groups= {"LocalAppium"})
