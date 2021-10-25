@@ -8,23 +8,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.html5.Location;
-import org.openqa.selenium.support.PageFactory;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.Setting;
 import io.appium.java_client.driverscripts.ScriptOptions;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.serverevents.CustomEvent;
 import util.Common.BaseClass;
 
 public class SessionCommands  extends BaseClass{
-	public SessionCommands(AppiumDriver<MobileElement> driver){
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-
-	}
-
-	
 
 	public void allCommands() {
 		driver.quit(); // End Session

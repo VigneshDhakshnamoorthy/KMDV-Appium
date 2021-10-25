@@ -1,19 +1,10 @@
 package pageObjects.azamTV;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.PageFactory;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import util.Common.BaseClass;
 
 public class MainPage extends BaseClass{
 
-	public MainPage(AppiumDriver<MobileElement> driver){
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-		
-	}
 	private By homeTab = By.xpath("//android.widget.Button[1]/android.view.ViewGroup");
 	private By livetvTab = By.xpath("//android.widget.Button[2]/android.view.ViewGroup");
 	private By moviesTab = By.xpath("//android.widget.Button[3]/android.view.ViewGroup");

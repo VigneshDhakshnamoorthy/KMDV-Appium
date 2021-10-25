@@ -21,7 +21,7 @@ public class ChromeBrowser extends BaseClass{
 		chromeBase.open(browseURL);
 		chromeBase.SwitchWebview();
 
-		AmazonPage amazonPage = new AmazonPage(driver);
+		AmazonPage amazonPage = new AmazonPage();
 		amazonPage.enterSearchBox(searchKeyword);
 		
 		screenShotUtil.ExtentShot("Pass");

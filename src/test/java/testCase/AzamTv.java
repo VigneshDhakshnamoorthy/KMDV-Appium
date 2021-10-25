@@ -19,21 +19,21 @@ public class AzamTv  extends BaseClass{
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("AzamExcelData.xlsx"));
 		String movienumber = xlutil.getCellDataByValue("Sheet1", "movienumber", "value");
 
-		StartupPage startUpPage = new StartupPage(driver);
+		StartupPage startUpPage = new StartupPage();
 		startUpPage.clickGetStarted();
 		startUpPage.clickenglishLanguageBtn();
 		startUpPage.clickcontinueBtn();
 		
-		MainPage mainPage = new MainPage(driver);
+		MainPage mainPage = new MainPage();
 		mainPage.clickmoviesTab();
 		
-		MoviesTabPage moviesTabPage = new MoviesTabPage(driver);
+		MoviesTabPage moviesTabPage = new MoviesTabPage();
 		Assert.assertTrue(moviesTabPage.isPageLoaded());
 		screenShotUtil.ExtentShot("Pass");
 		moviesTabPage.clickAnymovies(movienumber);
 		
 		mainPage.clickregisterBtn();
-		RegisterTabPage registerTabPage = new RegisterTabPage(driver);
+		RegisterTabPage registerTabPage = new RegisterTabPage();
 		Assert.assertTrue(registerTabPage.isPageLoaded());
 		actionClass.getLocation();
 	}
@@ -45,16 +45,16 @@ public class AzamTv  extends BaseClass{
 		String phonenumber = xlutil.getCellDataByValue("Sheet1", "phonenumber", "value");
 		String otpnumber = xlutil.getCellDataByValue("Sheet1", "otpnumber", "value");
 
-		StartupPage startUpPage = new StartupPage(driver);
+		StartupPage startUpPage = new StartupPage();
 		startUpPage.clickGetStarted();
 		startUpPage.clickenglishLanguageBtn();
 		startUpPage.clickcontinueBtn();
 		
-		MainPage mainPage = new MainPage(driver);
+		MainPage mainPage = new MainPage();
 		mainPage.clickloginTab();
 		mainPage.clickregisterBtn();
 		
-		RegisterTabPage registerTabPage = new RegisterTabPage(driver);
+		RegisterTabPage registerTabPage = new RegisterTabPage();
 		Assert.assertTrue(registerTabPage.isPageLoaded());
 		screenShotUtil.ExtentShot("Pass");
 		registerTabPage.enterPhonenumber(phonenumber);
