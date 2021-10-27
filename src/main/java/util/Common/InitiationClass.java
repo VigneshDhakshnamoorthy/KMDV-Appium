@@ -1,5 +1,6 @@
 package util.Common;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.AppiumDriver;
@@ -26,6 +27,7 @@ public class InitiationClass extends BaseClass  {
 		screenShotUtil= new ScreenShotUtil();
 		emulator = desireCap.emulatorID();
 	    avdName = desireCap.avdName();
+	    cleanFolderRLS();
 		
 		
 	}
@@ -40,4 +42,29 @@ public class InitiationClass extends BaseClass  {
 		logUtil.logE(APPName+" - Aplication is Closing");
 		driver.quit();
 	}
+	
+	public void cleanFolderRLS() {
+		File mainFolder = new File(pathUtil.RLCroot.toString());
+		 File[] mainFolders = mainFolder.listFiles();
+		    if(mainFolders!=null) { //some JVMs return null for empty dirs
+		        for(File fo: mainFolders) {
+		        	File folder = new File (pathUtil.RLCroot,fo.getName());
+		        	deleteFolder(folder);
+		        }
+		    }
+	}
+	
+	public void deleteFolder(File folder) {
+		File[] files = folder.listFiles();
+	    if(files!=null) { //some JVMs return null for empty dirs
+	        for(File f: files) {
+	            if(f.isDirectory()) {
+	                deleteFolder(f);
+	            } else {
+	                f.delete();
+	            }
+	        }
+	    }
+	}
+	
 }

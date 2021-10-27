@@ -3,18 +3,14 @@ package testCase;
 
 import org.testng.annotations.Test;
 
-import util.Common.BaseClass;
 
-
-public class trialDemo  extends BaseClass{
-	private String appName="Azam";
+public class trialDemo{
 
 	@Test(groups= {"LocalAppium"})
-	public void AppiumSessions() {
+	public void test() {
 		// Create Sessions
-			appOpen(appName);
-	
-
-
+		
 	}
+	
+	
 }
