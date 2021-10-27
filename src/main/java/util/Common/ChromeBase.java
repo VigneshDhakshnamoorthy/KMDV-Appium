@@ -34,7 +34,7 @@ public class ChromeBase  extends BaseClass{
 			}
 		}
 		
-		logUtil.logE("Switched to "+Context_WebView+" Succesfully");
+		logUtil.logE("Switched to WEBVIEW Succesfully");
 	}
 	
 	public void SwitchNative() {
@@ -46,7 +46,7 @@ public class ChromeBase  extends BaseClass{
 			}
 		}
 		
-		logUtil.logE("Switched to "+Context_Native+" Succesfully");
+		logUtil.logE("Switched to NATIVE Succesfully");
 	}
 	
 	public void jseScrolltoEle(By by) {
@@ -61,6 +61,7 @@ public class ChromeBase  extends BaseClass{
         logUtil.logE("Scroll By X : "+x+" | Y : "+y);
         
 	}
+	
 	
 
 }
