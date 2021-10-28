@@ -48,11 +48,31 @@ public class ChromeBase  extends BaseClass{
 		
 		logUtil.logE("Switched to NATIVE Succesfully");
 	}
+	public void jseClickEle(By by) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        if(actionClass.WaitForElement(by,60)) {
+            js.executeScript("arguments[0].click();", driver.findElement(by));
+		}else {
+			logUtil.logE("Element Not Found :  "+by);
+		}
+	}
+	
+	public boolean jseWaitPageLoad() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        boolean bool=false;
+        while(bool==false) {
+            bool = js.executeScript("return document.readyState").equals("complete");
+        }
+        return bool;
+	}
 	
 	public void jseScrolltoEle(By by) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        actionClass.WaitForElement(by,30);
-        js.executeScript("arguments[0].scrollIntoView();", driver.findElement(by));
+        if(actionClass.WaitForElement(by,60)) {
+            js.executeScript("arguments[0].scrollIntoView();", driver.findElement(by));
+		}else {
+			logUtil.logE("Element Not Found :  "+by);
+		}
 	}
 	
 	public void jseScrollbyDim(int x, int y) {
