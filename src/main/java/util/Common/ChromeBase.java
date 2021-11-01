@@ -5,6 +5,8 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
+import io.appium.java_client.MobileElement;
+
 public class ChromeBase  extends BaseClass{
 	
 	protected String Context_Native = "NATIVE_APP";
@@ -77,9 +79,22 @@ public class ChromeBase  extends BaseClass{
 	
 	public void jseScrollbyDim(int x, int y) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,1000)");
+        js.executeScript("window.scrollBy(" + x + "," + y + ")", "");
         logUtil.logE("Scroll By X : "+x+" | Y : "+y);
         
+	}
+	
+	public void jseScrolltoXY(By by) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        
+        if(actionClass.WaitForElement(by,60)) {
+        	MobileElement element = driver.findElement(by);
+            int x = element.getLocation().getX();
+            int y = element.getLocation().getY();
+            js.executeScript("window.scrollBy(" + x + "," + y + ")", "");
+		}else {
+			logUtil.logE("Element Not Found :  "+by);
+		}
 	}
 	
 	

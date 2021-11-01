@@ -1,10 +1,16 @@
 package util.Common;
 
+import java.time.Duration;
 import java.util.Map;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.html5.Location;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidTouchAction;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class ActionClass extends BaseClass {
 
@@ -71,6 +77,22 @@ public class ActionClass extends BaseClass {
 		driver.findElement(androidUIAutomator);
 		logUtil.logE("Scroll to - "+ScrollText+" -  Succesfully");
 	}
+	
+	public MobileElement getUIele(String ScrollText) {
+		String ScrollCommand = "new UiScrollable("
+				+ "new UiSelector().scrollable(true)).scrollIntoView("                      
+				+ "new UiSelector().textContains(\""+ScrollText+"\"));";
+		By androidUIAutomator = MobileBy.AndroidUIAutomator(ScrollCommand);
+		return driver.findElement(androidUIAutomator);
+	}
+	
+	public Point getUIpoint(String ScrollText) {
+		String ScrollCommand = "new UiScrollable("
+				+ "new UiSelector().scrollable(true)).scrollIntoView("                      
+				+ "new UiSelector().textContains(\""+ScrollText+"\"));";
+		By androidUIAutomator = MobileBy.AndroidUIAutomator(ScrollCommand);
+		return driver.findElement(androidUIAutomator).getLocation();
+	}
 
 	public Map<String, Object> getSessionDetails() {
 		return driver.getSessionDetails();
@@ -81,8 +103,9 @@ public class ActionClass extends BaseClass {
 	}
 
 	public ScreenOrientation getOrientation() {
-		logUtil.logE("Orientation : "+driver.getOrientation());
-		return driver.getOrientation();
+		ScreenOrientation orientation = driver.getOrientation();
+		logUtil.logE("Orientation : "+orientation);
+		return orientation;
 	}
 
 	public void rotateScreen(String Orientation) {
@@ -113,7 +136,32 @@ public class ActionClass extends BaseClass {
 		driver.setLocation(location);
 		
 	}
-
+	
+	public void touchMoveTo(MobileElement ele1, MobileElement ele2) {
+		
+		 int startX = ele1.getLocation().getX();
+	     int startY = ele1.getLocation().getY();
+	     int endX = ele2.getLocation().getX();
+	     int endY = ele2.getLocation().getY();
+	     
+	     
+		new AndroidTouchAction (driver)
+		  .press (PointOption.point (startX, startY))
+		  .waitAction (WaitOptions.waitOptions (Duration.ofMillis(1000)))
+		  .moveTo (PointOption.point (endX, endY))
+		  .release ()
+		  .perform ();
+	}
+	
+	public void touchMoveTo(Point point1, Point point2) {
+	     
+		new AndroidTouchAction (driver)
+		  .press (PointOption.point (point1))
+		  .waitAction (WaitOptions.waitOptions (Duration.ofMillis(1000)))
+		  .moveTo (PointOption.point (point2))
+		  .release ()
+		  .perform ();
+	}
 	
 
 }

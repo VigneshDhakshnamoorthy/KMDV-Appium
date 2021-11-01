@@ -44,19 +44,19 @@ public class AmazonPage  extends BaseClass{
 
 	}
 	public void clicknextPageButton() {
-		chromeBase.jseScrolltoEle(nextPageButton);
+		chromeBase.jseScrolltoXY(nextPageButton);
 		actionClass.ClickElement(nextPageButton);
 		logUtil.logE("Next Page Button - Clicked Succesfully");
 
 	}
 	public void scrollto_FilterByInternalMemory() {
-		chromeBase.jseScrolltoEle(filterByInternalMemory);
+		chromeBase.jseScrolltoXY(filterByInternalMemory);
 		logUtil.logE("Scroll To - Filter By Internal Memory Succesfully");
 
 	}
 	
 	public void scrollto_BrandsRelatedToYourSearch() {
-		chromeBase.jseScrolltoEle(brandsRelatedToYourSearch);
+		chromeBase.jseScrolltoXY(brandsRelatedToYourSearch);
 		logUtil.logE("Scroll To - Brands Related To Your Search Succesfully");
 
 	}
