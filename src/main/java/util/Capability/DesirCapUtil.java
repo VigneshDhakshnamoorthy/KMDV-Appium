@@ -41,43 +41,32 @@ public class DesirCapUtil extends BaseClass{
 	
 	public URL Url() {
 		prop = new PropertiesUtil("appiumserver.properties");
-		URLAddress = prop.getAppProperty("URLAddress");
+		URLAddress = prop.getValue("URLAddress");
 		URL Url = null;
 		try {
 			Url = new URL(URLAddress);
 		} catch (MalformedURLException e) {
 		}
 		return Url;
-
 	}
 	
-	public String emulatorID() {
-		prop = new PropertiesUtil("appiumserver.properties");
-		return prop.getAppProperty("emulator");
-		
-	}
 	
-	public String avdName() {
-		prop = new PropertiesUtil("appiumserver.properties");
-		return prop.getAppProperty("avdName");
-		
-	}
 	public void setDesireCap(String appProperty) {
 		prop = new PropertiesUtil(appProperty);
 		PlatformCap = new DesiredCapabilities();
-		Set<Object> allPropertyKeys = prop.getAllPropertyKeys();
+		Set<Object> allPropertyKeys = prop.getKeys();
 		PlatformCap.setCapability("deviceName", emulator);
 		for (Object propKey:allPropertyKeys)
 		{
 		if (propKey.toString().equalsIgnoreCase("app")) {
-			PlatformCap.setCapability(propKey.toString(),pathUtil.getAppPath(prop.getAppProperty(propKey.toString())));
+			PlatformCap.setCapability(propKey.toString(),pathUtil.getAppPath(prop.getValue(propKey.toString())));
 		}
 		else if(propKey.toString().equalsIgnoreCase("chromedriverExecutable")){
-			PlatformCap.setCapability(propKey.toString(),pathUtil.getDriverPath(prop.getAppProperty(propKey.toString())));
+			PlatformCap.setCapability(propKey.toString(),pathUtil.getDriverPath(prop.getValue(propKey.toString())));
 		}
 		else 
 		{
-			PlatformCap.setCapability(propKey.toString(),prop.getAppProperty(propKey.toString()));
+			PlatformCap.setCapability(propKey.toString(),prop.getValue(propKey.toString()));
 		}
 		}
 	}

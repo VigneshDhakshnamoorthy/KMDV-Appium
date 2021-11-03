@@ -27,13 +27,13 @@ public class PropertiesUtil extends BaseClass{
 	}
 
 
-	public String getAppProperty(String propertyName) {
+	public String getValue(String propertyName) {
 		
 		return p.getProperty(propertyName);
 		
 	}
 
-	public Set<Object> getAllPropertyKeys() {
+	public Set<Object> getKeys() {
 		return p.keySet();
 	}
 }

@@ -1,6 +1,7 @@
 package util.Common;
 
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -35,8 +36,9 @@ public class ChromeBase  extends BaseClass{
 				break;
 			}
 		}
-		
 		logUtil.logE("Switched to WEBVIEW Succesfully");
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+
 	}
 	
 	public void SwitchNative() {

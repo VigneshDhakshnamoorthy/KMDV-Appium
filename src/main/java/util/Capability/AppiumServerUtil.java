@@ -18,8 +18,8 @@ public class AppiumServerUtil  extends BaseClass{
 		
 		//Build the Appium service
 		AppiumBuilder = new AppiumServiceBuilder();
-		AppiumBuilder.withIPAddress(prop.getAppProperty("IPAddress"));
-		AppiumBuilder.usingPort(Integer.parseInt(prop.getAppProperty("Port")));
+		AppiumBuilder.withIPAddress(prop.getValue("IPAddress"));
+		AppiumBuilder.usingPort(Integer.parseInt(prop.getValue("Port")));
 		AppiumBuilder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
 		AppiumBuilder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
 		AppiumService = AppiumDriverLocalService.buildService(AppiumBuilder);

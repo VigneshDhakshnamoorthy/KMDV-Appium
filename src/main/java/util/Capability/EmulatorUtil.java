@@ -3,6 +3,7 @@ package util.Capability;
 import java.io.IOException;
 
 import util.Common.BaseClass;
+import util.Data.PropertiesUtil;
 
 public class EmulatorUtil extends BaseClass{
 
@@ -24,5 +25,15 @@ public class EmulatorUtil extends BaseClass{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public String emuID() {
+		prop = new PropertiesUtil("appiumserver.properties");
+		return prop.getValue("emulator");
+	}
+	
+	public String avdName() {
+		prop = new PropertiesUtil("appiumserver.properties");
+		return prop.getValue("avdName");
 	}
 }

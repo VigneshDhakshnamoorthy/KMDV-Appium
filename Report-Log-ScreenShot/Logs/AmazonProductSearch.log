@@ -1,10 +1,10 @@
-[2021-11-03 12:36:22] Test Started - AmazonProductSearch 
-[2021-11-03 12:36:33] Chrome - Aplication is Opening 
-[2021-11-03 12:36:39] Opened URL : https://www.amazon.in/ 
-[2021-11-03 12:36:49] Switched to WEBVIEW Succesfully 
-[2021-11-03 12:36:53] iphone - Searched Succesfully 
-[2021-11-03 12:37:07] Hamburger Menu - Clicked Succesfully 
-[2021-11-03 12:37:17] Menu Mobiles - Clicked Succesfully 
-[2021-11-03 12:37:26] Switched to NATIVE Succesfully 
-[2021-11-03 12:37:26] Test Success : AmazonProductSearch 
-[2021-11-03 12:37:26] Chrome - Aplication is Closing 
+[2021-11-03 22:56:23] Test Started - AmazonProductSearch 
+[2021-11-03 22:56:34] Chrome - Aplication is Opening 
+[2021-11-03 22:56:40] Opened URL : https://www.amazon.in/ 
+[2021-11-03 22:56:50] Switched to WEBVIEW Succesfully 
+[2021-11-03 22:56:56] iphone - Searched Succesfully 
+[2021-11-03 22:57:07] Hamburger Menu - Clicked Succesfully 
+[2021-11-03 22:57:20] Menu Mobiles - Clicked Succesfully 
+[2021-11-03 22:57:29] Switched to NATIVE Succesfully 
+[2021-11-03 22:57:29] Test Success : AmazonProductSearch 
+[2021-11-03 22:57:29] Chrome - Aplication is Closing 

@@ -25,8 +25,8 @@ public class InitiationClass extends BaseClass  {
 		actionClass= new ActionClass();
 		chromeBase = new ChromeBase();
 		screenShotUtil= new ScreenShotUtil();
-		emulator = desireCap.emulatorID();
-	    avdName = desireCap.avdName();
+		emulator = emuUtil.emuID();
+	    avdName = emuUtil.avdName();
 	    cleanFolderRLS();
 		
 		
