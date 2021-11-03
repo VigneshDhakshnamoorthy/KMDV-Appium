@@ -11,11 +11,10 @@ import util.Data.ExcelUtil;
 
 public class AzamTv  extends BaseClass{
 	
-	private String appName="Azam";
 
 	@Test(groups= {"LocalAppium"})
 	public void AzamTV_MovieSearch() {
-		appOpen(appName);
+		appOpen(AppDir.Azam);
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("AzamExcelData.xlsx"));
 		String movienumber = xlutil.getCellDataByValue("Sheet1", "movienumber", "value");
 
@@ -40,7 +39,7 @@ public class AzamTv  extends BaseClass{
 
 	@Test(groups= {"LocalAppium"})
 	public void AzamTV_Registeration() {
-		appOpen(appName);
+		appOpen(AppDir.Azam);
 		xlutil = new ExcelUtil(pathUtil.getExcelPath("AzamExcelData.xlsx"));
 		String phonenumber = xlutil.getCellDataByValue("Sheet1", "phonenumber", "value");
 		String otpnumber = xlutil.getCellDataByValue("Sheet1", "otpnumber", "value");

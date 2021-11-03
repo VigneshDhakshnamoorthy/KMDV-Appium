@@ -32,10 +32,10 @@ public class InitiationClass extends BaseClass  {
 		
 	}
 	
-	public void InitiateAppiumDriver(String appName) {
-		driver = new AppiumDriver<MobileElement>(desireCap.Url(),desireCap.App(appName));
+	public void InitiateAppiumDriver(AppDir aPPName) {
+		driver = new AppiumDriver<MobileElement>(desireCap.Url(),desireCap.App(aPPName));
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		logUtil.logE(appName+" - Aplication is Opening");
+		logUtil.logE(aPPName+" - Aplication is Opening");
 	}
 	
 	public void QuitDriver() {

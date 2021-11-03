@@ -35,7 +35,7 @@ public class BaseClass{
 
 	protected static String emulator;
 	protected static String avdName;
-	protected static String APPName;
+	protected static AppDir APPName;
 
 	protected static ITestResult BaseResult;
 
@@ -55,9 +55,13 @@ public class BaseClass{
 	    ERU.StartExtentReport();
 	}
 	
-	public void appOpen(String appName) {
+	public enum AppDir {
+		Azam, ApkInfo, Chrome
+	}
+	
+	public void appOpen(AppDir aPPName) {
 		//Initiate the AppiumDriver	
-		APPName = appName;
+		APPName = aPPName;
 		init.InitiateAppiumDriver(APPName);
 	}
 	
@@ -81,6 +85,7 @@ public class BaseClass{
 		emuUtil.stopEmulator(emulator);
 	}
 
+	
 }
 		
 	

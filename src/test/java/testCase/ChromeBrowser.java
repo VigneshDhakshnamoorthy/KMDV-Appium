@@ -6,12 +6,10 @@ import pageObjects.chromeBrowser.AmazonPage;
 import util.Common.BaseClass;
 
 public class ChromeBrowser extends BaseClass{
-	private String appName="Chrome";
-
 
 	@Test(groups= {"LocalAppium"})
 	public void AmazonProductSearch() throws Exception{
-		appOpen(appName);
+		appOpen(AppDir.Chrome);
 
 		AmazonPage amazonPage = new AmazonPage();
 		amazonPage.enterSearchBox();

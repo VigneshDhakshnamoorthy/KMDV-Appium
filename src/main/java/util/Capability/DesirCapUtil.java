@@ -14,19 +14,19 @@ public class DesirCapUtil extends BaseClass{
 	private  String URLAddress;
 
 
-	public DesiredCapabilities App(String AppName) {
+	public DesiredCapabilities App(AppDir aPPName) {
 		
-		switch (AppName) {
+		switch (aPPName) {
 		
-		case "Azam":
+		case Azam:
 			setDesireCap("azamTv.properties");
 			break;
 		
-		case "ApkInfo":
+		case ApkInfo:
 			setDesireCap("apkinfo.properties");
 			break;
 			
-		case "Chrome":
+		case Chrome:
 			setDesireCap("chrome.properties");
 			break;
 		
