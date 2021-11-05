@@ -12,7 +12,10 @@ public class ScreenShotUtil extends BaseClass{
 
 	public void ExtentShot(String testStatus) {
 		((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File screenShotLocation = new File(pathUtil.getScreenshotPath(BaseResult.getName()+".png"));
+		String DateTime = new java.util.Date().toString().replace(":", "-");
+		String Time = DateTime.substring(11, DateTime.length() - 9);
+
+		File screenShotLocation = new File(pathUtil.getScreenshotPath(BaseResult.getName()+" "+Time+".png"));
 		try {
 			File screenShot  = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			FileHandler.copy(screenShot, screenShotLocation);

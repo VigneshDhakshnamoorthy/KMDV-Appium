@@ -17,19 +17,19 @@
       <![CDATA[ApkInfo - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-11-03T12:31:47 IST" name="Default suite" finished-at="2021-11-03T12:32:19 IST" duration-ms="31662">
+  <suite started-at="2021-11-05T11:55:31 IST" name="Default suite" finished-at="2021-11-05T11:56:10 IST" duration-ms="38933">
     <groups>
       <group name="LocalAppium">
         <method signature="ApkInfo.ApkinfoMain()[pri:0, instance:testCase.ApkInfo@4229bb3f]" name="ApkinfoMain" class="testCase.ApkInfo"/>
       </group> <!-- LocalAppium -->
     </groups>
-    <test started-at="2021-11-03T12:31:47 IST" name="Default test" finished-at="2021-11-03T12:32:19 IST" duration-ms="31662">
+    <test started-at="2021-11-05T11:55:31 IST" name="Default test" finished-at="2021-11-05T11:56:10 IST" duration-ms="38933">
       <class name="testCase.ApkInfo">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@4229bb3f]" started-at="2021-11-03T12:31:40 IST" name="setup" finished-at="2021-11-03T12:31:47 IST" duration-ms="6776" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ApkInfo@4229bb3f]" started-at="2021-11-05T11:55:27 IST" name="setup" finished-at="2021-11-05T11:55:31 IST" duration-ms="3940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@4229bb3f]" started-at="2021-11-03T12:31:47 IST" name="ApkinfoMain" finished-at="2021-11-03T12:32:18 IST" duration-ms="30794" status="PASS">
+        <test-method signature="ApkinfoMain()[pri:0, instance:testCase.ApkInfo@4229bb3f]" started-at="2021-11-05T11:55:31 IST" name="ApkinfoMain" finished-at="2021-11-05T11:56:09 IST" duration-ms="38162" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ApkInfo - Aplication is Opening]]>
@@ -45,14 +45,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- ApkinfoMain -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@4229bb3f]" started-at="2021-11-03T12:32:18 IST" name="appClose" finished-at="2021-11-03T12:32:19 IST" duration-ms="817" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ApkInfo@4229bb3f]" started-at="2021-11-05T11:56:09 IST" name="appClose" finished-at="2021-11-05T11:56:10 IST" duration-ms="733" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[ApkInfo - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@4229bb3f]" started-at="2021-11-03T12:32:19 IST" name="tearDown" finished-at="2021-11-03T12:32:20 IST" duration-ms="868" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ApkInfo@4229bb3f]" started-at="2021-11-05T11:56:10 IST" name="tearDown" finished-at="2021-11-05T11:56:10 IST" duration-ms="440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

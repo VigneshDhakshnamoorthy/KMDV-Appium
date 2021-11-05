@@ -55,10 +55,12 @@ public class AzamTv  extends BaseClass{
 		
 		RegisterTabPage registerTabPage = new RegisterTabPage();
 		Assert.assertTrue(registerTabPage.isPageLoaded());
-		screenShotUtil.ExtentShot("Pass");
 		registerTabPage.enterPhonenumber(phonenumber);
+		screenShotUtil.ExtentShot("Pass");
 		registerTabPage.clickContinue();
 		registerTabPage.enterOTP(otpnumber);
+		screenShotUtil.ExtentShot("Pass");
+
 	}
 
 }

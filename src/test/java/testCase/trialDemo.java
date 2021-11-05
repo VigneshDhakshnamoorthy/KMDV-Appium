@@ -5,13 +5,14 @@ import org.testng.annotations.Test;
 
 
 public class trialDemo{
-	public enum ScrollDirection {
-	    UP, DOWN, LEFT, RIGHT
-	}
-	@Test(groups= {"LocalAppium"})
+	@Test()
 	public void test() {
-		// Create Sessions
-		System.out.println(ScrollDirection.UP);
+		String time = new java.util.Date().toString().replace(":", "-");
+		String substring = time.substring(11, time.length() - 9);
+		System.out.println(time);
+		System.out.println(substring);
+
+
 	}
 	
 	
