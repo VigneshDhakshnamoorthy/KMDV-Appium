@@ -9,9 +9,7 @@ public class ApkInfo extends BaseClass{
 	@Test(groups= {"LocalAppium"})
 	public void ApkinfoMain(){
 		appOpen(AppDir.ApkInfo);
-		screenShotUtil.ExtentShot("Pass");
 		actionClass.scrollUiText("Photos");
-		screenShotUtil.ExtentShot("Pass");
 		actionClass.getOrientation();
 		actionClass.scrollUiText("YouTube");
 		screenShotUtil.ExtentShot("Pass");

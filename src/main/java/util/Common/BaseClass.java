@@ -61,8 +61,7 @@ public class BaseClass{
 	
 	public void appOpen(AppDir aPPName) {
 		//Initiate the AppiumDriver	
-		APPName = aPPName;
-		init.InitiateAppiumDriver(APPName);
+		init.InitiateAppiumDriver(aPPName);
 	}
 	
 	

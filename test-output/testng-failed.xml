@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.ChromeBrowser">
+      <class name="testCase.AzamTv">
         <methods>
-          <include name="AmazonProductSearch"/>
+          <include name="AzamTV_Registeration"/>
+          <include name="AzamTV_MovieSearch"/>
           <include name="appClose"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testCase.ChromeBrowser -->
+      </class> <!-- testCase.AzamTv -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
