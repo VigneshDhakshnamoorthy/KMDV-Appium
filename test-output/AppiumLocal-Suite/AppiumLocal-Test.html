@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>TestNG:  AppiumLocal-Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>AppiumLocal-Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Nov 19 11:55:35 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>110 seconds (110119 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCase.ApkInfo.ApkinfoMain()'><b>ApkinfoMain</b><br>Test class: testCase.ApkInfo<br/>
+<a href="#Output-1248435962" onClick='toggleBox("Output-1248435962", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1248435962" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1248435962">
+ApkInfo - Aplication is Opening<br/>
+Scroll to - Photos -  Succesfully<br/>
+Orientation : PORTRAIT<br/>
+Scroll to - YouTube -  Succesfully<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>testCase.ApkInfo@35aea049</td></tr>
+<tr>
+<td title='testCase.AzamTv.AzamTV_Registeration()'><b>AzamTV_Registeration</b><br>Test class: testCase.AzamTv<br/>
+<a href="#Output-558913557" onClick='toggleBox("Output-558913557", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-558913557" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-558913557">
+Azam - Aplication is Opening<br/>
+Clicked Get Started Button Succesfully<br/>
+Clicked English Language Button Succesfully<br/>
+Clicked Continue Button Succesfully<br/>
+Clicked Login Tab Button Succesfully<br/>
+Clicked Register Button Succesfully<br/>
+Loaded Register Page Succesfully<br/>
+Entered New Register Number - 9600000000 - Succesfully<br/>
+Clicked Continue Button Succesfully<br/>
+Entered OTP - 111111 -  Succesfully<br/>
+</div>
+</td>
+<td></td>
+<td>36</td>
+<td>testCase.AzamTv@48f278eb</td></tr>
+<tr>
+<td title='testCase.ChromeBrowser.AmazonProductSearch()'><b>AmazonProductSearch</b><br>Test class: testCase.ChromeBrowser<br/>
+<a href="#Output-913955118" onClick='toggleBox("Output-913955118", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-913955118" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-913955118">
+Chrome - Aplication is Opening<br/>
+Opened URL : https://www.amazon.in/<br/>
+Switched to WEBVIEW Succesfully<br/>
+iphone - Searched Succesfully<br/>
+Hamburger Menu - Clicked Succesfully<br/>
+Menu Mobiles - Clicked Succesfully<br/>
+Switched to NATIVE Succesfully<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>testCase.ChromeBrowser@2f217633</td></tr>
+<tr>
+<td title='testCase.AzamTv.AzamTV_MovieSearch()'><b>AzamTV_MovieSearch</b><br>Test class: testCase.AzamTv<br/>
+<a href="#Output-734971558" onClick='toggleBox("Output-734971558", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-734971558" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-734971558">
+Azam - Aplication is Opening<br/>
+Clicked Get Started Button Succesfully<br/>
+Clicked English Language Button Succesfully<br/>
+Clicked Continue Button Succesfully<br/>
+Clicked Movies Tab Button Succesfully<br/>
+Loaded Movies Tab Succesfully<br/>
+Clicked Bongo Movies number - 3 Succesfully<br/>
+Clicked Register Button Succesfully<br/>
+Loaded Register Page Succesfully<br/>
+Location - Latitude: 37.4218511, Longitude: -122.0841292, Altitude: 0.0<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>testCase.AzamTv@48f278eb</td></tr>
+</table><p>
+</body>
+</html>
