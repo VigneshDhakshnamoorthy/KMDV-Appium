@@ -20,44 +20,51 @@ public class AmazonPage  extends BaseClass{
 	private By brandsRelatedToYourSearch = By.xpath("//*[text()='Brands related to your search']");
 	private By nextPageButton = By.xpath("//a[contains(text(),'Next')]");
 
-	public void enterSearchBox(String searchKeyword) {
+	public AmazonPage enterSearchBox(String searchKeyword) {
 		actionClass.TypeinElement(searchBox,searchKeyword+Keys.ENTER);
 		logUtil.logE(searchKeyword+" - Searched Succesfully");
+		return this;
 
 	}
-	public void enterSearchBox() {
+	public AmazonPage enterSearchBox() {
 		String searchKeyword=xlutil.getCellDataByValue("Sheet1", "searchKeyword", "value");
 		actionClass.TypeinElement(searchBox,searchKeyword+Keys.ENTER);
 		logUtil.logE(searchKeyword+" - Searched Succesfully");
+		return this;
 
 	}
 	
-	public void clickHamburgerMenu() {
+	public AmazonPage clickHamburgerMenu() {
 		actionClass.ClickElement(hamburgerMenu);
 		logUtil.logE("Hamburger Menu - Clicked Succesfully");
+		return this;
 
 	}
 	
-	public void clickMenuMobiles() {
+	public AmazonPage clickMenuMobiles() {
 		actionClass.ClickElement(menuMobiles);
 		logUtil.logE("Menu Mobiles - Clicked Succesfully");
+		return this;
 
 	}
-	public void clicknextPageButton() {
+	public AmazonPage clicknextPageButton() {
 		chromeBase.jseScrolltoXY(nextPageButton);
 		actionClass.ClickElement(nextPageButton);
 		logUtil.logE("Next Page Button - Clicked Succesfully");
+		return this;
 
 	}
-	public void scrollto_FilterByInternalMemory() {
+	public AmazonPage scrollto_FilterByInternalMemory() {
 		chromeBase.jseScrolltoXY(filterByInternalMemory);
 		logUtil.logE("Scroll To - Filter By Internal Memory Succesfully");
+		return this;
 
 	}
 	
-	public void scrollto_BrandsRelatedToYourSearch() {
+	public AmazonPage scrollto_BrandsRelatedToYourSearch() {
 		chromeBase.jseScrolltoXY(brandsRelatedToYourSearch);
 		logUtil.logE("Scroll To - Brands Related To Your Search Succesfully");
+		return this;
 
 	}
 
