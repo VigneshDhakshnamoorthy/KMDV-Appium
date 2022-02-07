@@ -1,11 +1,14 @@
-[2022-01-15 14:30:03] Test Started - AmazonProductSearch 
-[2022-01-15 14:30:08] Chrome - Aplication is Opening 
-[2022-01-15 14:30:21] Opened URL : https://www.amazon.in/ 
-[2022-01-15 14:31:02] Test Failure : AmazonProductSearch // io.appium.java_client.NoSuchContextException: Connection refused: no further information
+[2022-02-07 17:03:05] Test Started - AmazonProductSearch 
+[2022-02-07 17:03:12] Chrome - Aplication is Opening 
+[2022-02-07 17:03:19] Opened URL : https://www.amazon.in/ 
+[2022-02-07 17:03:27] Switched to WEBVIEW Succesfully 
+[2022-02-07 17:03:29] iphone - Searched Succesfully 
+[2022-02-07 17:03:32] Hamburger Menu - Clicked Succesfully 
+[2022-02-07 17:05:14] Test Failure : AmazonProductSearch // org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=83.0.4103.106)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'CESIT-LAP-0135', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: driver.version: AppiumDriver 
-[2022-01-15 14:31:02] Test Failure : AmazonProductSearch // org.openqa.selenium.WebDriverException: Connection refused: no further information
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'CESIT-LAP-0135', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: driver.version: RemoteWebDriver 
+System info: host: 'CESIT-LAP-0135', ip: '192.168.1.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, chromedriverExecutable: c:\Users\VigneshD\git\CES-A..., databaseEnabled: false, desired: {appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, chromedriverExecutable: c:\Users\VigneshD\git\CES-A..., deviceName: emulator-5554, noReset: true, platformName: android, platformVersion: 11.0}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: sdk_gphone_x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 2082, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 7648ce0d-7b14-4c26-8c34-18e8c847f80b 
+[2022-02-07 17:05:15] Chrome - Aplication is Closing 
