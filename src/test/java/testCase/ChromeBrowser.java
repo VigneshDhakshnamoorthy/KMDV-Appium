@@ -13,9 +13,7 @@ public class ChromeBrowser extends BaseClass{
 
 		AmazonPage amazonPage = new AmazonPage();
 		
-		amazonPage.enterSearchBox()
-				.clickHamburgerMenu()
-				.clickMenuMobiles();
+		amazonPage.enterSearchBox();
 		
 		screenShotUtil.ExtentShot("Pass");
 		chromeBase.SwitchNative();
