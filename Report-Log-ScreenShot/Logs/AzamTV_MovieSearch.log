@@ -1,13 +1,13 @@
-[2022-02-22 21:09:39] Test Started - AzamTV_MovieSearch 
-[2022-02-22 21:09:53] Azam - Aplication is Opening 
-[2022-02-22 21:09:58] Clicked Get Started Button Succesfully 
-[2022-02-22 21:09:59] Clicked English Language Button Succesfully 
-[2022-02-22 21:10:03] Clicked Continue Button Succesfully 
-[2022-02-22 21:10:04] Clicked Movies Tab Button Succesfully 
-[2022-02-22 21:10:07] Loaded Movies Tab Succesfully 
-[2022-02-22 21:10:11] Clicked Bongo Movies number - 3 Succesfully 
-[2022-02-22 21:10:12] Clicked Register Button Succesfully 
-[2022-02-22 21:10:14] Loaded Register Page Succesfully 
-[2022-02-22 21:10:14] Location - Latitude: 37.4219983, Longitude: -122.084, Altitude: 5.0435725 
-[2022-02-22 21:10:14] Test Success : AzamTV_MovieSearch 
-[2022-02-22 21:10:14] Azam - Aplication is Closing 
+[2022-03-04 13:54:17] Test Started - AzamTV_MovieSearch 
+[2022-03-04 13:54:26] Azam - Aplication is Opening 
+[2022-03-04 13:54:30] Clicked Get Started Button Succesfully 
+[2022-03-04 13:54:31] Clicked English Language Button Succesfully 
+[2022-03-04 13:54:31] Clicked Continue Button Succesfully 
+[2022-03-04 13:54:35] Clicked Movies Tab Button Succesfully 
+[2022-03-04 13:54:38] Loaded Movies Tab Succesfully 
+[2022-03-04 13:54:41] Clicked Bongo Movies number - 3 Succesfully 
+[2022-03-04 13:54:42] Clicked Register Button Succesfully 
+[2022-03-04 13:54:44] Loaded Register Page Succesfully 
+[2022-03-04 13:54:44] Location - Latitude: 37.4219983, Longitude: -122.084, Altitude: 5.0435725 
+[2022-03-04 13:54:44] Test Success : AzamTV_MovieSearch 
+[2022-03-04 13:54:44] Azam - Aplication is Closing 
