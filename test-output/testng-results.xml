@@ -5,19 +5,10 @@
       <![CDATA[Chrome - Aplication is Opening]]>
     </line>
     <line>
-      <![CDATA[Opened URL : https://www.amazon.in/]]>
+      <![CDATA[Opened URL : https://www.valuedopinions.co.in/index]]>
     </line>
     <line>
       <![CDATA[Switched to WEBVIEW Succesfully]]>
-    </line>
-    <line>
-      <![CDATA[iphone - Searched Succesfully]]>
-    </line>
-    <line>
-      <![CDATA[Hamburger Menu - Clicked Succesfully]]>
-    </line>
-    <line>
-      <![CDATA[Menu Mobiles - Clicked Succesfully]]>
     </line>
     <line>
       <![CDATA[Switched to NATIVE Succesfully]]>
@@ -26,55 +17,46 @@
       <![CDATA[Chrome - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-11-24T22:05:01 IST" name="Default suite" finished-at="2021-11-24T22:05:56 IST" duration-ms="54849">
+  <suite started-at="2022-04-07T17:17:26 IST" name="Default suite" finished-at="2022-04-07T17:17:56 IST" duration-ms="30840">
     <groups>
       <group name="LocalAppium">
-        <method signature="ChromeBrowser.AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@4229bb3f]" name="AmazonProductSearch" class="testCase.ChromeBrowser"/>
+        <method signature="Chrome2.AmazonProductSearch()[pri:0, instance:testCase.Chrome2@194bcebf]" name="AmazonProductSearch" class="testCase.Chrome2"/>
       </group> <!-- LocalAppium -->
     </groups>
-    <test started-at="2021-11-24T22:05:01 IST" name="Default test" finished-at="2021-11-24T22:05:56 IST" duration-ms="54849">
-      <class name="testCase.ChromeBrowser">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.ChromeBrowser@4229bb3f]" started-at="2021-11-24T22:04:56 IST" name="setup" finished-at="2021-11-24T22:05:01 IST" duration-ms="4853" status="PASS">
+    <test started-at="2022-04-07T17:17:26 IST" name="Default test" finished-at="2022-04-07T17:17:56 IST" duration-ms="30840">
+      <class name="testCase.Chrome2">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.Chrome2@194bcebf]" started-at="2022-04-07T17:17:23 IST" name="setup" finished-at="2022-04-07T17:17:26 IST" duration-ms="2594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.ChromeBrowser@4229bb3f]" started-at="2021-11-24T22:05:01 IST" name="AmazonProductSearch" finished-at="2021-11-24T22:05:55 IST" duration-ms="54262" status="PASS">
+        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.Chrome2@194bcebf]" started-at="2022-04-07T17:17:26 IST" name="AmazonProductSearch" finished-at="2022-04-07T17:17:56 IST" duration-ms="30382" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Opening]]>
             </line>
             <line>
-              <![CDATA[Opened URL : https://www.amazon.in/]]>
+              <![CDATA[Opened URL : https://www.valuedopinions.co.in/index]]>
             </line>
             <line>
               <![CDATA[Switched to WEBVIEW Succesfully]]>
-            </line>
-            <line>
-              <![CDATA[iphone - Searched Succesfully]]>
-            </line>
-            <line>
-              <![CDATA[Hamburger Menu - Clicked Succesfully]]>
-            </line>
-            <line>
-              <![CDATA[Menu Mobiles - Clicked Succesfully]]>
             </line>
             <line>
               <![CDATA[Switched to NATIVE Succesfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- AmazonProductSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.ChromeBrowser@4229bb3f]" started-at="2021-11-24T22:05:55 IST" name="appClose" finished-at="2021-11-24T22:05:56 IST" duration-ms="554" status="PASS">
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.Chrome2@194bcebf]" started-at="2022-04-07T17:17:56 IST" name="appClose" finished-at="2022-04-07T17:17:56 IST" duration-ms="432" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Chrome - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.ChromeBrowser@4229bb3f]" started-at="2021-11-24T22:05:56 IST" name="tearDown" finished-at="2021-11-24T22:05:57 IST" duration-ms="512" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.Chrome2@194bcebf]" started-at="2022-04-07T17:17:56 IST" name="tearDown" finished-at="2022-04-07T17:17:57 IST" duration-ms="470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCase.ChromeBrowser -->
+      </class> <!-- testCase.Chrome2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
