@@ -10,7 +10,6 @@
 	     <class name="testCase.ApkInfo"></class>
 	     <class name="testCase.AzamTv"></class>
 	     <class name="testCase.ChromeBrowser"></class>
-	     
 	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
