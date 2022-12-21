@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>AppiumLocal-Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 19 11:55:35 IST 2021</td>
+<td>Started on:</td><td>Thu Dec 15 15:17:53 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>110 seconds (110119 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (45 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,88 +67,52 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCase.ApkInfo.ApkinfoMain()'><b>ApkinfoMain</b><br>Test class: testCase.ApkInfo<br/>
-<a href="#Output-1248435962" onClick='toggleBox("Output-1248435962", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1248435962" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1248435962">
-ApkInfo - Aplication is Opening<br/>
-Scroll to - Photos -  Succesfully<br/>
-Orientation : PORTRAIT<br/>
-Scroll to - YouTube -  Succesfully<br/>
-</div>
-</td>
-<td></td>
-<td>18</td>
-<td>testCase.ApkInfo@35aea049</td></tr>
-<tr>
-<td title='testCase.AzamTv.AzamTV_Registeration()'><b>AzamTV_Registeration</b><br>Test class: testCase.AzamTv<br/>
-<a href="#Output-558913557" onClick='toggleBox("Output-558913557", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-558913557" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-558913557">
-Azam - Aplication is Opening<br/>
-Clicked Get Started Button Succesfully<br/>
-Clicked English Language Button Succesfully<br/>
-Clicked Continue Button Succesfully<br/>
-Clicked Login Tab Button Succesfully<br/>
-Clicked Register Button Succesfully<br/>
-Loaded Register Page Succesfully<br/>
-Entered New Register Number - 9600000000 - Succesfully<br/>
-Clicked Continue Button Succesfully<br/>
-Entered OTP - 111111 -  Succesfully<br/>
-</div>
-</td>
-<td></td>
-<td>36</td>
-<td>testCase.AzamTv@48f278eb</td></tr>
-<tr>
-<td title='testCase.ChromeBrowser.AmazonProductSearch()'><b>AmazonProductSearch</b><br>Test class: testCase.ChromeBrowser<br/>
-<a href="#Output-913955118" onClick='toggleBox("Output-913955118", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-913955118" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-913955118">
-Chrome - Aplication is Opening<br/>
-Opened URL : https://www.amazon.in/<br/>
-Switched to WEBVIEW Succesfully<br/>
-iphone - Searched Succesfully<br/>
-Hamburger Menu - Clicked Succesfully<br/>
-Menu Mobiles - Clicked Succesfully<br/>
-Switched to NATIVE Succesfully<br/>
-</div>
-</td>
-<td></td>
-<td>31</td>
-<td>testCase.ChromeBrowser@2f217633</td></tr>
-<tr>
-<td title='testCase.AzamTv.AzamTV_MovieSearch()'><b>AzamTV_MovieSearch</b><br>Test class: testCase.AzamTv<br/>
-<a href="#Output-734971558" onClick='toggleBox("Output-734971558", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-734971558" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-734971558">
-Azam - Aplication is Opening<br/>
-Clicked Get Started Button Succesfully<br/>
-Clicked English Language Button Succesfully<br/>
-Clicked Continue Button Succesfully<br/>
-Clicked Movies Tab Button Succesfully<br/>
-Loaded Movies Tab Succesfully<br/>
-Clicked Bongo Movies number - 3 Succesfully<br/>
-Clicked Register Button Succesfully<br/>
-Loaded Register Page Succesfully<br/>
-Location - Latitude: 37.4218511, Longitude: -122.0841292, Altitude: 0.0<br/>
-</div>
-</td>
-<td></td>
-<td>21</td>
-<td>testCase.AzamTv@48f278eb</td></tr>
+<td title='testCase.ApkInfo.setup()'><b>setup</b><br>Test class: testCase.ApkInfo</td>
+<td><div><pre>io.appium.java_client.service.local.InvalidServerInstanceException: NodeJS is either not installed or its executable not present in PATH
+	at io.appium.java_client.service.local.AppiumServiceBuilder.validatePath(AppiumServiceBuilder.java:129)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findBinary(AppiumServiceBuilder.java:139)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:182)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:91)
+	at util.Capability.AppiumServerUtil.startServer(AppiumServerUtil.java:25)
+	at util.Common.BaseClass.setup(BaseClass.java:52)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1963862935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1963862935'><pre>io.appium.java_client.service.local.InvalidServerInstanceException: NodeJS is either not installed or its executable not present in PATH
+	at io.appium.java_client.service.local.AppiumServiceBuilder.validatePath(AppiumServiceBuilder.java:129)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findBinary(AppiumServiceBuilder.java:139)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:182)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:91)
+	at util.Capability.AppiumServerUtil.startServer(AppiumServerUtil.java:25)
+	at util.Common.BaseClass.setup(BaseClass.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.ApkInfo@306e95ec</td></tr>
 </table><p>
 </body>
 </html>
