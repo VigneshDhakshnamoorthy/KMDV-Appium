@@ -1,62 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Chrome - Aplication is Opening]]>
+      <![CDATA[Azam - Aplication is Opening]]>
     </line>
     <line>
-      <![CDATA[Opened URL : https://www.valuedopinions.co.in/index]]>
+      <![CDATA[Clicked Get Started Button Succesfully]]>
     </line>
     <line>
-      <![CDATA[Switched to WEBVIEW Succesfully]]>
+      <![CDATA[Clicked English Language Button Succesfully]]>
     </line>
     <line>
-      <![CDATA[Switched to NATIVE Succesfully]]>
+      <![CDATA[Clicked Continue Button Succesfully]]>
     </line>
     <line>
-      <![CDATA[Chrome - Aplication is Closing]]>
+      <![CDATA[Clicked Login Tab Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Register Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Loaded Register Page Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Entered New Register Number - 9600000000 - Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Continue Button Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Entered OTP - 111111 -  Succesfully]]>
+    </line>
+    <line>
+      <![CDATA[Azam - Aplication is Closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-04-07T17:17:26 IST" name="Default suite" finished-at="2022-04-07T17:17:56 IST" duration-ms="30840">
+  <suite started-at="2022-12-21T16:50:52 IST" name="Default suite" finished-at="2022-12-21T16:52:29 IST" duration-ms="97246">
     <groups>
       <group name="LocalAppium">
-        <method signature="Chrome2.AmazonProductSearch()[pri:0, instance:testCase.Chrome2@194bcebf]" name="AmazonProductSearch" class="testCase.Chrome2"/>
+        <method signature="AzamTv.AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@6fd83fc1]" name="AzamTV_Registeration" class="testCase.AzamTv"/>
       </group> <!-- LocalAppium -->
     </groups>
-    <test started-at="2022-04-07T17:17:26 IST" name="Default test" finished-at="2022-04-07T17:17:56 IST" duration-ms="30840">
-      <class name="testCase.Chrome2">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.Chrome2@194bcebf]" started-at="2022-04-07T17:17:23 IST" name="setup" finished-at="2022-04-07T17:17:26 IST" duration-ms="2594" status="PASS">
+    <test started-at="2022-12-21T16:50:52 IST" name="Default test" finished-at="2022-12-21T16:52:29 IST" duration-ms="97246">
+      <class name="testCase.AzamTv">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.AzamTv@6fd83fc1]" started-at="2022-12-21T16:50:49 IST" name="setup" finished-at="2022-12-21T16:50:52 IST" duration-ms="3472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AmazonProductSearch()[pri:0, instance:testCase.Chrome2@194bcebf]" started-at="2022-04-07T17:17:26 IST" name="AmazonProductSearch" finished-at="2022-04-07T17:17:56 IST" duration-ms="30382" status="PASS">
+        <test-method signature="AzamTV_Registeration()[pri:0, instance:testCase.AzamTv@6fd83fc1]" started-at="2022-12-21T16:50:52 IST" name="AzamTV_Registeration" finished-at="2022-12-21T16:52:29 IST" duration-ms="96829" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Chrome - Aplication is Opening]]>
+              <![CDATA[Azam - Aplication is Opening]]>
             </line>
             <line>
-              <![CDATA[Opened URL : https://www.valuedopinions.co.in/index]]>
+              <![CDATA[Clicked Get Started Button Succesfully]]>
             </line>
             <line>
-              <![CDATA[Switched to WEBVIEW Succesfully]]>
+              <![CDATA[Clicked English Language Button Succesfully]]>
             </line>
             <line>
-              <![CDATA[Switched to NATIVE Succesfully]]>
+              <![CDATA[Clicked Continue Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Login Tab Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Register Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Loaded Register Page Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Entered New Register Number - 9600000000 - Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Continue Button Succesfully]]>
+            </line>
+            <line>
+              <![CDATA[Entered OTP - 111111 -  Succesfully]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AmazonProductSearch -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.Chrome2@194bcebf]" started-at="2022-04-07T17:17:56 IST" name="appClose" finished-at="2022-04-07T17:17:56 IST" duration-ms="432" status="PASS">
+        </test-method> <!-- AzamTV_Registeration -->
+        <test-method is-config="true" signature="appClose()[pri:0, instance:testCase.AzamTv@6fd83fc1]" started-at="2022-12-21T16:52:29 IST" name="appClose" finished-at="2022-12-21T16:52:29 IST" duration-ms="374" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Chrome - Aplication is Closing]]>
+              <![CDATA[Azam - Aplication is Closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- appClose -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.Chrome2@194bcebf]" started-at="2022-04-07T17:17:56 IST" name="tearDown" finished-at="2022-04-07T17:17:57 IST" duration-ms="470" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.AzamTv@6fd83fc1]" started-at="2022-12-21T16:52:29 IST" name="tearDown" finished-at="2022-12-21T16:52:30 IST" duration-ms="534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCase.Chrome2 -->
+      </class> <!-- testCase.AzamTv -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
